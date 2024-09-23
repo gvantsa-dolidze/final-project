@@ -1,5 +1,6 @@
 import HeaderLogo from "./elements/HeaderLogo";
 import HeaderNav from "./elements/HeaderNav";
+import LoginAndCart from "./elements/LoginAndCart";
 import PromoHeader from "./elements/PromoHeader";
 import SearchBar from "./elements/SearchBar";
 const Header = () => {
@@ -10,6 +11,7 @@ const Header = () => {
         <HeaderLogo />
         <HeaderNav />
         <SearchBar />
+        <LoginAndCart />
       </div>
       
     </div>
