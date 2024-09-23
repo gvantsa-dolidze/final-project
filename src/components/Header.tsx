@@ -1,6 +1,10 @@
+import PromoHeader from "./elements/PromoHeader"
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <PromoHeader />
+      
+    </div>
   )
 }
 
