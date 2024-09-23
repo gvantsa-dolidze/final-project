@@ -1,8 +1,7 @@
-import Counter from "../components/Counter"
 const Home = () => {
   return (
     <div>
-      <Counter />
+      
     </div>
   )
 }
