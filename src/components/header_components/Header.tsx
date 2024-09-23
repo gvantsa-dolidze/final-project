@@ -1,8 +1,8 @@
-import HeaderLogo from "./header_elements/HeaderLogo";
-import HeaderNav from "./header_elements/HeaderNav";
-import LoginAndCart from "./header_elements/LoginAndCart";
-import PromoHeader from "./header_elements/PromoHeader";
-import SearchBar from "./header_elements/SearchBar";
+import HeaderLogo from "./HeaderLogo";
+import HeaderNav from "./HeaderNav";
+import LoginAndCart from "./LoginAndCart";
+import PromoHeader from "./PromoHeader";
+import SearchBar from "./SearchBar";
 const Header = () => {
   return (
     <div>
