@@ -12,9 +12,10 @@ const Header = () => {
           <HeaderLogo />
           <HeaderNav />
         </div>
-
-        <SearchBar />
-        <LoginAndCart />
+        <div className="flex">
+          <SearchBar />
+          <LoginAndCart />
+        </div>
       </div>
     </div>
   );
