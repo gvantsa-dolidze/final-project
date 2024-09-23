@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <PromoHeader />
-      <div className="flex items-center space-x-28">
+      <div className="flex items-center space-x-28 justify-center">
         <HeaderLogo />
         <HeaderNav />
         <SearchBar />
