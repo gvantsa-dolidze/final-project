@@ -1,15 +1,16 @@
-import HeaderLogo from "./elements/HeaderLogo"
-import PromoHeader from "./elements/PromoHeader"
+import HeaderLogo from "./elements/HeaderLogo";
+import HeaderNav from "./elements/HeaderNav";
+import PromoHeader from "./elements/PromoHeader";
 const Header = () => {
   return (
     <div>
       <PromoHeader />
-      <div>
-<HeaderLogo />
-
+      <div className="flex items-center space-x-28">
+        <HeaderLogo />
+        <HeaderNav />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
