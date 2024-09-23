@@ -6,6 +6,7 @@ import ProductPage from './pages/ProductPage';
 import ListingPage from './pages/ListingPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
+import AfterPaymentPage from './pages/AfterPaymentPage';
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/listing_page" element={<ListingPage />} />
         <Route path="/cart_page" element={<CartPage />} />
         <Route path="/checkout_page" element={<CheckoutPage />} />
+        <Route path="/after_payment_page" element={<AfterPaymentPage />} />
+
 
 
       </Routes>
