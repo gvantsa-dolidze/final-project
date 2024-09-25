@@ -1,7 +1,7 @@
 import React from "react";
 
-const FooterMiddle = () => {
+const FooterBase = () => {
   return <div>FooterBottom</div>;
 };
 
-export default FooterMiddle;
+export default FooterBase;
