@@ -5,7 +5,10 @@ import FooterTop from "./FooterTop";
 const Footer = () => {
   return (
     <div className="">
-      <FooterTop />
+      <FooterTop 
+          title='Join Our Newsletter'
+          description='We love to surprise our subscribers with occasional gifts.'
+      />
       <FooterBase />
       <FooterBottom />
     </div>
