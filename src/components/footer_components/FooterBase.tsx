@@ -5,7 +5,7 @@ import FooterNav from "./FooterNav";
 
 const FooterBase = () => {
   return (
-    <div className="max-w-1116 flex m-auto">
+    <div className="max-w-1116 flex justify-between m-auto">
       <FooterLogo />
       <FooterNav />
       <AcceptedPayments />
