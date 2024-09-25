@@ -2,7 +2,7 @@ import React from "react";
 
 const EmailInput = () => {
   return (
-    <form className="flex items-center">
+    <form className="flex items-center gap-4">
       <input
         type="email"
         placeholder="Your email address"

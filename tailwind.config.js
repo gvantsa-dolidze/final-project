@@ -9,6 +9,9 @@ module.exports = {
         '1116': '1116px',
         '1440': '1440px',
     },
+    colors: {
+      lightGray: '#F6F6F6',
+    },
   },
   },
   plugins: [],
