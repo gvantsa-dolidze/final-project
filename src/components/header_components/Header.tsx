@@ -6,13 +6,16 @@ import SearchBar from "./SearchBar";
 const Header = () => {
   return (
     <div>
-      <PromoHeader 
-             content = 'Get 25% OFF on your first order. Order Now'
-      />
+      <PromoHeader content="Get 25% OFF on your first order. Order Now" />
       <div className="flex items-center space-x-28 max-w-1116 m-auto pt-3 pb-3 justify-between">
         <div className="flex items-center gap-[116px]">
           <HeaderLogo />
-          <HeaderNav />
+          <HeaderNav
+            home="Home"
+            categories="Categories"
+            about="About"
+            contact="Contact"
+          />
         </div>
         <div className="flex">
           <SearchBar />
