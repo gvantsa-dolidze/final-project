@@ -1,8 +1,14 @@
-import React from 'react'
+import EmailInput from "./EmailInput"
 
 const FooterTop = () => {
   return (
-    <div>FooterTop</div>
+    <div>
+        <div>
+            <p>Join Our Newsletter</p>
+            <p>We love to surprise our subscribers with occasional gifts.</p>
+        </div>
+        <EmailInput />
+    </div>
   )
 }
 

@@ -1,6 +1,11 @@
+import FooterTop from "./FooterTop"
+
+
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div>
+      <FooterTop />
+    </div>
   )
 }
 
