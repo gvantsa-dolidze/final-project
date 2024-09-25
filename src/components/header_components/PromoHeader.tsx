@@ -1,7 +1,12 @@
-const PromoHeader = () => {
+
+interface PromoHeaderProps {
+  content: string; // Define the type for the content prop
+}
+const PromoHeader: React.FC<PromoHeaderProps> = ({ content }) => {
   return (
-    <div className="bg-[#0E1422] text-white p-2">Get 25% OFF on your first order. Order Now</div>
+    <div className="bg-[#0E1422] text-white p-2">{ content }</div>
   )
 }
 
 export default PromoHeader
+
