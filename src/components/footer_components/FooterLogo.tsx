@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const FooterLogo = () => {
   return (
     <div className="space-y-4">
@@ -10,9 +12,17 @@ const FooterLogo = () => {
         <p>practical project-based learning.</p>
       </div>
       <div className="flex gap-1">
-        <img src="/img/social icons/Github.png" alt="github" />
-        <img src="/img/social icons/Instagram.png" alt="instagram" />
-        <img src="/img/social icons/Youtube.png" alt="youtube" />
+        <NavLink to="https://github.com/" target="_blank">
+          <img src="/img/social icons/Github.png" alt="github" />
+        </NavLink>
+        <NavLink to="https://www.instagram.com/" target="_blank">
+          {" "}
+          <img src="/img/social icons/Instagram.png" alt="instagram" />
+        </NavLink>
+        <NavLink to="https://www.youtube.com/" target="_blank">
+          {" "}
+          <img src="/img/social icons/Youtube.png" alt="youtube" />
+        </NavLink>
       </div>
     </div>
   );
