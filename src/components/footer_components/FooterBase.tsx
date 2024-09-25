@@ -1,7 +1,12 @@
-import React from "react";
 
 const FooterBase = () => {
-  return <div>FooterBase</div>;
+  return (
+    <div className="max-w-1116 flex m-auto">
+      FooterBase
+      
+    </div>
+  )
+  
 };
 
 export default FooterBase;
