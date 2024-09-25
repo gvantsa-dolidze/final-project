@@ -7,10 +7,15 @@ module.exports = {
     extend: {
       maxWidth: {
         '1116': '1116px',
-        '1440': '1440px',
+       
     },
     colors: {
-      lightGray: '#F6F6F6',
+      BackgroundGray: '#F6F6F6',
+      PrimaryTextGray: '#717171',
+      SecondaryTextGray: '#878A92',
+      MainTextGray: '#5C5F6A',
+      MidnightBlue: '#0E1422',
+      
     },
   },
   },
