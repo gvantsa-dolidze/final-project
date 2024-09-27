@@ -2,7 +2,15 @@
 
 const BestSelling = () => {
   return (
-    <div>BestSelling</div>
+    <div>
+      <div className="text-center">
+        <p>SHOP NOW</p>
+        <h2>Best Selling</h2>
+      </div>
+      <div className="flex">
+
+      </div>
+    </div>
   )
 }
 
