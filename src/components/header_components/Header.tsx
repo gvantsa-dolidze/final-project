@@ -17,7 +17,7 @@ const Header = () => {
             contact="Contact"
           />
         </div>
-        <div className="flex">
+        <div className="flex gap-3">
           <SearchBar />
           <LoginAndCart />
         </div>
