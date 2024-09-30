@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   label: string;
-  variant?: "primary" | "secondary" | "danger" | "outline";
+  variant?: "primary" | "secondary" | "danger" | "outline" | 'link';
 }
 const Button: React.FC<ButtonProps> = ({ label, variant = "primary" }) => {
   const styles: Record<string, string> = {
@@ -10,6 +10,7 @@ const Button: React.FC<ButtonProps> = ({ label, variant = "primary" }) => {
     secondary: "border rounded-full px-4 py-1",
     danger: "",
     outline: "",
+    link: 'text-gray',
   };
 
   return <button className={`${styles[variant]}`}>{label}</button>;

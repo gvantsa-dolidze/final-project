@@ -5,8 +5,8 @@ const FeaturedLatest = () => {
   return (
     <div className="max-w-1116 m-auto py-16">
     <div className="text-center space-x-2">
-      <Button label='Featured' />
-      <Button label='Latest'/>
+      <Button label='Featured'  variant = "secondary"/>
+      <Button label='Latest' variant = "link"/>
     </div>
     <div className="flex gap-5 py-5">
       <Card />
