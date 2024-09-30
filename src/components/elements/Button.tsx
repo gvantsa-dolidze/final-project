@@ -7,7 +7,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ label, variant = "primary" }) => {
   const styles: Record<string, string> = {
     primary: "bg-MidnightBlue text-white px-4 py-2 rounded-md text-sm",
-    secondary: "",
+    secondary: "border rounded-full px-4 py-1",
     danger: "",
     outline: "",
   };
