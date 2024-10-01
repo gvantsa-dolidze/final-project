@@ -15,11 +15,15 @@ const SelectColorRadioBtn: React.FC<SelectColorRadioBtnProps> = ({
   };
 
   return (
-    <input
+    <label htmlFor="colorPiker">
+        <input
       type="radio"
       className={`${styles[variant]}`}
       name="color_piker"
-    ></input>
+      id='colorPiker'
+    ></input> 
+    </label>
+   
   );
 };
 
