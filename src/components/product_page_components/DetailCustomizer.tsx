@@ -6,7 +6,7 @@ import SizePiker from "../elements/SizePiker";
 const DetailCustomizer = () => {
   return (
     <div className="space-y-2">
-      <div className="flex">
+      <div className="flex justify-between">
         <h2>Raw Black T-Shirt Lineup</h2>
         <button>
           <img src="/img/icons/Share.png" alt="share" />
