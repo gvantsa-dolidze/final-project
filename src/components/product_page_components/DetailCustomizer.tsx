@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Button from "../elements/Button";
-// import SelectColorRadioBtn from "../elements/SelectColorRadioBtn";
 import ColorPiker from "../elements/ColorPiker";
-import SelectSizeRadioBtn from "../elements/SelectSizeRadioBtn";
+import SizePiker from "../elements/SizePiker";
+
 const DetailCustomizer = () => {
   return (
     <div className="space-y-2">
@@ -26,13 +26,7 @@ const DetailCustomizer = () => {
       </div>
       <div>
         <h2>SELECT SIZE</h2>
-        <div className="space-x-2 flex">
-          <SelectSizeRadioBtn variant="s" />
-          <SelectSizeRadioBtn variant="m" />
-          <SelectSizeRadioBtn variant="l" />
-          <SelectSizeRadioBtn variant="xl" />
-          <SelectSizeRadioBtn variant="xxl" />
-        </div>
+       <SizePiker />
       </div>
       <div>
         <h2>Quantity</h2>
