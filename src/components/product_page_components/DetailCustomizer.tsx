@@ -5,17 +5,17 @@ import SizePiker from "../elements/SizePiker";
 
 const DetailCustomizer = () => {
   return (
-    <div className="space-y-2 text-start">
+    <div className="space-y-2">
       <div className="flex justify-between">
         <h2>Raw Black T-Shirt Lineup</h2>
         <button>
           <img src="/img/icons/Share.png" alt="share" />
         </button>
       </div>
-      <div className="flex">
-        <NavLink to="" className="flex">
+      <div className="flex justify-between">
+        <NavLink to="" className="flex ">
           <img src="/img/icons/Star.png" alt="star" />
-          <span>4.2 — 54 Reviews</span>
+          4.2 — 54 Reviews
         </NavLink>
         <Button label="IN STOCK" variant="secondary" />
       </div>
