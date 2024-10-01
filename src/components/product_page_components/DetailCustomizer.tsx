@@ -5,19 +5,19 @@ import SizePiker from "../elements/SizePiker";
 
 const DetailCustomizer = () => {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 w-[438px]">
       <div className="flex justify-between">
         <h2>Raw Black T-Shirt Lineup</h2>
         <button>
           <img src="/img/icons/Share.png" alt="share" />
         </button>
       </div>
-      <div className="flex justify-between">
-        <NavLink to="" className="flex ">
-          <img src="/img/icons/Star.png" alt="star" />
-          4.2 — 54 Reviews
+      <div className="flex gap-5">
+        <NavLink to="" className="flex  items-center bg-[#F6F6F6] rounded-full px-3">
+          <img src="/img/icons/Star.png" alt="star" className="w-5 h-5"/>
+          <span className="text-sm">4.2 — 54 Reviews</span>
         </NavLink>
-        <Button label="IN STOCK" variant="secondary" />
+        <Button label="IN STOCK" variant="secondary"/>
       </div>
       <div className="text-start">$0000</div>
       <div className="flex flex-col items-start">
@@ -34,7 +34,7 @@ const DetailCustomizer = () => {
       <div className="flex justify-between items-center">
         <Button label="Add to cart" /> likebtn
       </div>
-      <div>— Free shipping on orders $100+</div>
+      <div className="text-start">— Free shipping on orders $100+</div>
     </div>
   );
 };
