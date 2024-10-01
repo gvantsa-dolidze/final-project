@@ -1,7 +1,14 @@
+import ImgSwiper from "../components/elements/ImgSwiper";
+
 const ProductPage = () => {
   return (
-    <div>ProductPage</div>
-  )
-}
+    <div>
+      <div>
+       <ImgSwiper /> 
+      </div>
+      
+    </div>
+  );
+};
 
-export default ProductPage
+export default ProductPage;
