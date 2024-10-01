@@ -2,8 +2,8 @@ import ImgSwiper from "../components/elements/ImgSwiper";
 
 const ProductPage = () => {
   return (
-    <div>
-      <div>
+    <div className="max-w-1116">
+      <div className="py-5">
        <ImgSwiper /> 
       </div>
       
