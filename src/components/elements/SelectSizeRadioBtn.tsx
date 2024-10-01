@@ -20,7 +20,7 @@ const SelectSizeRadioBtn: React.FC<SelectSizeRadioBtnProps> = ({
       <input
         type="radio"
         className={`${styles[variant]}`}
-        name="color_piker"
+        name="size-piker"
         id={`colorPiker-${variant}`}
         value={variant}
       ></input>
