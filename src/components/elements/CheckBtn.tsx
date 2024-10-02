@@ -12,7 +12,7 @@ const CheckBtn: React.FC<CheckBtnProps> = ({ variant = "blue", label, id}) => {
     <label htmlFor={id} className="flex gap-2 items-center border-b pt-2 pb-4 cursor-pointer">
       <input
         type="checkbox"
-        className={`${styles[variant]}`}
+        className={`${styles[variant]} cursor-pointer`}
         name="product-category"
         id={id}
       ></input>
