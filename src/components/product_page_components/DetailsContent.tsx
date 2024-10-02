@@ -1,6 +1,6 @@
 const DetailsContent = () => {
   return (
-    <div className="text-start space-y-10">
+    <div className="text-start space-y-10 max-w-[727px]">
       <h2>Details</h2>
       <div className="space-y-20">
         <p>
