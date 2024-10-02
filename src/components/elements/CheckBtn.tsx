@@ -9,7 +9,7 @@ const CheckBtn: React.FC<CheckBtnProps> = ({ variant = "blue", label, id}) => {
   };
 
   return (
-    <label htmlFor={id} className="flex gap-2 items-center">
+    <label htmlFor={id} className="flex gap-2 items-center border-b pt-2 pb-4 cursor-pointer">
       <input
         type="checkbox"
         className={`${styles[variant]}`}
