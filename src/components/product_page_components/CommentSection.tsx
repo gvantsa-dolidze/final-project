@@ -2,7 +2,9 @@ import Comment from "./Comment"
 
 const CommentSection = () => {
   return (
-    <div>
+    <div className="">
+      <Comment />
+      <Comment />
       <Comment />
     </div>
   )
