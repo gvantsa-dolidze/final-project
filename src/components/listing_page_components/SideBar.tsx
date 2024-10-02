@@ -1,8 +1,10 @@
-
+import Categories from "./Categories"
 
 const SideBar = () => {
   return (
-    <div>SideBar</div>
+    <div className="border p-2">
+        <Categories />
+    </div>
   )
 }
 
