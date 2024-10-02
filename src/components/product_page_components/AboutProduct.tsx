@@ -7,8 +7,8 @@ const AboutProduct = () => {
     <div className="max-w-1116 m-auto py-28 flex items-center justify-between">
       <DetailsAndReviews />
 
-      <DetailsContent />
-      {/* <ReviewsContent /> */}
+      {/* <DetailsContent /> */}
+      <ReviewsContent />
     </div>
   );
 };
