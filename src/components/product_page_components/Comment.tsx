@@ -2,12 +2,12 @@ import FiveStar from "../elements/FiveStar"
 import InitialsAvatar from "../elements/InitialsAvatar"
 const Comment = () => {
   return (
-    <div className="py-10 flex gap-7">
+    <div className="py-10 flex justify-between">
         <InitialsAvatar />
-        <div className="text-start space-y-3 w-[550px]">
-            <h2>name</h2>
-            <p>date of comment</p>
-            <p>Comment text Comment text Comment text Comment text Comment text Comment text Comment text Comment text </p>
+        <div className="text-start space-y-3 max-w-[610px]">
+            <h2>John Doe</h2>
+            <p>11.11.2011</p>
+            <p>Comment Text Comment Text Comment Text Comment Text Comment Text Comment Text Comment Text Comment Text </p> 
         </div>
         <FiveStar />
     </div>

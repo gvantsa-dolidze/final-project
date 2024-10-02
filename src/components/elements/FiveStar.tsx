@@ -1,12 +1,12 @@
 
 const FiveStar = () => {
   return (
-    <div className="flex w-[96px] h-[16px]">
-        <img src="/img/icons/Empty Star.png" alt="star" />
-        <img src="/img/icons/Empty Star.png" alt="star" />
-        <img src="/img/icons/Empty Star.png" alt="star" />
-        <img src="/img/icons/Empty Star.png" alt="star" />
-        <img src="/img/icons/Empty Star.png" alt="star" />
+    <div className="flex">
+        <img src="/img/icons/Empty Star.png" alt="star" className="w-6 h-6" />
+        <img src="/img/icons/Empty Star.png" alt="star" className="w-6 h-6"/>
+        <img src="/img/icons/Empty Star.png" alt="star" className="w-6 h-6"/>
+        <img src="/img/icons/Empty Star.png" alt="star" className="w-6 h-6"/>
+        <img src="/img/icons/Empty Star.png" alt="star" className="w-6 h-6"/>
     </div>
   )
 }

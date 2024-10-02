@@ -2,7 +2,7 @@ import Comment from "./Comment"
 import Button from "../elements/Button"
 const CommentSection = () => {
   return (
-    <div className="w-[727px]">
+    <div className="">
       <Comment />
       <Comment />
       <Comment />

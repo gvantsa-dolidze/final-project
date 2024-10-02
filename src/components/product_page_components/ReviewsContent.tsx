@@ -2,7 +2,7 @@ import ReviewAndSort from "./ReviewAndSort";
 import CommentSection from "./CommentSection";
 const ReviewsContent = () => {
   return (
-    <div className="">
+    <div className="w-full">
       <ReviewAndSort />
       <CommentSection />
     </div>
