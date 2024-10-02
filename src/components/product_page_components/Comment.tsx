@@ -1,7 +1,9 @@
-
+import FiveStar from "../elements/FiveStar"
 const Comment = () => {
   return (
-    <div>Comment</div>
+    <div>
+        <FiveStar />
+    </div>
   )
 }
 
