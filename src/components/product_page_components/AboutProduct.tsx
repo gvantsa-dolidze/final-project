@@ -5,8 +5,9 @@ import ReviewsContent from './ReviewsContent'
 
 const AboutProduct = () => {
   return (
-    <div>
+    <div className='max-w-1116 m-auto'>
       <DetailsAndReviews />
+      
       <DetailsContent />
       <ReviewsContent />
     </div>
