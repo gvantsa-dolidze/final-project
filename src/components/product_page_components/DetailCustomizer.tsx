@@ -31,7 +31,7 @@ const DetailCustomizer = () => {
       <div>
         <h2 className="text-start">Quantity</h2>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex gap-5 items-center">
         <Button label="Add to cart" /> 
         <button className="border-2 border-[#F6F6F6] p-1 rounded-md"><img src="/img/icons/Heart.png" alt="heart_img" /></button>
       </div>
