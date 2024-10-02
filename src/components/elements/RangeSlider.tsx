@@ -1,9 +1,10 @@
-import React from 'react'
-
+import { Slider } from "@material-tailwind/react";
 const RangeSlider = () => {
   return (
-    <div>RangeSlider</div>
-  )
-}
+    <div>
+      
+    </div>
+  );
+};
 
-export default RangeSlider
+export default RangeSlider;
