@@ -1,8 +1,10 @@
-
+import Pagination from "../elements/Pagination"
 
 const GridContainer = () => {
   return (
-    <div>GridContainer</div>
+    <div>
+      <Pagination />
+    </div>
   )
 }
 
