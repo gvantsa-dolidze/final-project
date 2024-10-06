@@ -11,7 +11,7 @@ const Card: React.FC<CardProps> = ({ variant = "primary" }) => {
   };
 
   return (
-    <div className={`${styles[variant]}`}>
+    <div className={`${styles[variant]} flex flex-col items-center`}>
       <img
         src=""
         alt="product"
