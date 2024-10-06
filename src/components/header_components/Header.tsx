@@ -12,7 +12,6 @@ const Header = () => {
           <HeaderLogo />
           <HeaderNav
             home="Home"
-            categories="Categories"
             about="About"
             contact="Contact"
           />
