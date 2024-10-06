@@ -8,7 +8,7 @@ const SimiliarProducts = () => {
         <p>SIMILAR PRODUCTS</p>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-between">
         <Card />
         <Card />
         <Card />
