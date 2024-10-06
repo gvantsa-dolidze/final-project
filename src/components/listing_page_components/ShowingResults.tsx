@@ -1,8 +1,14 @@
+import SortByBtn from "../elements/SortByBtn"
 
 
 const ShowingResults = () => {
   return (
-    <div>ShowingResults</div>
+    <div className="flex justify-between">
+        <div>
+        Showing 1-9 of 36 results.
+        </div>
+        <SortByBtn />
+    </div>
   )
 }
 
