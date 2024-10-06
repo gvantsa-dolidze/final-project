@@ -21,18 +21,18 @@ const PopOver: React.FC<PopOverProps> = ({
     thermos,
   }) => {
   return (
-    <Popover className="relative outline-none">
-        <PopoverButton className="flex">
+    <Popover className="relative">
+        <PopoverButton className="flex outline-none">
           {categories}
           <img src="/img/icons/Chevron Down.png" alt="arrow_down" />
         </PopoverButton>
-        <PopoverPanel anchor="bottom" className="flex flex-col">
-          <NavLink to="/analytics">{perfume}</NavLink>
-          <NavLink to="/engagement">{trousers}</NavLink>
-          <NavLink to="/security">{shoe}</NavLink>
-          <NavLink to="/integrations">{handbag}</NavLink>
-          <NavLink to="/integrations">{hat}</NavLink>
-          <NavLink to="/integrations">{thermos}</NavLink>
+        <PopoverPanel anchor="bottom" className="flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3">
+          <NavLink to="/analytics" className="hover:bg-BackgroundGray px-4 py-2">{perfume}</NavLink>
+          <NavLink to="/engagement" className="hover:bg-BackgroundGray px-4 py-2">{trousers}</NavLink>
+          <NavLink to="/security" className="hover:bg-BackgroundGray px-4 py-2">{shoe}</NavLink>
+          <NavLink to="/integrations" className="hover:bg-BackgroundGray px-4 py-2">{handbag}</NavLink>
+          <NavLink to="/integrations" className="hover:bg-BackgroundGray px-4 py-2">{hat}</NavLink>
+          <NavLink to="/integrations" className="hover:bg-BackgroundGray px-4 py-2">{thermos}</NavLink>
         </PopoverPanel>
       </Popover>
   )
