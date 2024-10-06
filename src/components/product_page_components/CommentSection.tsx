@@ -6,7 +6,7 @@ const CommentSection = () => {
       <Comment />
       <Comment />
       <Comment />
-<Button label='Load more reviews'/>
+<Button label='Load more reviews' destination='/'/>
     </div>
   )
 }

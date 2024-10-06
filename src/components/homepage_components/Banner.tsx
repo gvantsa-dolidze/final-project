@@ -6,7 +6,7 @@ const Banner = () => {
         <div className="space-y-5 my-auto">
           <h2>Fresh Arrivals Online</h2>
           <p>Discover Our Newest Collection Today.</p>
-          <Button label="View Collection" />
+          <Button label="View Collection" destination='/listing_page'/>
         </div>
         <div className="relative">
           <img

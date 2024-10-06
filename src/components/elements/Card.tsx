@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({ variant = "primary" }) => {
       
       <h2>text text text</h2>
       <div className="flex items-center gap-3">
-        <Button label="IN STOCK" variant = "secondary"/>
+        <Button label="IN STOCK" variant = "secondary" destination='/product_page'/>
         <p>$000</p>
       </div>
     </div>

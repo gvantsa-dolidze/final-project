@@ -5,8 +5,8 @@ const AppliedFilters = () => {
     <div className="space-y-3">
       <h3>Applied Filters</h3>
       <div className="space-x-2">
-        <Button  label='Perfume' variant='secondary'/>
-        <Button  label='Size: M' variant='secondary'/>
+        <Button  label='Perfume' variant='secondary' destination='/'/>
+        <Button  label='Size: M' variant='secondary' destination='/'/>
       </div>
     </div>
   );

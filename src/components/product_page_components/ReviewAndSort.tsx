@@ -7,7 +7,7 @@ const ReviewAndSort = () => {
       <div className="space-y-5 text-start">
         <h2>Reviews</h2>
         <ProductRatingInfo />
-        <Button label="Write a review" />
+        <Button label="Write a review" destination='/'/>
       </div>
       <SortByBtn />
     </div>

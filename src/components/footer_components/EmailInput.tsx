@@ -10,6 +10,7 @@ const EmailInput = () => {
       />
       <Button 
          label='Subscribe'
+         destination='/' 
       />
     </form>
   );
