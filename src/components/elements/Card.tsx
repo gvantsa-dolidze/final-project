@@ -11,11 +11,11 @@ const Card: React.FC<CardProps> = ({ variant = "primary" }) => {
   };
 
   return (
-    <div className={`${styles[variant]} flex flex-col items-center`}>
+    <div className={`${styles[variant]} flex flex-col `}>
       <img
         src=""
         alt="product"
-        className="w-[237px] h-[312px] bg-BackgroundGray"
+        className="w-[264px] h-[312px] bg-BackgroundGray"
       />
       <h2>text text text</h2>
       <div className="flex items-center gap-3">
