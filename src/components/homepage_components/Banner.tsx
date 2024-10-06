@@ -5,7 +5,7 @@ const Banner = () => {
       <div className="text-start max-w-1116 m-auto space-y-5 flex justify-between">
         <div className="space-y-5 my-auto">
           <h2>Fresh Arrivals Online</h2>
-          <p>Discover Our Newest Collection Today.</p>
+          <p className="pb-6">Discover Our Newest Collection Today.</p>
           <Button label="View Collection" destination='/listing_page'/>
         </div>
         <div className="relative">

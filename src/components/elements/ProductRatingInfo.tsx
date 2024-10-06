@@ -1,6 +1,6 @@
 const ProductRatingInfo = () => {
   return (
-    <div>
+    <div className="pb-5">
       <span>4.2</span>
       <span> - 54 Reviews</span>
     </div>
