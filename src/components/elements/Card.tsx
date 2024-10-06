@@ -12,11 +12,13 @@ const Card: React.FC<CardProps> = ({ variant = "primary" }) => {
 
   return (
     <div className={`${styles[variant]} flex flex-col `}>
-      <img
-        src=""
+      <div className="w-[264px] h-[312px] bg-BackgroundGray rounded-md flex justify-center">
+        <img
+        src="/img/cover.png"
         alt="product"
-        className="w-[264px] h-[312px] bg-BackgroundGray"
       />
+      </div>
+      
       <h2>text text text</h2>
       <div className="flex items-center gap-3">
         <Button label="IN STOCK" variant = "secondary"/>
