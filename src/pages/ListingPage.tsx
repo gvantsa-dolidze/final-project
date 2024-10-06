@@ -6,7 +6,9 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 const ListingPage = () => {
   return (
     <div>
-      <Breadcrumb />
+      <div className="bg-BackgroundGray">
+        <Breadcrumb />
+      </div>
       <div className="max-w-1116 m-auto gap-10 flex py-10">
       <SideBar />
       <div className="flex flex-col gap-10">
