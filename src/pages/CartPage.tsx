@@ -10,7 +10,7 @@ const CartPage = () => {
       <div className="flex justify-between m-auto max-w-1116 py-10">
         {/* Cart element */}
         <div>
-          <h3 className="border-b pb-5">Your cart</h3>
+          <h3 className="border-b pb-5 text-start">Your cart</h3>
           <div className="flex items-center justify-between gap-5 border rounded-md mt-5">
             <img src="/img/cover.png" alt="product" className="w-20" />
             <div className="text-start">
