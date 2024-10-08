@@ -1,7 +1,7 @@
 import SelectColorRadioBtn from "./SelectColorRadioBtn"
 const ColorPiker = () => {
   return (
-    <div className="space-x-2">
+    <div className="space-x-2 flex">
           <SelectColorRadioBtn variant="blue" />
           <SelectColorRadioBtn variant="green" />
           <SelectColorRadioBtn variant="red" />
