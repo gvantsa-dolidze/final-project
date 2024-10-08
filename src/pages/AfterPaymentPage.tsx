@@ -4,7 +4,7 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 const AfterPaymentPage = () => {
   return (
     <div>
-      <div className="bg-[#D5E5D7] py-5">
+      <div className="bg-[#D5E5D7] py-10">
         <Breadcrumb />
       </div>
       <div className="max-w-1116 m-auto">
