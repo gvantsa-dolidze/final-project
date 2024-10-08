@@ -5,27 +5,22 @@ const SelectSizeRadioBtn: React.FC<SelectSizeRadioBtnProps> = ({
   variant = "s",
 }) => {
   const styles: Record<string, string> = {
-    s: "appearance-none border w-10 h-10 rounded cursor-pointer checked:border-[black] hover:bg-BackgroundGray",
-    m: "appearance-none border w-10 h-10 rounded cursor-pointer checked:border-[black] hover:bg-BackgroundGray",
-    l: "appearance-none border w-10 h-10 rounded cursor-pointer checked:border-[black] hover:bg-BackgroundGray",
-    xl: "appearance-none border w-10 h-10 rounded cursor-pointer checked:border-[black] hover:bg-BackgroundGray",
-    xxl: "appearance-none border w-10 h-10 rounded cursor-pointer checked:border-[black] hover:bg-BackgroundGray",
   };
 
   return (
-    <label
-      htmlFor={`colorPiker-${variant}`}
-      className="relative flex items-center justify-center"
-    >
+    <div className="flex items-center justify-center w-10 h-10 border rounded cursor-pointer checked:border-[black] hover:bg-BackgroundGray">
+      <label
+        htmlFor={`colorPiker-${variant}`}
+        className="cursor-pointer"
+      >{variant}</label>
       <input
         type="radio"
-        className={`${styles[variant]}`}
+        className={`${styles[variant]} appearance-none`}
         name="size-piker"
         id={`colorPiker-${variant}`}
         value={variant}
       ></input>
-      <span className="absolute cursor-pointer text-sm">{variant}</span>
-    </label>
+    </div>
   );
 };
 
