@@ -1,8 +1,9 @@
-import { Slider } from "@material-tailwind/react";
+import RangeField from "./RangeField";
+
 const RangeSlider = () => {
   return (
     <div>
-      
+      <RangeField type="range" text='Price'/>
     </div>
   );
 };

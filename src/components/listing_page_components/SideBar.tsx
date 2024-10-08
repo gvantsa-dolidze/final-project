@@ -16,7 +16,6 @@ const SideBar = () => {
         <SizePiker />
       </div>
       <div>
-        <h3 className="text-start space-y-3">Price</h3>
         <RangeSlider />
       </div>
     </div>
