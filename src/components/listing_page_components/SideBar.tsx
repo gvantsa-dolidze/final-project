@@ -5,7 +5,7 @@ import Categories from "./Categories";
 
 const SideBar = () => {
   return (
-    <div className="border rounded-md p-2 space-y-5 h-[800px]">
+    <div className="border rounded-md p-2 pt-6 space-y-5 h-[700px]">
       <Categories />
       <div className="space-y-3 text-start">
         <h3>Color</h3>
