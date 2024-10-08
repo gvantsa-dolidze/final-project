@@ -1,6 +1,6 @@
 import ShippingAddress from "../components/checkout_page_components/ShippingAddress";
+import YourOrder from "../components/checkout_page_components/YourOrder";
 import Breadcrumb from "../components/elements/Breadcrumb";
-// import InputElement from "../components/elements/InputElement";
 
 const CheckoutPage = () => {
   return (
@@ -10,8 +10,7 @@ const CheckoutPage = () => {
       </div>
       <div className="flex justify-between py-10 max-w-1116 m-auto">
         <ShippingAddress />
-
-        <div></div>
+        <YourOrder />
       </div>
     </div>
   );
