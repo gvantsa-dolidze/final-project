@@ -1,7 +1,13 @@
+import Breadcrumb from "../components/elements/Breadcrumb";
+
 const CheckoutPage = () => {
   return (
-    <div>CheckoutPage</div>
-  )
-}
+    <div>
+      <div className="bg-BackgroundGray py-10">
+        <Breadcrumb />
+      </div>
+    </div>
+  );
+};
 
-export default CheckoutPage
+export default CheckoutPage;
