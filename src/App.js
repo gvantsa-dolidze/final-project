@@ -5,6 +5,7 @@ import Footer from './components/footer_components/Footer';
 import ProductPage from './pages/ProductPage';
 import ListingPage from './pages/ListingPage';
 import CartPage from './pages/CartPage';
+import CheckoutPage from './pages/CheckoutPage'
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -15,10 +16,7 @@ function App() {
         <Route path="/product_page" element={<ProductPage />} />
         <Route path="/listing_page" element={<ListingPage />} />
         <Route path="/cart_page" element={<CartPage />} />
-       
-
-
-
+        <Route path="/checkout_page" element={<CheckoutPage />} />
       </Routes>
       <Footer />
     </div>
