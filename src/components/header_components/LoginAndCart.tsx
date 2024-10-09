@@ -6,7 +6,7 @@ const LoginAndCart = () => {
         <img src="/img/icons/cart.png" alt="login"/>
       </NavLink>
 
-      <NavLink to="/">
+      <NavLink to="/login_page">
         <img src="/img/icons/user.png" alt="cart"/>
       </NavLink>
     </div>
