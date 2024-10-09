@@ -1,9 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
-
 import Featured from './components/homepage_components/Featured';
 import Latest from './components/homepage_components/Latest';
-
 import Header from "./components/header_components/Header";
 import Footer from './components/footer_components/Footer';
 import ProductPage from './pages/ProductPage';
@@ -34,12 +32,14 @@ function App() {
       <Routes>
         {/* homepage routing */}
         <Route path="/" element={<Home />}>
+          <Route index element={ <Featured /> } />
           <Route path="featured" element={<Featured />} />
           <Route path="latest" element={<Latest />} />
         </Route>
 
        {/* productpage routing */}
         <Route path="/product_page" element={<ProductPage />} >
+           <Route index element={ <DetailsContent /> } />
            <Route path="details_content" element={<DetailsContent />} />
            <Route path="reviews_content" element={<ReviewsContent />} />
         </Route>
@@ -55,6 +55,7 @@ function App() {
 
           {/* profile Page routing */}
          <Route path="/profile_page" element={<ProfilePage />} >
+           <Route index element={ <Orders /> } />
            <Route path="orders" element={<Orders />} />
            <Route path="wishlists" element={<WishList />} />
            <Route path="address" element={<Address />} />
