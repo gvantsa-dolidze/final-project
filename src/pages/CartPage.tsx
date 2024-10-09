@@ -8,7 +8,7 @@ const CartPage = () => {
       <div className="bg-BackgroundGray py-5">
         <Breadcrumb />
       </div>
-      <div className="flex justify-between m-auto max-w-1116 py-10">
+      <div className="flex m-auto max-w-1116 py-10 gap-20">
         <CartElement />
         <OrderSummary />
       </div>
