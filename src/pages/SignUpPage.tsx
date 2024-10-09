@@ -2,6 +2,7 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 import Button from "../components/elements/Button";
 import InputElement from "../components/elements/InputElement";
 import ContinueWithGoogle from "../components/authentication_pages_components/ContinueWithGoogle";
+import HorizontalLine from "../components/authentication_pages_components/HorizontalLine";
 
 const SignUpPage = () => {
   return (
@@ -14,9 +15,7 @@ const SignUpPage = () => {
           <div className="flex flex-col items-center gap-5 w-96 py-10">
             <ContinueWithGoogle />
 
-            <div className="flex items-center w-full justify-between">
-              <hr className="w-44" /> <p>OR</p> <hr className="w-44" />
-            </div>
+            <HorizontalLine />
             <form action="" className="space-y-5">
               <InputElement text="name" type="text" placeholder="" />
               <InputElement text="Email" type="email" placeholder="" />
