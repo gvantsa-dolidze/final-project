@@ -7,7 +7,7 @@ const ListingPage = () => {
   return (
     <div>
       <div className="bg-BackgroundGray">
-        <Breadcrumb />
+        <Breadcrumb label='Search'/>
       </div>
       <div className="max-w-1116 m-auto gap-10 flex py-10">
       <SideBar />

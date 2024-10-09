@@ -6,7 +6,7 @@ const ProfilePage = () => {
   return (
     <div>
       <div className="bg-BackgroundGray py-5">
-        <Breadcrumb />
+        <Breadcrumb label='My Account'/>
       </div>
       <div className="max-w-1116 m-auto flex py-10">
         <ProfileSideBar />

@@ -6,7 +6,7 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 const ProductPage = () => {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb label='Product'/>
       <div className="max-w-1116 m-auto py-10 space-y-10">
         <div className="flex justify-between">
           <ImgSwiper />
