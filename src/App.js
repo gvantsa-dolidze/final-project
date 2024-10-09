@@ -11,8 +11,6 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
-
-
 import ProfilePage from './pages/ProfilePage';
 import Orders from './components/profile_pages_components/Orders';
 import WishList from './components/profile_pages_components/WishList';
@@ -43,7 +41,6 @@ function App() {
          <Route path="/profile_page" element={<ProfilePage />} >
            <Route path="orders" element={<Orders />} />
            <Route path="wishlists" element={<WishList />} />
-
            <Route path="address" element={<Address />} />
            <Route path="password" element={<Password />} />
            <Route path="account_detail" element={<AccountDetail />} />
