@@ -1,6 +1,6 @@
+import ForgotPasswordForm from "../components/authentication_pages_components/ForgotPasswordForm";
 import Breadcrumb from "../components/elements/Breadcrumb";
-import Button from "../components/elements/Button";
-import InputElement from "../components/elements/InputElement";
+
 
 const ForgotPassword = () => {
   return (
@@ -17,13 +17,8 @@ const ForgotPassword = () => {
                 We'll promptly send you a link to reset your password.
               </p>
             </div>
-            <form action="" className="space-y-5 w-96">
-              <InputElement text="Email" type="email" placeholder="" />
-
-              <div className="flex flex-col gap-5">
-                <Button label="Send reset link" destination="/reset_password_page" />
-              </div>
-            </form>
+            
+            <ForgotPasswordForm />
           </div>
         </div>
       </div>
