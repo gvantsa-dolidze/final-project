@@ -13,12 +13,10 @@ const Button: React.FC<ButtonProps> = ({ label, variant = "primary", destination
     danger: "",
     outline: "",
     light: 'border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md',
-    link: 'text-gray',
+    link: 'text-gray hover:border-b pb-1',
   };
 
   return (
-
-  
   // <button className={`${styles[variant]}`}>{label}</button>;
   <Link to={destination} className={`${styles[variant]}`}>
       {label}
