@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import ProfileSideBar from "../components/profile_pages_components/ProfileSideBar";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Button from "../components/elements/Button";
 
 const ProfilePage = () => {
   return (
