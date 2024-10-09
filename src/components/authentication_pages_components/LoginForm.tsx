@@ -12,7 +12,7 @@ const LoginForm = () => {
           destination="/forgot_password_page"
           variant="link"
         />
-        <Button label="Login" destination="/" />
+        <Button label="Login" destination="/profile_page" />
         <Button
           label="Don't have an account? Sign up"
           destination="/sign_up_page"
