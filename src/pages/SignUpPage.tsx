@@ -11,7 +11,6 @@ const SignUpPage = () => {
         <Breadcrumb />
       </div>
       <div className="max-w-1116 m-auto flex justify-center">
-        <div className="py-10">
           <div className="flex flex-col items-center gap-5 w-96 py-10">
             <ContinueWithGoogle />
 
@@ -34,7 +33,7 @@ const SignUpPage = () => {
               </div>
             </form>
           </div>
-        </div>
+        
       </div>
     </div>
   );
