@@ -25,8 +25,8 @@ function App() {
         <Route path="/after_payment_page" element={<AfterPaymentPage />} />
         <Route path="/login_page" element={<LoginPage />} />
         <Route path="/sign_up_page" element={<SignUpPage />} />
-        <Route path="/forgot_password" element={<ForgotPassword />} />
-        <Route path="/reset_password" element={<ResetPassword />} />
+        <Route path="/forgot_password_page" element={<ForgotPassword />} />
+        <Route path="/reset_password_page" element={<ResetPassword />} />
       </Routes>
       <Footer />
     </div>
