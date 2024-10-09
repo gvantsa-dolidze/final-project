@@ -7,18 +7,19 @@ const SignUpPage = () => {
       <div className="bg-BackgroundGray">
         <Breadcrumb />
       </div>
-      <div className="max-w-1116 m-auto">
+      <div className="max-w-1116 m-auto flex justify-center">
         <div className="py-10">
-          <div className="flex flex-col items-center gap-5 ">
-            <form action="">
+          <div className="flex flex-col items-center gap-5 w-96 py-10">
+            <div className="flex flex-col gap-5 w-full">
               <Button
                 label="Continue with Google"
                 destination="/"
                 variant="light"
               />
-            </form>
-            <div className="flex gap-2 items-center ">
-              <hr className="w-20" /> <span>OR</span> <hr className="w-20" />
+            </div>
+
+            <div className="flex items-center w-full justify-between">
+              <hr className="w-44" /> <p>OR</p> <hr className="w-44" />
             </div>
             <form action="" className="space-y-5">
               <InputElement text="name" type="text" placeholder="" />
@@ -30,9 +31,12 @@ const SignUpPage = () => {
               </p>
               <div className="flex flex-col gap-5">
                 <Button label="Create account" destination="/" />
-              <Button label="Already have an account? Log in" destination="/login_page" variant='link'/>
+                <Button
+                  label="Already have an account? Log in"
+                  destination="/login_page"
+                  variant="link"
+                />
               </div>
-              
             </form>
           </div>
         </div>
