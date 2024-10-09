@@ -12,8 +12,8 @@ import SignUpPage from './pages/SignUpPage';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import ProfilePage from './pages/ProfilePage';
-import OrdersPage from './components/profile_pages_components/OrdersPage';
-import WishListsPage from './components/profile_pages_components/WishListsPage';
+import OrdersPage from './components/profile_pages_components/Orders';
+import WishListsPage from './components/profile_pages_components/WishList';
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
