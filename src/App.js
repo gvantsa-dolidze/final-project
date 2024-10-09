@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Featured from './components/homepage_components/Featured';
@@ -23,8 +24,6 @@ import AccountDetail from './components/profile_pages_components/AccountDetail';
 import Password from './components/profile_pages_components/Password';
 import Logout from './components/profile_pages_components/Logout';
 
-
-import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
