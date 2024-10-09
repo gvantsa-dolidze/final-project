@@ -7,7 +7,7 @@ import ListingPage from './pages/ListingPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import AfterPaymentPage from './pages/AfterPaymentPage'
-
+import Authentication from './pages/Authentication';
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/cart_page" element={<CartPage />} />
         <Route path="/checkout_page" element={<CheckoutPage />} />
         <Route path="/after_payment_page" element={<AfterPaymentPage />} />
-
+        <Route path="/authentication" element={<Authentication />} />
       </Routes>
       <Footer />
     </div>
