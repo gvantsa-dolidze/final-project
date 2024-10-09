@@ -1,14 +1,14 @@
-import ImgElement from "../elements/ImgElement"
+import OrdersCardElement from "./OrdersCardElement";
+
+
 const Orders = () => {
   return (
-    <div className='flex pl-10 space-y-10'>
-      <h3>Orders</h3>
-      {/* card */}
-      <div className='flex '>
-<ImgElement />
-      </div>
+    <div className="flex  flex-col pl-10 space-y-10">
+      <h3 className="text-start">Orders</h3>
+      <OrdersCardElement />
+      <OrdersCardElement />
     </div>
-  )
-}
+  );
+};
 
-export default Orders
+export default Orders;
