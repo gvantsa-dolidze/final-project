@@ -12,8 +12,8 @@ import SignUpPage from './pages/SignUpPage';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import ProfilePage from './pages/ProfilePage';
-import OrdersPage from './components/profile_pages_components/Orders';
-import WishListsPage from './components/profile_pages_components/WishList';
+import Orders from './components/profile_pages_components/Orders';
+import WishList from './components/profile_pages_components/WishList';
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -33,8 +33,8 @@ function App() {
 
           {/* profile Page routing */}
          <Route path="/profile_page" element={<ProfilePage />} >
-           <Route path="orders_page" element={<OrdersPage />} />
-           <Route path="wishlists_page" element={<WishListsPage />} />
+           <Route path="orders_page" element={<Orders />} />
+           <Route path="wishlists_page" element={<WishList />} />
          </Route>
         
       </Routes>
