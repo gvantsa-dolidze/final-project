@@ -5,7 +5,7 @@ const ForgotPassword = () => {
   return (
     <div>
       <div className="bg-BackgroundGray">
-        <Breadcrumb label='Forgot Password'/>
+        <Breadcrumb label='Forgot Password' title='Forgot Password'/>
       </div>
       <div className="max-w-1116 m-auto flex justify-center">
         <div className="w-96 py-32 space-y-10">

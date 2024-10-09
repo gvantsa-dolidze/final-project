@@ -6,7 +6,7 @@ const CheckoutPage = () => {
   return (
     <div>
       <div className="bg-BackgroundGray py-10">
-        <Breadcrumb label='Checkout'/>
+        <Breadcrumb label='Checkout' title='Checkout'/>
       </div>
       <div className="flex justify-between py-10 max-w-1116 m-auto">
         <ShippingAddress />

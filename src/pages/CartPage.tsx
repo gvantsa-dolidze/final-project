@@ -6,7 +6,7 @@ const CartPage = () => {
   return (
     <div>
       <div className="bg-BackgroundGray py-5">
-        <Breadcrumb label='Cart'/>
+        <Breadcrumb label='Cart' title='Cart'/>
       </div>
       <div className="flex m-auto max-w-1116 py-10 gap-20">
         <CartElement />

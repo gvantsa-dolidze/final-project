@@ -5,7 +5,7 @@ const ResetPassword = () => {
   return (
     <div>
       <div className="bg-BackgroundGray">
-        <Breadcrumb label='lol'/>
+        <Breadcrumb label='Reset Password' title='Reset Password'/>
       </div>
       <div className="max-w-1116 m-auto flex justify-center">
         <ResetPasswordForm />
