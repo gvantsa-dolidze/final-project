@@ -10,7 +10,7 @@ const EditCard = () => {
           <FullRoundedImg />
         </div>
 
-        <Button label="Edit Card" destination="/cart_page" />
+        <Button label="Edit Card" destination="/cart_page" variant="light"/>
       </div>
   )
 }
