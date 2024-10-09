@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Header from "./components/header_components/Header";
 import Footer from './components/footer_components/Footer';
 import ProductPage from './pages/ProductPage';
+import DetailsContent from "./components/product_page_components/DetailsContent";
+import ReviewsContent from "./components/product_page_components/ReviewsContent";
 import ListingPage from './pages/ListingPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
@@ -27,7 +29,13 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product_page" element={<ProductPage />} />
+
+       {/* productpage routing */}
+        <Route path="/product_page" element={<ProductPage />} >
+           <Route path="details_content" element={<DetailsContent />} />
+           <Route path="reviews_content" element={<ReviewsContent />} />
+        </Route>
+
         <Route path="/listing_page" element={<ListingPage />} />
         <Route path="/cart_page" element={<CartPage />} />
         <Route path="/checkout_page" element={<CheckoutPage />} />

@@ -1,8 +1,10 @@
+
 import ImgSwiper from "../components/elements/ImgSwiper";
 import DetailCustomizer from "../components/product_page_components/DetailCustomizer";
 import SimiliarProducts from "../components/product_page_components/SimiliarProducts";
 import AboutProduct from "../components/product_page_components/AboutProduct";
 import Breadcrumb from "../components/elements/Breadcrumb";
+
 const ProductPage = () => {
   return (
     <div>
