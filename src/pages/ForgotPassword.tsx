@@ -8,8 +8,8 @@ const ForgotPassword = () => {
       <div className="bg-BackgroundGray">
         <Breadcrumb />
       </div>
-      <div className="max-w-1116 m-auto">
-        <div className="py-10">
+      <div className="max-w-1116 m-auto flex justify-center">
+        <div className="w-96 py-32">
           <div className="flex flex-col items-center gap-5 ">
             <div>
               <p>
@@ -17,10 +17,10 @@ const ForgotPassword = () => {
                 We'll promptly send you a link to reset your password.
               </p>
             </div>
-            <form action="" className="space-y-5">
+            <form action="" className="space-y-5 w-96">
               <InputElement text="Email" type="email" placeholder="" />
 
-              <div className="">
+              <div className="flex flex-col gap-5">
                 <Button label="Send reset link" destination="/reset_password_page" />
               </div>
             </form>
