@@ -21,7 +21,7 @@ const ForgotPassword = () => {
               <InputElement text="Email" type="email" placeholder="" />
 
               <div className="">
-                <Button label="Send reset link" destination="/" />
+                <Button label="Send reset link" destination="/reset_password_page" />
               </div>
             </form>
           </div>
