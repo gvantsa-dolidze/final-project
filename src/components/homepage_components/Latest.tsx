@@ -1,5 +1,4 @@
 import Card from "../elements/Card";
-
 const Latest = () => {
   return (
     <div className="flex gap-5 py-5">
@@ -8,7 +7,7 @@ const Latest = () => {
       <Card />
       <Card />
     </div>
-  )
-}
+  );
+};
 
-export default Latest
+export default Latest;

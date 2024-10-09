@@ -1,4 +1,3 @@
-
 import ImgSwiper from "../components/elements/ImgSwiper";
 import DetailCustomizer from "../components/product_page_components/DetailCustomizer";
 import SimiliarProducts from "../components/product_page_components/SimiliarProducts";
@@ -8,7 +7,7 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 const ProductPage = () => {
   return (
     <div>
-      <Breadcrumb label='Product' title='Product'/>
+      <Breadcrumb label="Product" title="Product" />
       <div className="max-w-1116 m-auto py-10 space-y-10">
         <div className="flex justify-between">
           <ImgSwiper />
