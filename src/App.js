@@ -1,5 +1,9 @@
 import "./App.css";
 import Home from "./pages/Home";
+
+import Featured from './components/homepage_components/Featured';
+import Latest from './components/homepage_components/Latest';
+
 import Header from "./components/header_components/Header";
 import Footer from './components/footer_components/Footer';
 import ProductPage from './pages/ProductPage';
@@ -28,7 +32,11 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* homepage routing */}
+        <Route path="/" element={<Home />}>
+          <Route path="featured" element={<Featured />} />
+          <Route path="latest" element={<Latest />} />
+        </Route>
 
        {/* productpage routing */}
         <Route path="/product_page" element={<ProductPage />} >
