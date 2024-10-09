@@ -8,7 +8,7 @@ const SignUpPage = () => {
         <Breadcrumb />
       </div>
       <div className="max-w-1116 m-auto">
-        <div className="max-w-1116 m-auto py-10">
+        <div className="py-10">
           <div className="flex flex-col items-center gap-5 ">
             <form action="">
               <Button
