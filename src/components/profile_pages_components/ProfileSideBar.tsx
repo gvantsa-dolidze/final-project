@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const ProfileSideBar = () => {
   return (
-    <div className="flex flex-col w-1/4">
+    <div className="flex flex-col w-1/4 border-r-2">
         <NavLink to="orders" className="mb-2">
           Orders
         </NavLink>
