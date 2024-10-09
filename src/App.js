@@ -8,6 +8,7 @@ import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import AfterPaymentPage from './pages/AfterPaymentPage'
 import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage';
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/checkout_page" element={<CheckoutPage />} />
         <Route path="/after_payment_page" element={<AfterPaymentPage />} />
         <Route path="/login_page" element={<LoginPage />} />
+        <Route path="/sign_up_page" element={<SignUpPage />} />
       </Routes>
       <Footer />
     </div>
