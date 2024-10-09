@@ -10,6 +10,7 @@ import AfterPaymentPage from './pages/AfterPaymentPage'
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login_page" element={<LoginPage />} />
         <Route path="/sign_up_page" element={<SignUpPage />} />
         <Route path="/forgot_password" element={<ForgotPassword />} />
+        <Route path="/reset_password" element={<ResetPassword />} />
       </Routes>
       <Footer />
     </div>
