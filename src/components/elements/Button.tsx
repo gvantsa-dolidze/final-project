@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ label, variant = "primary", destination
     danger: "",
     outline: "",
     light: 'border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md',
-    link: 'text-gray hover:border-b pb-1',
+    link: 'text-gray hover:text-gray-800 pb-1',
   };
 
   return (
