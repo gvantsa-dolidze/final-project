@@ -73,6 +73,16 @@ function App() {
            <Route path="logout" element={<Logout />} />
          </Route>
         
+        {/* admin's Page routing */}
+        <Route path="/admin_page" element={<AdminPage />} >
+           <Route index element={ <Dashboard /> } />
+           <Route path="dashboard" element={<Dashboard />} />
+           <Route path="products" element={<Products />} />
+           <Route path="admins_orders" element={<AdminsOrders />} />
+           <Route path="customers" element={<Customers />} />
+           <Route path="reviews" element={<Reviews />} />
+           <Route path="settings" element={<Settings />} />
+         </Route>
       </Routes>
     </div>
   );

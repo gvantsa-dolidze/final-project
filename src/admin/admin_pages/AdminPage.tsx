@@ -1,7 +1,15 @@
+import { Outlet } from "react-router-dom";
+import AdminSideBar from "../admin_components/AdminSideBar";
 
 const AdminPage = () => {
   return (
-    <div>AdminPage</div>
+    <div className="max-w-[1440px] m-auto flex py-10">
+        <AdminSideBar />
+        <div className="flex-1">
+            <Outlet />
+        </div>
+        
+    </div>
   )
 }
 
