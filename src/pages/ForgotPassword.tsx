@@ -1,9 +1,10 @@
 import ForgotPasswordForm from "../components/authentication_pages_components/ForgotPasswordForm";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Layout from "../components/layout/Layout"
 
 const ForgotPassword = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray">
         <Breadcrumb label='Forgot Password' title='Forgot Password'/>
       </div>
@@ -19,7 +20,7 @@ const ForgotPassword = () => {
           <ForgotPasswordForm />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

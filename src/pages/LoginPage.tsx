@@ -2,10 +2,11 @@ import ContinueWithGoogle from "../components/authentication_pages_components/Co
 import HorizontalLine from "../components/authentication_pages_components/HorizontalLine";
 import Breadcrumb from "../components/elements/Breadcrumb";
 import LoginForm from "../components/authentication_pages_components/LoginForm";
+import Layout from "../components/layout/Layout"
 
 const LoginPage = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray">
         <Breadcrumb label='Login' title='Login'/>
       </div>
@@ -16,7 +17,7 @@ const LoginPage = () => {
             <LoginForm />
           </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

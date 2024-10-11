@@ -3,10 +3,11 @@ import DetailCustomizer from "../components/product_page_components/DetailCustom
 import SimiliarProducts from "../components/product_page_components/SimiliarProducts";
 import AboutProduct from "../components/product_page_components/AboutProduct";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Layout from "../components/layout/Layout"
 
 const ProductPage = () => {
   return (
-    <div>
+    <Layout>
       <Breadcrumb label="Product" title="Product" />
       <div className="max-w-1116 m-auto py-10 space-y-10">
         <div className="flex justify-between">
@@ -16,7 +17,7 @@ const ProductPage = () => {
         <AboutProduct />
         <SimiliarProducts />
       </div>
-    </div>
+    </Layout>
   );
 };
 

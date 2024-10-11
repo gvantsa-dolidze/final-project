@@ -2,10 +2,11 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 import ContinueWithGoogle from "../components/authentication_pages_components/ContinueWithGoogle";
 import HorizontalLine from "../components/authentication_pages_components/HorizontalLine";
 import SignUpForm from "../components/authentication_pages_components/SignUpForm";
+import Layout from "../components/layout/Layout"
 
 const SignUpPage = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray">
         <Breadcrumb label='Sign up' title='Sign up'/>
       </div>
@@ -17,7 +18,7 @@ const SignUpPage = () => {
           </div>
         
       </div>
-    </div>
+    </Layout>
   );
 };
 

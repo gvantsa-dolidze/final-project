@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
 import ProfileSideBar from "../components/profile_pages_components/ProfileSideBar";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Layout from "../components/layout/Layout"
 
 const ProfilePage = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray py-5">
         <Breadcrumb label='My Account' title='My Account'/>
       </div>
@@ -15,7 +16,7 @@ const ProfilePage = () => {
           <Outlet />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

@@ -1,10 +1,11 @@
 import ShippingAddress from "../components/checkout_page_components/ShippingAddress";
 import YourOrder from "../components/checkout_page_components/YourOrder";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Layout from "../components/layout/Layout"
 
 const CheckoutPage = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray py-10">
         <Breadcrumb label='Checkout' title='Checkout'/>
       </div>
@@ -12,7 +13,7 @@ const CheckoutPage = () => {
         <ShippingAddress />
         <YourOrder />
       </div>
-    </div>
+    </Layout>
   );
 };
 

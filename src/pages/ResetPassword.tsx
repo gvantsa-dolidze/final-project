@@ -1,16 +1,17 @@
 import ResetPasswordForm from "../components/authentication_pages_components/ResetPasswordForm";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Layout from "../components/layout/Layout"
 
 const ResetPassword = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray">
         <Breadcrumb label='Reset Password' title='Reset Password'/>
       </div>
       <div className="max-w-1116 m-auto flex justify-center">
         <ResetPasswordForm />
       </div>
-    </div>
+    </Layout>
   );
 };
 

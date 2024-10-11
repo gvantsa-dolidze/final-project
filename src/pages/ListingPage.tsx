@@ -3,9 +3,11 @@ import GridContainer from "../components/listing_page_components/GridContainer";
 import AppliedFilters from "../components/listing_page_components/AppliedFilters";
 import ShowingResults from "../components/listing_page_components/ShowingResults";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Layout from "../components/layout/Layout"
+
 const ListingPage = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray">
         <Breadcrumb label='Search' title=''/>
       </div>
@@ -19,7 +21,7 @@ const ListingPage = () => {
         <GridContainer />
       </div>
     </div>
-    </div>
+    </Layout>
     
   );
 };

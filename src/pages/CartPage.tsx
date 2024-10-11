@@ -1,10 +1,11 @@
 import CartElement from "../components/cart_page_components/CartElement";
 import OrderSummary from "../components/cart_page_components/OrderSummary";
 import Breadcrumb from "../components/elements/Breadcrumb";
+import Layout from "../components/layout/Layout"
 
 const CartPage = () => {
   return (
-    <div>
+    <Layout>
       <div className="bg-BackgroundGray py-5">
         <Breadcrumb label='Cart' title='Cart'/>
       </div>
@@ -12,7 +13,7 @@ const CartPage = () => {
         <CartElement />
         <OrderSummary />
       </div>
-    </div>
+    </Layout>
   );
 };
 
