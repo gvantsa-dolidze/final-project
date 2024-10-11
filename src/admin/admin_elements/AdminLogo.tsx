@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const AdminLogo = () => {
   return (
     <div>
-      <NavLink to="/admin_page" className='flex items-center justify-around'>
+      <NavLink to="/admin_page" className='flex items-center justify-center gap-2 py-10'>
         <div>
           <svg
             width="16"

@@ -3,11 +3,14 @@ import AdminSideBar from "../admin_components/AdminSideBar";
 
 const AdminPage = () => {
   return (
-    <div className="max-w-[1440px] m-auto flex py-10">
-        <AdminSideBar />
+    <div className="bg-BackgroundGray">
+        <div className="max-w-[1440px] m-auto flex py-10">
+            <AdminSideBar />
         <div className="flex-1">
             <Outlet />
         </div>
+        </div>
+        
         
     </div>
   )
