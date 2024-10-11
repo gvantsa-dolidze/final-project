@@ -22,6 +22,17 @@ import AccountDetail from './components/profile_pages_components/AccountDetail';
 import Password from './components/profile_pages_components/Password';
 import Logout from './components/profile_pages_components/Logout';
 
+import About from "./admin/admin_pages/About"
+import AddProduct from "./admin/admin_pages/AddProduct"
+import AdminPage from "./admin/admin_pages/AdminPage"
+import Customers from "./admin/admin_pages/Customers"
+import Dashboard from "./admin/admin_pages/Dashboard"
+import Login from "./admin/admin_pages/Login"
+import AdminsOrders from "./admin/admin_pages/AdminsOrders"
+import Products from "./admin/admin_pages/Products"
+import Reviews from "./admin/admin_pages/Reviews"
+import Settings from "./admin/admin_pages/Settings"
+
 function App() {
   return (
     <div className="App">
