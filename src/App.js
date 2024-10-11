@@ -3,8 +3,6 @@ import "./App.css";
 import Home from "./pages/Home";
 import Featured from './components/homepage_components/Featured';
 import Latest from './components/homepage_components/Latest';
-import Header from "./components/header_components/Header";
-import Footer from './components/footer_components/Footer';
 import ProductPage from './pages/ProductPage';
 import DetailsContent from "./components/product_page_components/DetailsContent";
 import ReviewsContent from "./components/product_page_components/ReviewsContent";
@@ -27,7 +25,7 @@ import Logout from './components/profile_pages_components/Logout';
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
+      
       <Routes>
         {/* homepage routing */}
         <Route path="/" element={<Home />}>
@@ -64,7 +62,6 @@ function App() {
          </Route>
         
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }
