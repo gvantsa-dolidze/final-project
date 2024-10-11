@@ -3,7 +3,7 @@ import AdminSideBar from "../admin_components/AdminSideBar";
 
 const AdminPage = () => {
   return (
-    <div className="bg-BackgroundGray">
+    <div className="bg-BackgroundGray h-screen">
         <div className="max-w-[1440px] m-auto flex py-10">
             <AdminSideBar />
         <div className="flex-1">

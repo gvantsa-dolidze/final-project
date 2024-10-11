@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import AdminLogo from "../admin_elements/AdminLogo";
 const AdminSideBar = () => {
   return (
-    <div className="flex flex-col w-64 border-b-2 p-5 bg-white border-r">
+    <div className="flex flex-col w-64 border-b-2 p-5 bg-white border-r ">
       <AdminLogo />
       <div className="flex flex-col border-b pb-5">
         <NavLink
