@@ -27,7 +27,7 @@ import Logout from './components/profile_pages_components/Logout';
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Routes>
         {/* homepage routing */}
         <Route path="/" element={<Home />}>
@@ -64,7 +64,7 @@ function App() {
          </Route>
         
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
