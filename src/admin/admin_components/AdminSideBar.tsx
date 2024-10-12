@@ -1,17 +1,15 @@
 // import { NavLink } from "react-router-dom"
-import SideBarNavLink from "../../components/elements/SideBarNavLink";
+// import SideBarNavLink from "../../components/elements/SideBarNavLink";
+
+import LinkBtn from "../../components/elements/LinkBtn";
 import AdminLogo from "../admin_elements/AdminLogo";
 const AdminSideBar = () => {
   return (
     <div className="flex flex-col w-64 border-b-2 p-5 bg-white border-r ">
       <AdminLogo />
       <div className="flex flex-col border-b pb-5">
-        <SideBarNavLink />
-        <SideBarNavLink />
-        <SideBarNavLink />
-        <SideBarNavLink />
-        <SideBarNavLink />
-        <SideBarNavLink />
+        <LinkBtn  destination='dashboard' label='Dashboard' variant='sidebar'/>
+        
         {/* <NavLink
           to="dashboard"
           className="p-4 flex justify-start gap-5 hover:bg-BackgroundGray hover:rounded-md"
@@ -62,7 +60,7 @@ const AdminSideBar = () => {
           <img src="/img/icons/Add.png" alt="" />
           <p>Extras</p>
         </NavLink> */}
-        <SideBarNavLink />
+        <LinkBtn destination='' label='Extras' variant='sidebar'/>
       </div>
     </div>
   );
