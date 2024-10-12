@@ -2,6 +2,7 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 import HorizontalLine from "../components/authentication_pages_components/HorizontalLine";
 import SignUpForm from "../components/authentication_pages_components/SignUpForm";
 import Layout from "../components/layout/Layout"
+import Button from "../components/elements/Button";
 
 const SignUpPage = () => {
   return (
@@ -11,6 +12,12 @@ const SignUpPage = () => {
       </div>
       <div className="max-w-1116 m-auto flex justify-center">
           <div className="flex flex-col items-center gap-5 w-96 py-10">
+          <Button
+            label="Continue with Google"
+            variant="light"
+            img="/img/social icons/Google.png"
+            className="w-full"
+          />
             <HorizontalLine />
             <SignUpForm />
           </div>
