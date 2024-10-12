@@ -1,12 +1,18 @@
 interface InputElementProps {
-  variant?: "form";
-  text: string;
+  variant?: "form" | 'noBorder';
+  text?: string;
   type: React.HTMLInputTypeAttribute;
-  placeholder: string;
+  placeholder?: string;
 }
-const InputElement: React.FC<InputElementProps> = ({ variant = "form", text, type, placeholder }) => {
+const InputElement: React.FC<InputElementProps> = ({
+  variant = "form",
+  text = "",
+  type = "",
+  placeholder = "",
+}) => {
   const styles: Record<string, string> = {
     form: "outline-none border py-2 px-3 rounded-md text-sm box-border",
+    noBorder: 'outline-none py-2 px-3 rounded-md text-sm box-border',
   };
 
   return (
