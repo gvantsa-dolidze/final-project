@@ -81,9 +81,11 @@ function App() {
           <Route path="customers" element={<Customers />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="settings" element={<Settings />} />
+
+          <Route path="add_product" element={<AddProduct />} />
+          <Route path="login" element={<Login />} />
         </Route>
-        <Route path="add_product" element={<AddProduct />} />
-        <Route path="login" element={<Login />} />
+
       </Routes>
     </div>
   );
