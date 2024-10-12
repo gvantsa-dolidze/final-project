@@ -1,21 +1,10 @@
-import { NavLink } from "react-router-dom";
+import LinkBtn from "../elements/LinkBtn";
+
 const DetailsAndReviews = () => {
   return (
     <div className="space-y-5 w-[241px]">
-      <NavLink
-        to="details_content"
-        className="flex gap-3 px-4 py-3 w-[241px] cursor-pointer"
-      >
-        <img src="/img/icons/More.png" alt="dots" />
-        <span>Details</span>
-      </NavLink>
-      <NavLink
-        to="reviews_content"
-        className="flex gap-3 px-4 py-3 w-[241px] cursor-pointer"
-      >
-        <img src="/img/icons/Empty Star.png" alt="star" />
-        <span>Reviews</span>
-      </NavLink>
+      <LinkBtn destination='details_content' img='/img/icons/More.png' label='Details' variant='sidebar'/>
+      <LinkBtn destination='reviews_content' img='/img/icons/Empty Star.png' label='Reviews' variant='sidebar'/>
     </div>
   );
 };
