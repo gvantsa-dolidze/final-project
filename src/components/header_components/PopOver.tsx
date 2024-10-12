@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import LinkBtn from "../elements/LinkBtn";
 
 interface PopOverProps { 
     categories: string;
@@ -13,12 +13,12 @@ interface PopOverProps {
 
 const PopOver: React.FC<PopOverProps> = ({
     categories,
-    perfume,
-    trousers,
-    shoe,
-    handbag,
-    hat,
-    thermos,
+    // perfume,
+    // trousers,
+    // shoe,
+    // handbag,
+    // hat,
+    // thermos,
   }) => {
   return (
     <Popover className="relative">
@@ -27,12 +27,12 @@ const PopOver: React.FC<PopOverProps> = ({
           <img src="/img/icons/Chevron Down.png" alt="arrow_down" />
         </PopoverButton>
         <PopoverPanel anchor="bottom" className="flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3">
-          <NavLink to="/perfume" className="hover:bg-BackgroundGray px-4 py-2">{perfume}</NavLink>
-          <NavLink to="/trousers" className="hover:bg-BackgroundGray px-4 py-2">{trousers}</NavLink>
-          <NavLink to="/shoe" className="hover:bg-BackgroundGray px-4 py-2">{shoe}</NavLink>
-          <NavLink to="/handbag" className="hover:bg-BackgroundGray px-4 py-2">{handbag}</NavLink>
-          <NavLink to="/hat" className="hover:bg-BackgroundGray px-4 py-2">{hat}</NavLink>
-          <NavLink to="/thermos" className="hover:bg-BackgroundGray px-4 py-2">{thermos}</NavLink>
+        <LinkBtn destination="/listing_page/" label="perfume" variant="sidebar" />
+        <LinkBtn destination="" label="trousers" variant="sidebar" />
+        <LinkBtn destination="" label="shoe" variant="sidebar" />
+        <LinkBtn destination="" label="handbag" variant="sidebar" />
+        <LinkBtn destination="" label="hat" variant="sidebar" />
+        <LinkBtn destination="" label="thermos" variant="sidebar" />
         </PopoverPanel>
       </Popover>
   )
