@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
     secondary: "border rounded-full px-4 py-1 text-sm hover:bg-BackgroundGray",
     danger: "",
     outline: "",
-    light: "border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md",
+    light: "flex items-center justify-center gap-2 border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md ",
     link: "text-gray hover:text-gray-800 pb-1",
     gray: "bg-BackgroundGray rounded-md",
   };
