@@ -1,4 +1,6 @@
+import Button from "../elements/Button"
 import ImgElement from "../elements/ImgElement"
+
 const CartCardElement = () => {
   return (
     <div className="flex items-center justify-between mt-5">
@@ -15,13 +17,7 @@ const CartCardElement = () => {
         <div className="flex gap-5">
           <div>$75.00</div>
           <div> - 1 + </div>
-          <button>
-            <img
-              src="/img/icons/x.png"
-              alt="x"
-              className="bg-BackgroundGray rounded-md"
-            />
-          </button>
+          <Button  variant='gray' img='/img/icons/x.png'/>
         </div>
       </div>
   )
