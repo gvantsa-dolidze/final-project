@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import LinkBtn from "../elements/LinkBtn";
 
 const ProfileSideBar = () => {

@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 interface ButtonProps {
   destination: string;
   label: string;
@@ -18,9 +16,6 @@ const Button: React.FC<ButtonProps> = ({ label='label', variant = "primary", des
 
   return (
    <button className={`${styles[variant]}`}>{label}</button>
-  // <Link to={destination} className={`${styles[variant]}`}>
-  //     {label}
-  //   </Link>
   )
 };
 
