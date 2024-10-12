@@ -1,4 +1,5 @@
-import Button from "./Button";
+import LinkBtn from "./LinkBtn";
+
 interface CardProps {
   variant?: "primary" | "secondary" | "danger" | "outline";
 }
@@ -21,7 +22,7 @@ const Card: React.FC<CardProps> = ({ variant = "primary" }) => {
       
       <h2>text text text</h2>
       <div className="flex items-center gap-3">
-        <Button label="IN STOCK" variant = "secondary"/>
+        <LinkBtn label="IN STOCK" variant = "secondary" destination="/listing_page"/>
         <p>$000</p>
       </div>
     </div>
