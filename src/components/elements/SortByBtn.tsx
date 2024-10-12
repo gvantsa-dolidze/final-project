@@ -1,6 +1,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { NavLink } from "react-router-dom";
+import LinkBtn from "./LinkBtn";
+
 const SortByBtn = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -20,39 +21,17 @@ const SortByBtn = () => {
       >
         <div className="py-1">
           <MenuItem>
-            <NavLink
-              to=""
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Most Popular
-            </NavLink>
+            <LinkBtn destination="" label="Most Popular" variant="sidebar" />
           </MenuItem>
           <MenuItem>
-            <NavLink
-              to=""
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Least Popular
-            </NavLink>
+            <LinkBtn destination="" label="Least Popular" variant="sidebar" />
           </MenuItem>
           <MenuItem>
-            <NavLink
-              to=""
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-            >
-              Newest First
-            </NavLink>
+            <LinkBtn destination="" label="Newest First" variant="sidebar" />
           </MenuItem>
-          <form action="#" method="POST">
-            <MenuItem>
-              <button
-                type="submit"
-                className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
-              >
-                Oldest First
-              </button>
-            </MenuItem>
-          </form>
+          <MenuItem>
+            <LinkBtn destination="" label="Oldest First" variant="sidebar" />
+          </MenuItem>
         </div>
       </MenuItems>
     </Menu>
