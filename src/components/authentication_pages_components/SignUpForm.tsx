@@ -1,5 +1,7 @@
 import Button from "../elements/Button";
 import InputElement from "../elements/InputElement";
+import LinkBtn from "../elements/LinkBtn";
+
 const SignUpForm = () => {
   return (
     <form action="" className="space-y-5">
@@ -12,9 +14,10 @@ const SignUpForm = () => {
               </p>
               <div className="flex flex-col gap-5">
                 <Button label="Create account" />
-                <Button
+                <LinkBtn
                   label="Already have an account? Log in"
                   variant="link"
+                  destination="/login_page"
                 />
               </div>
             </form>
