@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 interface LinkBtnProps {
   destination: string;
   label?: string;
@@ -10,7 +9,8 @@ interface LinkBtnProps {
     | "outline"
     | "link"
     | "light"
-    | "sidebar";
+    | "sidebar"
+    | "gray";
   alt?: string;
   img?: string;
   reverse?: boolean;
@@ -34,6 +34,7 @@ const LinkBtn: React.FC<LinkBtnProps> = ({
     outline: "",
     light: "border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md",
     link: "text-gray hover:border-b pb-1",
+    gray: "bg-BackgroundGray rounded-md",
   };
 
   return (
