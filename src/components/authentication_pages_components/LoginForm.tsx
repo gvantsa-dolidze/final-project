@@ -1,5 +1,7 @@
 import Button from "../elements/Button";
 import InputElement from "../elements/InputElement";
+import LinkBtn from "../elements/LinkBtn";
+
 const LoginForm = () => {
   return (
     <form action="" className="space-y-5">
@@ -7,14 +9,16 @@ const LoginForm = () => {
       <InputElement text="password" type="password" placeholder="" />
 
       <div className="flex flex-col gap-5 w-96">
-        <Button
+        <LinkBtn
           label="Forgot Password?"
           variant="link"
+          destination="/forgot_password_page"
         />
         <Button label="Login" />
-        <Button
+        <LinkBtn
           label="Don't have an account? Sign up"
           variant="link"
+          destination="/sign_up_page"
         />
       </div>
     </form>
