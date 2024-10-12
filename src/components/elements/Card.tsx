@@ -2,8 +2,9 @@ import LinkBtn from "./LinkBtn";
 
 interface CardProps {
   variant?: "primary" | "secondary" | "danger" | "outline";
+  id?: string;
 }
-const Card: React.FC<CardProps> = ({ variant = "primary" }) => {
+const Card: React.FC<CardProps> = ({ variant = "primary", id=''}) => {
   const styles: Record<string, string> = {
     primary: "w-[264px] h-[434px] text-start space-y-5",
     secondary: "",
@@ -22,7 +23,7 @@ const Card: React.FC<CardProps> = ({ variant = "primary" }) => {
       
       <h2>text text text</h2>
       <div className="flex items-center gap-3">
-        <LinkBtn label="IN STOCK" variant = "secondary" destination="/listing_page"/>
+        <LinkBtn label="IN STOCK" variant = "secondary" destination={`/product_page/${id}`}/>
         <p>$000</p>
       </div>
     </div>
