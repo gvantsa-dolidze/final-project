@@ -1,5 +1,7 @@
 import Button from "../elements/Button"
 import FullRoundedImg from "../elements/FullRoundedImg"
+import LinkBtn from "../elements/LinkBtn"
+
 
 const EditCard = () => {
   return (
@@ -9,8 +11,7 @@ const EditCard = () => {
           <FullRoundedImg />
           <FullRoundedImg />
         </div>
-
-        <Button label="Edit Card" variant="light"/>
+        <LinkBtn  label="Edit Card" variant="light" destination='/cart_page'/>
       </div>
   )
 }
