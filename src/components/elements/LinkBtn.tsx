@@ -5,8 +5,10 @@ interface LinkButtonProps {
   destination: string;
   label: string;
   variant?: "primary" | "secondary" | "danger" | "outline" | 'link' | 'light' | 'sidebar';
+  alt?: string;
+  img?: string;
 }
-const LinkButton: React.FC<LinkButtonProps> = ({ label, variant = "primary", destination }) => {
+const LinkButton: React.FC<LinkButtonProps> = ({ label, variant = "primary", destination, alt ='logo', img }) => {
   const styles: Record<string, string> = {
     primary: "bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm",
     secondary: "border rounded-full px-4 py-1 text-sm hover:bg-BackgroundGray",
@@ -18,7 +20,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ label, variant = "primary", des
 
   return (
   <NavLink to={destination} className={`${styles[variant]}`}>
-      {label}
+    {img && <img src={img} alt={alt} />}<p>{label}</p>
     </NavLink>
   )
 };

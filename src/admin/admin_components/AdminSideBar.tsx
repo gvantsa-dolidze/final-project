@@ -8,7 +8,11 @@ const AdminSideBar = () => {
     <div className="flex flex-col w-64 border-b-2 p-5 bg-white border-r ">
       <AdminLogo />
       <div className="flex flex-col border-b pb-5">
-        <LinkBtn  destination='dashboard' label='Dashboard' variant='sidebar'/>
+        <LinkBtn  destination='dashboard' 
+                  label='Dashboard' 
+                  variant='sidebar' 
+                  img='/img/icons/Dashboard.png'
+                  />
         
         {/* <NavLink
           to="dashboard"
@@ -60,7 +64,7 @@ const AdminSideBar = () => {
           <img src="/img/icons/Add.png" alt="" />
           <p>Extras</p>
         </NavLink> */}
-        <LinkBtn destination='' label='Extras' variant='sidebar'/>
+        <LinkBtn destination='' label='Extras' variant='sidebar' img='/img/icons/Add.png'/>
       </div>
     </div>
   );
