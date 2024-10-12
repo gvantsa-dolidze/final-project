@@ -8,7 +8,7 @@ interface LinkButtonProps {
   alt?: string;
   img?: string;
 }
-const LinkButton: React.FC<LinkButtonProps> = ({ label, variant = "primary", destination, alt ='logo', img }) => {
+const LinkButton: React.FC<LinkButtonProps> = ({ label='label', variant = "primary", destination='', alt ='logo', img }) => {
   const styles: Record<string, string> = {
     primary: "bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm",
     secondary: "border rounded-full px-4 py-1 text-sm hover:bg-BackgroundGray",
