@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
 import PopOver from "./PopOver";
+import LinkBtn from "../elements/LinkBtn";
+
 
 interface HeaderNavProps {
   home: string;
@@ -8,13 +9,13 @@ interface HeaderNavProps {
 }
 
 const HeaderNav: React.FC<HeaderNavProps> = ({
-  home,
-  about,
-  contact,
+  // home,
+  // about,
+  // contact,
 }) => {
   return (
     <div className="space-x-5 flex">
-      <NavLink to="/">{home}</NavLink>
+      <LinkBtn  destination="/" label='Home' variant="link"/>
       <PopOver 
           categories="Categories"
           perfume='Perfume'
@@ -24,8 +25,8 @@ const HeaderNav: React.FC<HeaderNavProps> = ({
           hat='Hat'
           thermos='Thermos'
       />
-      <NavLink to="/about">{about}</NavLink>
-      <NavLink to="/contact">{contact}</NavLink>
+      <LinkBtn  destination="/about" label='About' variant="link"/>
+      <LinkBtn  destination="/contact" label='Contact' variant="link"/>
     </div>
   );
 };
