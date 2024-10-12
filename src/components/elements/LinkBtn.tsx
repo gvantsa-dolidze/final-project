@@ -6,8 +6,9 @@ interface LinkBtnProps {
   variant?: "primary" | "secondary" | "danger" | "outline" | 'link' | 'light' | 'sidebar';
   alt?: string;
   img?: string;
+  reverse?: boolean;
 }
-const LinkBtn: React.FC<LinkBtnProps> = ({ label, variant = "primary", destination='', alt ='logo', img }) => {
+const LinkBtn: React.FC<LinkBtnProps> = ({ label, variant = "primary", destination='', alt ='logo', img, reverse = false }) => {
   const styles: Record<string, string> = {
     primary: "flex items-center justify-center bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm ",
     secondary: "border rounded-full px-4 py-1 text-sm hover:bg-BackgroundGray",
@@ -19,8 +20,9 @@ const LinkBtn: React.FC<LinkBtnProps> = ({ label, variant = "primary", destinati
 
   return (
   <NavLink to={destination} className={`${styles[variant]}`}>
-    {img && <img src={img} alt={alt} />}
+    {!reverse && img && <img src={img} alt={alt} />}
     {label && <p>{label}</p>}
+    {reverse && img && <img src={img} alt={alt} className="ml-2" />}
     </NavLink>
   )
 };

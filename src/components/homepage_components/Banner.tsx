@@ -7,7 +7,12 @@ const Banner = () => {
         <div className="space-y-5 my-auto flex flex-col">
           <h2>Fresh Arrivals Online</h2>
           <p className="pb-6">Discover Our Newest Collection Today.</p>
-          <LinkBtn destination="" label='View Collection' img='/img/icons/Arrow Right.png'/>
+          <LinkBtn
+            destination="/listing_page"
+            label="View Collection"
+            img="/img/icons/Arrow Right.png"
+            reverse={true}
+          />
         </div>
         <div className="relative">
           <img
