@@ -10,7 +10,7 @@ const Password = () => {
           <InputElement text="New Password" type="password" placeholder="" />
           <InputElement text="Confirm Password" type="password" placeholder="" />
           <div>
-            <Button label="Change Password" destination="/" />
+            <Button label="Change Password"  />
           </div>
         </form>
       </div>

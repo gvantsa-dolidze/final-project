@@ -18,7 +18,7 @@ const PlaceOrder = () => {
       <p>Total</p> <p>$ 100.00</p>
     </div>
     <div className="flex flex-col gap-7">
-      <Button label="Place Order" destination="/after_payment_page" />
+      <Button label="Place Order" />
     </div>
   </div>
   )

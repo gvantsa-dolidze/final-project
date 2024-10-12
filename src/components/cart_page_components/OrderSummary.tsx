@@ -20,10 +20,9 @@ const OrderSummary = () => {
         <p>Total</p> <p>$ 100.00</p>
       </div>
       <div className="flex flex-col gap-7">
-        <Button label="Checkout" destination="/checkout_page" />
+        <Button label="Checkout" />
         <Button
           label="Continue Shopping"
-          destination="/listing_page"
           variant="link"
         />
       </div>

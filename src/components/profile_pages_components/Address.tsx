@@ -7,7 +7,7 @@ const Address = () => {
       <div className="w-96">
         <ShippingAddress />
         <div className="flex mt-5">
-         <Button label='Save Changes' destination='/'/>   
+         <Button label='Save Changes' />   
         </div>
         
       </div>

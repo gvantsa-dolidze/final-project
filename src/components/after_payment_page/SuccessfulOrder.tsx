@@ -7,7 +7,7 @@ const SuccessfulOrder = () => {
             <img src="/img/Frame.png" alt="box" />
             <h3>Thank you for shopping</h3>
             <p>Your order has been successfully placed and is now being processed.</p>
-            <Button label="Go to my account" destination="/" />
+            <Button label="Go to my account" />
         </div>
     </div>
   )

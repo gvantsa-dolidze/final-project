@@ -12,8 +12,8 @@ const WishlistCardElement = () => {
         </div>
       </div>
       <div className="flex gap-5 items-center">
-        <Button variant="link" label="Remove item" destination="/" />
-        <Button variant="light" label="Add to cart" destination="/" />
+        <Button variant="link" label="Remove item"  />
+        <Button variant="light" label="Add to cart"  />
       </div>
     </div>
   );

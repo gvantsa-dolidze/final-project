@@ -7,7 +7,7 @@ const StartShopping = () => {
                 <img src="/img/empty_state.png" alt="" className="w-20"/>
                 <p>Your order history is waiting to be filled.</p>
                 <div>
-                    <Button label='Start Shopping' destination="/listing_page"/>
+                    <Button label='Start Shopping' />
                 </div>
             </div>
         </div>

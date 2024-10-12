@@ -5,7 +5,6 @@ const ContinueWithGoogle = () => {
     <div className="flex flex-col gap-5 w-full">
               <Button
                 label="Continue with Google"
-                destination="/"
                 variant="light"
               />
             </div>

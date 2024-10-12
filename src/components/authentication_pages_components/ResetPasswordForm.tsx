@@ -6,7 +6,7 @@ const ResetPasswordForm = () => {
       <InputElement text="New password" type="password" placeholder="" />
       <InputElement text="Confirm password" type="password" placeholder="" />
       <div className="flex flex-col gap-5">
-        <Button label="Reset password" destination="/" />
+        <Button label="Reset password"/>
       </div>
     </form>
   );

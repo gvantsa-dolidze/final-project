@@ -9,13 +9,11 @@ const LoginForm = () => {
       <div className="flex flex-col gap-5 w-96">
         <Button
           label="Forgot Password?"
-          destination="/forgot_password_page"
           variant="link"
         />
-        <Button label="Login" destination="/profile_page" />
+        <Button label="Login" />
         <Button
           label="Don't have an account? Sign up"
-          destination="/sign_up_page"
           variant="link"
         />
       </div>

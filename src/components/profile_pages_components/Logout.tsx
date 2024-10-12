@@ -6,8 +6,8 @@ const Logout = () => {
       <div>
         <h3>Are you sure you want to log out?</h3>
         <div className="mt-10 space-x-5">
-          <Button label="Yes, log out" destination="/" />
-          <Button label="No, stay logged in" destination="/" />
+          <Button label="Yes, log out"  />
+          <Button label="No, stay logged in"  />
         </div>
       </div>
     </div>

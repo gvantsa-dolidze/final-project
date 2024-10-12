@@ -9,7 +9,7 @@ const SecondBanner = () => {
             Step into a world of style and explore our diverse collection of
             clothing categories.
           </p>
-          <Button label="Start Browsing"  destination='/listing_page'/>
+          <Button label="Start Browsing"  />
         </div>
         <div className="">
           <img

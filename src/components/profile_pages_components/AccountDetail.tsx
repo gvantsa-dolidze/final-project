@@ -12,7 +12,7 @@ const AccountDetail = () => {
           <InputElement text="Full Name" type="text" placeholder="" />
           <InputElement text="Email" type="Email" placeholder="" />
           <div>
-            <Button label="Save Changes" destination="/" />
+            <Button label="Save Changes"  />
           </div>
         </form>
       </div>

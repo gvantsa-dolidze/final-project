@@ -6,7 +6,7 @@ const ForgotPasswordForm = () => {
       <InputElement text="Email" type="email" placeholder="" />
 
       <div className="flex flex-col gap-5">
-        <Button label="Send reset link" destination="/reset_password_page" />
+        <Button label="Send reset link"  />
       </div>
     </form>
   );

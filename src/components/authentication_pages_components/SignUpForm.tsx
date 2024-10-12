@@ -11,10 +11,9 @@ const SignUpForm = () => {
                 Privacy Policy,
               </p>
               <div className="flex flex-col gap-5">
-                <Button label="Create account" destination="/" />
+                <Button label="Create account" />
                 <Button
                   label="Already have an account? Log in"
-                  destination="/login_page"
                   variant="link"
                 />
               </div>

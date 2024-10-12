@@ -4,8 +4,8 @@ const FeaturedLatest = () => {
   return (
     <div className="max-w-1116 m-auto py-16">
       <div className="text-center space-x-4">
-        <Button label="Featured" variant="link" destination="featured" />
-        <Button label="Latest" variant="link" destination="latest" />
+        <Button label="Featured" variant="link" />
+        <Button label="Latest" variant="link"  />
       </div>
       <Outlet />
     </div>
