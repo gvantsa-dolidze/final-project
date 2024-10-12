@@ -9,7 +9,7 @@ interface LinkBtnProps {
 }
 const LinkBtn: React.FC<LinkBtnProps> = ({ label, variant = "primary", destination='', alt ='logo', img }) => {
   const styles: Record<string, string> = {
-    primary: "bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm",
+    primary: "flex items-center justify-center bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm ",
     secondary: "border rounded-full px-4 py-1 text-sm hover:bg-BackgroundGray",
     sidebar: "p-4 flex justify-start gap-5 hover:bg-BackgroundGray hover:rounded-md",
     outline: "",
