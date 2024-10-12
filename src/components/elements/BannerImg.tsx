@@ -15,7 +15,7 @@ const BannerImg = () => {
     <img
       src="/img/banner/guy_img.png"
       alt="guy_img"
-      className="w-[255px] h-[382px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
     />
   </div>
   )

@@ -4,7 +4,7 @@ import LinkBtn from "../elements/LinkBtn";
 const Banner = () => {
   return (
     <div className="bg-BackgroundGray py-5">
-      <div className="text-start max-w-1116 m-auto space-y-5 flex justify-between">
+      <div className="text-start max-w-1116 m-auto h-[460px] flex justify-between">
         <div className="space-y-5 my-auto flex flex-col w-96">
           <h2>Fresh Arrivals Online</h2>
           <p className="pb-6">Discover Our Newest Collection Today.</p>
