@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className="bg-BackgroundGray py-5">
       <div className="text-start max-w-1116 m-auto space-y-5 flex justify-between">
-        <div className="space-y-5 my-auto flex flex-col">
+        <div className="space-y-5 my-auto flex flex-col w-96">
           <h2>Fresh Arrivals Online</h2>
           <p className="pb-6">Discover Our Newest Collection Today.</p>
           <LinkBtn
@@ -12,6 +12,7 @@ const Banner = () => {
             label="View Collection"
             img="/img/icons/Arrow Right.png"
             reverse={true}
+            className='w-52'
           />
         </div>
         <div className="relative">
