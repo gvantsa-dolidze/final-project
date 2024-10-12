@@ -1,14 +1,10 @@
-import { NavLink } from "react-router-dom";
+import LinkBtn from "../elements/LinkBtn";
+
 const LoginAndCart = () => {
   return (
-    <div className="flex gap-8 shrink-0 items-center">
-      <NavLink to="/cart_page">
-        <img src="/img/icons/cart.png" alt="login"/>
-      </NavLink>
-
-      <NavLink to="/login_page">
-        <img src="/img/icons/user.png" alt="cart"/>
-      </NavLink>
+    <div className="flex gap-5 items-center">
+      <LinkBtn destination='/cart_page' img="/img/icons/cart.png" variant='link'/>
+      <LinkBtn destination='/login_page' img="/img/icons/user.png" variant='link'/>
     </div>
   );
 };
