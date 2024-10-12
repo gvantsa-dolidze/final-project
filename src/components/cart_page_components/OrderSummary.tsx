@@ -1,4 +1,5 @@
 import Button from "../elements/Button";
+import LinkBtn from "../elements/LinkBtn";
 
 const OrderSummary = () => {
   return (
@@ -21,9 +22,10 @@ const OrderSummary = () => {
       </div>
       <div className="flex flex-col gap-7">
         <Button label="Checkout" />
-        <Button
+        <LinkBtn
           label="Continue Shopping"
           variant="link"
+          destination="/listing_page"
         />
       </div>
     </div>

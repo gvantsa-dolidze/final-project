@@ -33,7 +33,7 @@ const LinkBtn: React.FC<LinkBtnProps> = ({
       "p-4 flex justify-start gap-5 hover:bg-BackgroundGray hover:rounded-md",
     outline: "",
     light: "border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md",
-    link: "text-gray hover:border-b pb-1",
+    link: "text-gray hover:text-gray-800",
     gray: "bg-BackgroundGray rounded-md",
   };
 
