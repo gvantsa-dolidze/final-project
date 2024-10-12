@@ -1,14 +1,13 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
-interface LinkButtonProps {
+interface LinkBtnProps {
   destination: string;
-  label: string;
+  label? : string;
   variant?: "primary" | "secondary" | "danger" | "outline" | 'link' | 'light' | 'sidebar';
   alt?: string;
   img?: string;
 }
-const LinkButton: React.FC<LinkButtonProps> = ({ label='label', variant = "primary", destination='', alt ='logo', img }) => {
+const LinkBtn: React.FC<LinkBtnProps> = ({ label, variant = "primary", destination='', alt ='logo', img }) => {
   const styles: Record<string, string> = {
     primary: "bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm",
     secondary: "border rounded-full px-4 py-1 text-sm hover:bg-BackgroundGray",
@@ -20,9 +19,10 @@ const LinkButton: React.FC<LinkButtonProps> = ({ label='label', variant = "prima
 
   return (
   <NavLink to={destination} className={`${styles[variant]}`}>
-    {img && <img src={img} alt={alt} />}<p>{label}</p>
+    {img && <img src={img} alt={alt} />}
+    {label && <p>{label}</p>}
     </NavLink>
   )
 };
 
-export default LinkButton;
+export default LinkBtn;
