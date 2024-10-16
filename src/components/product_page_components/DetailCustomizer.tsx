@@ -31,7 +31,7 @@ const DetailCustomizer = () => {
       </div>
       <div className="space-y-2">
         <h2 className="text-start">Quantity</h2>
-        <Counter />
+        <Counter itemId="yourItemId"/>
       </div>
       <div className="flex gap-5 items-center">
         <Button label="Add to cart" /> 

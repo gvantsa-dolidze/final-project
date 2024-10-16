@@ -1,39 +1,51 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from '../store'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import type { RootState } from '../store';
 
 // Define a type for the slice state
+interface CartItem {
+  quantity: number;
+}
+
 interface CounterState {
-  value: number
+  items: Record<string, CartItem>; // Object mapping item IDs to quantities
 }
 
 // Define the initial state using that type
 const initialState: CounterState = {
-  value: 0,
-}
+  items: {},
+};
 
 export const counterSlice = createSlice({
   name: 'counter',
-  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
+    increment: (state, action: PayloadAction<string>) => {
+      const itemId = action.payload;
+      if (!state.items[itemId]) {
+        state.items[itemId] = { quantity: 0 };
+      }
+      state.items[itemId].quantity += 1;
     },
-    decrement: (state) => {
-      if (state.value > 0) {
-        state.value -= 1;
+    decrement: (state, action: PayloadAction<string>) => {
+      const itemId = action.payload;
+      if (state.items[itemId] && state.items[itemId].quantity > 0) {
+        state.items[itemId].quantity -= 1;
       }
     },
-    // Use the PayloadAction type to declare the contents of `action.payload`
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload
+    incrementByAmount: (state, action: PayloadAction<{ itemId: string; amount: number }>) => {
+      const { itemId, amount } = action.payload;
+      if (!state.items[itemId]) {
+        state.items[itemId] = { quantity: 0 };
+      }
+      state.items[itemId].quantity += amount;
     },
   },
-})
+});
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
-// Other code such as selectors can use the imported `RootState` type
-export const selectCount = (state: RootState) => state.counter.value
+// Selector to get the quantity of a specific item
+export const selectItemQuantity = (state: RootState, itemId: string) =>
+  state.counter.items[itemId]?.quantity || 0;
 
-export default counterSlice.reducer
+export default counterSlice.reducer;
