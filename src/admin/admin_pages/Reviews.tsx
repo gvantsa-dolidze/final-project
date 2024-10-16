@@ -6,7 +6,10 @@ import AdminTableHeader from "../admin_components/AdminTableHeader";
 const Reviews = () => {
   return (
     <div className="bg-white rounded-md border">
-<SearchBar />
+      <div className="flex justify-between items-center p-7">
+        <h3>Reviews</h3>
+        <SearchBar />
+      </div>{" "}
       <table className="w-full p-7">
         <AdminTableHeader showName={true} showReview={true} showAction={true} />
         <AdminTableCell
