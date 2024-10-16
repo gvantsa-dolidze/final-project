@@ -68,7 +68,12 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
           <p className="text-start">{name}</p>
         </td>
       )}
-      
+      {showOrder && (
+        <td>
+          <p className="text-start">{order}</p>
+        </td>
+      )}
+       
       {showPrice && (
         <td>
           <p className="text-start">{price}</p>
@@ -94,6 +99,11 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
           <p className="text-start">{action}</p>
         </td>
       )}
+      {showDate && (
+        <td>
+          <p className="text-start">{date}</p>
+        </td>
+      )}
       {showTotal && (
         <td>
           <p className="text-start">{total}</p>
@@ -104,16 +114,8 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
           <p className="text-start">{status}</p>
         </td>
       )}
-      {showOrder && (
-        <td>
-          <p className="text-start">{order}</p>
-        </td>
-      )}
-      {showDate && (
-        <td>
-          <p className="text-start">{date}</p>
-        </td>
-      )}
+      
+      
       {showEmail && (
         <td>
           <p className="text-start">{email}</p>

@@ -15,7 +15,17 @@ const AdminsOrders = () => {
           showStatus={true}
           showAction={true}
         />
-        {/* <AdminTableCell /> */}
+        <AdminTableCell 
+          showOrder={true}
+          order='Raw Black T-Shirt Lineup'
+          showDate={true}
+          date='20 Mar, 2023'
+          showTotal={true}
+          total='$75.00'
+          showStatus={true}
+          status="Processing"
+          
+        />
       </table>
 
       <div className="flex justify-end">
