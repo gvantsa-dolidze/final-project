@@ -24,7 +24,6 @@ const AdminsOrders = () => {
           total='$75.00'
           showStatus={true}
           status="Processing"
-          
         />
       </table>
 

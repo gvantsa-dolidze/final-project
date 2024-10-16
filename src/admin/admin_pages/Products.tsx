@@ -1,5 +1,4 @@
 import Pagination from "../../components/elements/Pagination";
-import Categories from "../../components/listing_page_components/Categories";
 import AdminSearchBar from "../admin_components/AdminSearchBar";
 import AdminTableCell from "../admin_components/AdminTableCell";
 import AdminTableHeader from "../admin_components/AdminTableHeader";

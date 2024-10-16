@@ -71,28 +71,28 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
       )}
       {showOrder && (
         <th>
-          <p>{order}</p>
+          <p className="text-start">{order}</p>
         </th>
       )}
       {showDate && (
         <th>
-          <p>{date}</p>
+          <p className="text-start">{date}</p>
         </th>
       )}
       {showEmail && (
         <th>
-          <p>{email}</p>
+          <p className="text-start">{email}</p>
         </th>
       )}
       {showAddress && (
         <th>
-          <p>{address}</p>
+          <p className="text-start">{address}</p>
         </th>
       )}
       
       {showTotal && (
         <th>
-          <p>{total}</p>
+          <p className="text-start">{total}</p>
         </th>
       )}
       {showSKU && (
@@ -107,7 +107,7 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
       )}
       {showReview && (
         <th>
-          <p>{review}</p>
+          <p className="text-start">{review}</p>
         </th>
       )}
       {showStock && (
@@ -122,7 +122,7 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
       )}
       {showStatus && (
         <th>
-          <p>{status}</p>
+          <p className="text-start">{status}</p>
         </th>
       )}
       {showAction && (
