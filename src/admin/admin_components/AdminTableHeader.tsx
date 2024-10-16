@@ -13,6 +13,7 @@ interface AdminTableHeaderProps {
   showDate?: boolean;
   showEmail?: boolean;
   showAddress?: boolean;
+  showReview?: boolean;
   name?: string;
   sku?: string;
   price?: string;
@@ -25,6 +26,7 @@ interface AdminTableHeaderProps {
   date?: string;
   email?: string;
   address?: string;
+  review?: string;
 }
 
 const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
@@ -40,6 +42,7 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
   showDate = false,
   showEmail = false,
   showAddress = false,
+  showReview = false,
   name = "Name",
   email = 'Email',
   sku = "SKU",
@@ -52,6 +55,7 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
   status = "Status",
   order = "Order",
   date = "Date",
+  review = 'Review'
 }) => {
   return (
     <tr className="border-b border-t">
@@ -99,6 +103,11 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
       {showPrice && (
         <th>
           <p className="text-start">{price}</p>
+        </th>
+      )}
+      {showReview && (
+        <th>
+          <p>{review}</p>
         </th>
       )}
       {showStock && (
