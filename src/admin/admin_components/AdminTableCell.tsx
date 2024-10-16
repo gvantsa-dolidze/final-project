@@ -129,7 +129,7 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
       )}
       {showReview && (
         <td>
-          <p className="text-start">{showReview}</p>
+          <p className="text-start">{review}</p>
         </td>
       )}
       <td>
