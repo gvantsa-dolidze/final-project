@@ -6,8 +6,10 @@ import Layout from "../components/layout/Layout"
 const CheckoutPage = () => {
   return (
     <Layout>
-      <div className="bg-BackgroundGray py-10">
-        <Breadcrumb label='Checkout' title='Checkout'/>
+      <div className="bg-BackgroundGray">
+      <div className="max-w-1116 m-auto py-5">
+          <Breadcrumb label="Search" title="" />
+        </div>
       </div>
       <div className="flex justify-between py-10 max-w-1116 m-auto">
         <ShippingAddress />

@@ -8,7 +8,9 @@ const LoginPage = () => {
   return (
     <Layout>
       <div className="bg-BackgroundGray">
-        <Breadcrumb label="Login" title="Login" />
+      <div className="max-w-1116 m-auto py-5">
+          <Breadcrumb label="Search" title="" />
+        </div>
       </div>
       <div className="max-w-1116 m-auto flex justify-center py-10">
         <div className="flex flex-col items-center gap-5 w-96 py-10">

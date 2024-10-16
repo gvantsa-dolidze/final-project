@@ -6,8 +6,10 @@ import Layout from "../components/layout/Layout"
 const AfterPaymentPage = () => {
   return (
     <Layout>
-      <div className="bg-[#D5E5D7] py-10">
-        <Breadcrumb label='Successful Order' title='Successful Order'/>
+      <div className="bg-[#D5E5D7]">
+      <div className="max-w-1116 m-auto py-5">
+          <Breadcrumb label="Search" title="" />
+        </div>
       </div>
       <div className="max-w-1116 m-auto">
         <SuccessfulOrder />

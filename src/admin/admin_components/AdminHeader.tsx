@@ -3,7 +3,7 @@ import Button from "../../components/elements/Button"
 
 const AdminHeader = () => {
   return (
-    <div className="">
+    <div className="flex justify-between p-7">
         <Breadcrumb label='Admin' title=''/>
         <Button  img="/img/icons/Logout.png" variant="gray"/>
     </div>

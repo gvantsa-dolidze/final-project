@@ -6,8 +6,10 @@ import Layout from "../components/layout/Layout"
 const CartPage = () => {
   return (
     <Layout>
-      <div className="bg-BackgroundGray py-5">
-        <Breadcrumb label='Cart' title='Cart'/>
+      <div className="bg-BackgroundGray">
+      <div className="max-w-1116 m-auto py-5">
+          <Breadcrumb label="Search" title="" />
+        </div>
       </div>
       <div className="flex m-auto max-w-1116 py-10 gap-20">
         <CartElement />

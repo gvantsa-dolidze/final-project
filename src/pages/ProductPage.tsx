@@ -8,7 +8,10 @@ import Layout from "../components/layout/Layout"
 const ProductPage = () => {
   return (
     <Layout>
-      <Breadcrumb label="Product" title="Product" />
+      <div className="max-w-1116 m-auto py-5">
+        <Breadcrumb label="Product" title="Product" />
+      </div>
+      
       <div className="max-w-1116 m-auto py-10 space-y-10">
         <div className="flex justify-between">
           <ImgSwiper />
