@@ -20,12 +20,16 @@ const AddProduct = () => {
           <div className="w-72 space-y-5">
             <InputElement type="text" text="Stock status" />
             <InputElement type="text" text="Available quantity" />
-            <InputElement
+            <div>
+              <h3 className="text-start text-gray-700">Image</h3>
+              <InputElement
               type="file"
               text="Choose product images"
               variant="hidden"
               img="/img/icons/Upload.png"
             />
+            </div>
+            
             <div>
               <h3 className="text-start">Colors</h3>
               <ColorPiker />
