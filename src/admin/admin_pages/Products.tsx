@@ -10,7 +10,7 @@ const Products = () => {
       <div className="flex justify-between gap-7 p-7 items-center">
         <h3>Product</h3>
         <div className="flex gap-7">
-          <LinkBtn label="Add product" destination="add_product" />
+          <LinkBtn label="Add product" destination="/admin_page/add_product" />
           <SearchBar />
         </div>
       </div>
