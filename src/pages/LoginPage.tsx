@@ -8,8 +8,14 @@ const LoginPage = () => {
   return (
     <Layout>
       <div className="bg-BackgroundGray">
-      <div className="max-w-1116 m-auto py-5">
-          <Breadcrumb label="Search" title="" />
+        <div className="max-w-1116 m-auto py-5">
+          <Breadcrumb
+            title="Login"
+            label="Ecommerce"
+            secondaryLabel="Login"
+            destination="/"
+            secondaryDestination="/login_page"
+          />
         </div>
       </div>
       <div className="max-w-1116 m-auto flex justify-center py-10">

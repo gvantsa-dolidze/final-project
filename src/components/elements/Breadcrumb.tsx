@@ -1,14 +1,14 @@
 import LinkBtn from "./LinkBtn";
 
 interface BreadcrumbProps {
-  label: string;
+  label?: string;
   title?: string;
   secondaryLabel?: string;
   destination?: string;
   secondaryDestination?: string;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ label, title, secondaryLabel = '', destination='', secondaryDestination=''}) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ label='', title, secondaryLabel = '', destination='', secondaryDestination=''}) => {
   return (
     <div className="max-w-1116 py-5 ">
       <h3 className="text-start pb-4 text-xl">{title}</h3>

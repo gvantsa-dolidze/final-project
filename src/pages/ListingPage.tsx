@@ -10,7 +10,12 @@ const ListingPage = () => {
     <Layout>
       <div className="bg-BackgroundGray">
         <div className="max-w-1116 m-auto py-5">
-          <Breadcrumb label="Search" title="" />
+          <Breadcrumb
+            label="Ecommerce"
+            secondaryLabel="Search"
+            destination="/"
+            secondaryDestination="/listing_page"
+          />
         </div>
       </div>
       <div className="max-w-1116 m-auto gap-10 flex py-10">
