@@ -1,15 +1,16 @@
 import Button from "../../components/elements/Button";
 
 interface AdminTableHeaderProps {
-  showName?: boolean; 
-  showSKU?: boolean; 
-  showPrice?: boolean; 
-  showStock?: boolean; 
-  showCategories?: boolean; 
+  showName?: boolean;
+  showSKU?: boolean;
+  showPrice?: boolean;
+  showStock?: boolean;
+  showCategories?: boolean;
   showAction?: boolean;
   showTotal?: boolean;
   showStatus?: boolean;
   showOrder?: boolean;
+  showDate?: boolean;
   name?: string;
   sku?: string;
   price?: string;
@@ -19,6 +20,7 @@ interface AdminTableHeaderProps {
   total?: string;
   status?: string;
   order?: string;
+  date?: string;
 }
 
 const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
@@ -31,6 +33,7 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
   showTotal = false,
   showStatus = false,
   showOrder = false,
+  showDate = false,
   name = "Name",
   sku = "SKU",
   price = "Price",
@@ -40,6 +43,7 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
   total = "Total",
   status = "Status",
   order = "Order",
+  date = "Date",
 }) => {
   return (
     <tr className="border-b border-t">
@@ -51,6 +55,21 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
       {showName && (
         <th>
           <p className="text-start">{name}</p>
+        </th>
+      )}
+      {showOrder && (
+        <th>
+          <p>{order}</p>
+        </th>
+      )}
+      {showDate && (
+        <th>
+          <p>{date}</p>
+        </th>
+      )}
+      {showTotal && (
+        <th>
+          <p>{total}</p>
         </th>
       )}
       {showSKU && (
@@ -73,25 +92,14 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
           <p className="text-start">{categories}</p>
         </th>
       )}
-
-      {showAction && (
-        <th>
-          <p>{action}</p>
-        </th>
-      )}
-      {showTotal && (
-        <th>
-          <p>{total}</p>
-        </th>
-      )}
       {showStatus && (
         <th>
           <p>{status}</p>
         </th>
       )}
-      {showOrder && (
+      {showAction && (
         <th>
-          <p>{order}</p>
+          <p>{action}</p>
         </th>
       )}
     </tr>
