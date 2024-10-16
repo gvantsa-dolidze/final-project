@@ -3,7 +3,7 @@ import AdminTable from "../admin_components/AdminTable";
 
 const Products = () => {
   return (
-    <div className="bg-white ">
+    <div className="bg-white rounded-md border">
       <AdminSearchBart />
       <AdminTable />
     </div>
