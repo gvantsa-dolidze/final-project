@@ -7,9 +7,12 @@ import AdminTableHeader from "../admin_components/AdminTableHeader";
 const Products = () => {
   return (
     <div className="bg-white rounded-md border">
-      <div className="flex justify-end gap-7 p-7 items-center">
-        <LinkBtn label="Add product" destination="add_product" />
-        <SearchBar />
+      <div className="flex justify-between gap-7 p-7 items-center">
+        <h3>Product</h3>
+        <div className="flex gap-7">
+          <LinkBtn label="Add product" destination="add_product" />
+          <SearchBar />
+        </div>
       </div>
       <table className="w-full p-7">
         <AdminTableHeader
