@@ -1,5 +1,3 @@
-import Button from "../../components/elements/Button";
-import ImgElement from "../../components/elements/ImgElement";
 import AdminTableCell from "./AdminTableCell";
 import AdminTableHeader from "./AdminTableHeader";
 
