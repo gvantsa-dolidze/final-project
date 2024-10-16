@@ -1,13 +1,16 @@
+import LinkBtn from "../../components/elements/LinkBtn";
 import Pagination from "../../components/elements/Pagination";
-import AdminSearchBar from "../admin_components/AdminSearchBar";
+import SearchBar from "../../components/header_components/SearchBar";
 import AdminTableCell from "../admin_components/AdminTableCell";
 import AdminTableHeader from "../admin_components/AdminTableHeader";
 
 const Products = () => {
   return (
     <div className="bg-white rounded-md border">
-      <AdminSearchBar showButton={true} />
-
+      <div className="flex justify-end gap-7 p-7 items-center">
+        <LinkBtn label="Add product" destination="add_product" />
+        <SearchBar />
+      </div>
       <table className="w-full p-7">
         <AdminTableHeader
           showName={true}
