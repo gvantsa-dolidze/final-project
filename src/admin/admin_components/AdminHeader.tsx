@@ -3,9 +3,9 @@ import Button from "../../components/elements/Button"
 
 const AdminHeader = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="">
         <Breadcrumb label='Admin' title=''/>
-        <Button />
+        <Button  img="/img/icons/Logout.png" variant="gray"/>
     </div>
   )
 }
