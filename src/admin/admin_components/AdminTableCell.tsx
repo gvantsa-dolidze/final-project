@@ -94,6 +94,11 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
           <p className="text-start">{categories}</p>
         </td>
       )}
+      {showEmail && (
+        <td>
+          <p className="text-start">{email}</p>
+        </td>
+      )}
       {showAction && (
         <td>
           <p className="text-start">{action}</p>
@@ -116,11 +121,7 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
       )}
       
       
-      {showEmail && (
-        <td>
-          <p className="text-start">{email}</p>
-        </td>
-      )}
+      
       {showAddress && (
         <td>
           <p className="text-start">{address}</p>
