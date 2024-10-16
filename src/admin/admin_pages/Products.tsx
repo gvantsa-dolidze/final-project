@@ -1,9 +1,13 @@
-import React from 'react'
+import AdminSearchBart from "../admin_components/AdminSearchBar";
+import AdminTable from "../admin_components/AdminTable";
 
 const Products = () => {
   return (
-    <div>Products</div>
-  )
-}
+    <div className="bg-white ">
+      <AdminSearchBart />
+      <AdminTable />
+    </div>
+  );
+};
 
-export default Products
+export default Products;
