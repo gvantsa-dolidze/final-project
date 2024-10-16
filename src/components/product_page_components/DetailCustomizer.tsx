@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../elements/Button";
 import ColorPiker from "../elements/ColorPiker";
 import SizePiker from "../elements/SizePiker";
+import { Counter } from "../../store/app/Counter";
 
 const DetailCustomizer = () => {
   return (
@@ -28,8 +29,9 @@ const DetailCustomizer = () => {
         <h2 className="text-start">SELECT SIZE</h2>
         <SizePiker />
       </div>
-      <div>
+      <div className="space-y-2">
         <h2 className="text-start">Quantity</h2>
+        <Counter />
       </div>
       <div className="flex gap-5 items-center">
         <Button label="Add to cart" /> 
