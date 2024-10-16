@@ -1,4 +1,5 @@
 import Pagination from "../../components/elements/Pagination";
+import Categories from "../../components/listing_page_components/Categories";
 import AdminSearchBar from "../admin_components/AdminSearchBar";
 import AdminTableCell from "../admin_components/AdminTableCell";
 import AdminTableHeader from "../admin_components/AdminTableHeader";
@@ -23,7 +24,18 @@ const Products = () => {
           categories="Categories"
           action="Action"
         />
-        <AdminTableCell />
+        <AdminTableCell
+          showName={true}
+          name="Raw Black T-Shirt Lineup"
+          showSKU={true}
+          sku="47514501"
+          showPrice={true}
+          price="$75.00"
+          showStock={true}
+          stock="In Stock"
+          showCategories={true}
+          categories="T-shirt, Men"
+        />
       </table>
 
       <div className="flex justify-end">
