@@ -12,6 +12,7 @@ interface ButtonProps {
   img?: string;
   reverse?: boolean;
   className?: string;
+  onClick?: () => void;
 }
 const Button: React.FC<ButtonProps> = ({
   label,
@@ -20,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   img,
   reverse = false,
   className = "",
+  onClick,
 }) => {
   const styles: Record<string, string> = {
     primary: "bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm",
@@ -32,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button className={`${styles[variant]} ${className}`}>
+    <button className={`${styles[variant]} ${className}`} onClick={onClick}>
       {!reverse && img && <img src={img} alt={alt} />}
       {label && <p>{label}</p>}
       {reverse && img && <img src={img} alt={alt} className="ml-2" />}
