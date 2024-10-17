@@ -1,6 +1,6 @@
 import Button from "../elements/Button"
 import ProductPrice from "../elements/ProductPrice"
-import Title from "../product_page_components/TItle"
+import Title from "../product_page_components/Title"
 
 const PlaceOrder = () => {
   return (

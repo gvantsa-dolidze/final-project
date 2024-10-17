@@ -3,14 +3,14 @@ import ColorPiker from "../elements/ColorPiker";
 import SizePiker from "../elements/SizePiker";
 import { Counter } from "../../store/app/Counter";
 import LinkBtn from "../elements/LinkBtn";
-import ProductTItle from "./TItle";
+import Title from "./Title";
 import ProductPrice from "../elements/ProductPrice";
 
 const DetailCustomizer = () => {
   return (
     <div className="space-y-10 w-[438px]">
       <div className="flex justify-between">
-        <ProductTItle />
+        <Title variant="title24" />
         <Button img="/img/icons/Share.png" variant="link" />
       </div>
 
@@ -26,15 +26,20 @@ const DetailCustomizer = () => {
       </div>
       <ProductPrice />
       <div className="flex flex-col items-start">
-        <h3>Available Colors</h3>
+        <Title variant="title12" title="Available Colors" className="pb-2" />
         <ColorPiker />
       </div>
       <div>
-        <h3 className="text-start">SELECT SIZE</h3>
+        <Title
+          variant="title12"
+          title="SELECT SIZE"
+          className="text-start pb-2"
+        />
+
         <SizePiker />
       </div>
       <div className="space-y-2">
-        <h2 className="text-start">Quantity</h2>
+        <Title variant="title12" title="Quantity" className="text-start pb-2" />
         <Counter itemId="yourItemId" />
       </div>
       <div className="flex gap-5 items-center">
@@ -45,7 +50,11 @@ const DetailCustomizer = () => {
           className=""
         />
       </div>
-      <div className="text-start">— Free shipping on orders $100+</div>
+      <Title
+        variant="title12"
+        title="— Free shipping on orders $100+"
+        className="text-start pb-2"
+      />
     </div>
   );
 };
