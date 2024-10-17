@@ -9,8 +9,9 @@ const ListingPage = () => {
   return (
     <Layout>
       <div className="bg-BackgroundGray">
-        <div className="max-w-1116 m-auto py-5">
+        <div className="max-w-1116 m-auto">
           <Breadcrumb
+            title=''
             label="Ecommerce"
             secondaryLabel="Search"
             destination="/"
