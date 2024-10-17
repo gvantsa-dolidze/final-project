@@ -1,41 +1,46 @@
-import { NavLink } from "react-router-dom";
 import Button from "../elements/Button";
 import ColorPiker from "../elements/ColorPiker";
 import SizePiker from "../elements/SizePiker";
 import { Counter } from "../../store/app/Counter";
+import LinkBtn from "../elements/LinkBtn";
 
 const DetailCustomizer = () => {
   return (
     <div className="space-y-10 w-[438px]">
       <div className="flex justify-between">
-        <h2>Raw Black T-Shirt Lineup</h2>
-        <button>
-          <img src="/img/icons/Share.png" alt="share" />
-        </button>
+        <h3>Raw Black T-Shirt Lineup</h3>
+        <Button img="/img/icons/Share.png" variant="link" />
       </div>
       <div className="flex gap-5">
-        <NavLink to="" className="flex  items-center bg-[#F6F6F6] rounded-full px-3">
-          <img src="/img/icons/Star.png" alt="star" className="w-5 h-5"/>
-          <span className="text-sm">4.2 — 54 Reviews</span>
-        </NavLink>
+        <LinkBtn
+          destination="details_content"
+          variant="secondary"
+          img="/img/icons/Star.png"
+          label="4.2 — 54 Reviews"
+          className="flex items-center"
+        />
         <Button label="IN STOCK" variant="secondary" />
       </div>
       <div className="text-start">$0000</div>
       <div className="flex flex-col items-start">
-        <h2>Available Colors</h2>
+        <h3>Available Colors</h3>
         <ColorPiker />
       </div>
       <div>
-        <h2 className="text-start">SELECT SIZE</h2>
+        <h3 className="text-start">SELECT SIZE</h3>
         <SizePiker />
       </div>
       <div className="space-y-2">
         <h2 className="text-start">Quantity</h2>
-        <Counter itemId="yourItemId"/>
+        <Counter itemId="yourItemId" />
       </div>
       <div className="flex gap-5 items-center">
-        <Button label="Add to cart" /> 
-        <button className="border-2 border-[#F6F6F6] p-1 rounded-md"><img src="/img/icons/Heart.png" alt="heart_img" /></button>
+        <Button label="Add to cart" />
+        <Button
+          img="/img/icons/Heart.png"
+          variant="borderPngBtn"
+          className=""
+        />
       </div>
       <div className="text-start">— Free shipping on orders $100+</div>
     </div>

@@ -7,7 +7,8 @@ interface ButtonProps {
     | "outline"
     | "link"
     | "light"
-    | "gray";
+    | "gray"
+    | "borderPngBtn"
   alt?: string;
   img?: string;
   reverse?: boolean;
@@ -30,7 +31,8 @@ const Button: React.FC<ButtonProps> = ({
     outline: "",
     light: "flex items-center justify-center gap-2 border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md ",
     link: "text-gray hover:text-gray-800",
-    gray: "bg-BackgroundGray rounded-md",
+    gray: "bg-BackgroundGray rounded-md ",
+    borderPngBtn: "flex items-center justify-center gap-2 border px-2 py-2 text-sm hover:bg-BackgroundGray rounded-md ",
   };
 
   return (
