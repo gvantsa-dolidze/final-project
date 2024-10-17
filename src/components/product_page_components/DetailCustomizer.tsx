@@ -3,14 +3,12 @@ import ColorPiker from "../elements/ColorPiker";
 import SizePiker from "../elements/SizePiker";
 import { Counter } from "../../store/app/Counter";
 import LinkBtn from "../elements/LinkBtn";
+import ProductTItle from "./ProductTItle";
 
 const DetailCustomizer = () => {
   return (
     <div className="space-y-10 w-[438px]">
-      <div className="flex justify-between">
-        <h3>Raw Black T-Shirt Lineup</h3>
-        <Button img="/img/icons/Share.png" variant="link" />
-      </div>
+      <ProductTItle />
       <div className="flex gap-5">
         <LinkBtn
           destination="details_content"
