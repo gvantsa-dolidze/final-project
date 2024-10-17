@@ -1,6 +1,6 @@
 interface TitleProps {
   title?: string; // Title of the product
-  variant?: "PageTitle" | "ProductTitle" | "ElementTitle";
+  variant?: "title24" | "title12" | "title16" | 'title14';
   className?: string;
 }
 const Title: React.FC<TitleProps> = ({
@@ -9,9 +9,10 @@ const Title: React.FC<TitleProps> = ({
   className = "",
 }) => {
   const styles: Record<string, string> = {
-    PageTitle: "",
-    ProductTitle:"",
-    ElementTitle: "",
+    title12: 'text-xs',
+    title14: 'text-sm',
+    title16: 'text-base',
+    title24: 'text-2xl',
   };
 
   return <h3 className={`${styles[variant]} ${className}`}>{title}</h3>;
