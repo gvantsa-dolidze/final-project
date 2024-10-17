@@ -20,7 +20,7 @@ const DetailCustomizer = () => {
           variant="secondary"
           img="/img/icons/Star.png"
           label="4.2 — 54 Reviews"
-          className="flex items-center"
+          className="flex items-center text-xs"
         />
         <Button label="IN STOCK" variant="secondary" />
       </div>
@@ -39,7 +39,7 @@ const DetailCustomizer = () => {
         <SizePiker />
       </div>
       <div className="space-y-2">
-        <Title variant="title12" title="Quantity" className="text-start pb-2" />
+        <Title variant="title12" title="Quantity" className="text-start" />
         <Counter itemId="yourItemId" />
       </div>
       <div className="flex gap-5 items-center">
@@ -53,7 +53,7 @@ const DetailCustomizer = () => {
       <Title
         variant="title12"
         title="— Free shipping on orders $100+"
-        className="text-start pb-2"
+        className="text-start"
       />
     </div>
   );
