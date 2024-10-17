@@ -4,6 +4,7 @@ import SizePiker from "../elements/SizePiker";
 import { Counter } from "../../store/app/Counter";
 import LinkBtn from "../elements/LinkBtn";
 import ProductTItle from "./ProductTItle";
+import ProductPrice from "../elements/ProductPrice";
 
 const DetailCustomizer = () => {
   return (
@@ -19,7 +20,7 @@ const DetailCustomizer = () => {
         />
         <Button label="IN STOCK" variant="secondary" />
       </div>
-      <div className="text-start">$0000</div>
+      <ProductPrice />
       <div className="flex flex-col items-start">
         <h3>Available Colors</h3>
         <ColorPiker />
