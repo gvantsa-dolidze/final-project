@@ -1,12 +1,9 @@
-import Button from "../elements/Button"
-
-const ProductTItle = () => {
-  return (
-    <div className="flex justify-between">
-        <h3>Raw Black T-Shirt Lineup</h3>
-        <Button img="/img/icons/Share.png" variant="link" />
-      </div>
-  )
+import Button from "../elements/Button";
+interface ProductTitleProps {
+  title?: string; // Title of the product
 }
+const ProductTItle: React.FC<ProductTitleProps> = ({ title = 'Raw Black T-Shirt Lineup' }) => {
+  return <h3>{title}</h3>;
+};
 
-export default ProductTItle
+export default ProductTItle;

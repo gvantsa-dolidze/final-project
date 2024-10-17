@@ -2,7 +2,6 @@ import Button from "../elements/Button";
 import LinkBtn from "../elements/LinkBtn";
 import ProductPrice from "../elements/ProductPrice";
 
-
 const OrderSummary = () => {
   return (
     <div className="border rounded-md py-10 px-2  flex flex-col w-96 gap-5">

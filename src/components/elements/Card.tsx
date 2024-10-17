@@ -1,3 +1,4 @@
+import ProductTItle from "../product_page_components/ProductTItle";
 import LinkBtn from "./LinkBtn";
 import ProductPrice from "./ProductPrice";
 
@@ -18,8 +19,7 @@ const Card: React.FC<CardProps> = ({ variant = "primary", id = "" }) => {
       <div className="w-[264px] h-[312px] bg-BackgroundGray rounded-md flex justify-center">
         <img src="/img/cover.png" alt="product" />
       </div>
-
-      <h2>text text text</h2>
+      <ProductTItle/> 
       <div className="flex items-center gap-3">
         <LinkBtn
           label="IN STOCK"

@@ -2,6 +2,8 @@ import { Counter } from "../../store/app/Counter";
 import Button from "../elements/Button";
 import ImgElement from "../elements/ImgElement";
 import ProductPrice from "../elements/ProductPrice";
+import ProductTItle from "../product_page_components/ProductTItle";
+
 
 interface CartCardElementProps {
   itemId: string; // Adjust type as necessary (string or number)
@@ -14,7 +16,7 @@ const CartCardElement: React.FC<CartCardElementProps> = ({ itemId }) => {
       <div className="flex gap-5">
         <ImgElement />
         <div className="text-start">
-          <h3>Raw Black T-Shirt Lineup</h3>
+         <ProductTItle title='Raw Black T-Shirt Lineup'/>
           <div className="flex gap-2 items-center">
             color: <div className="bg-green-700 w-3 h-3 rounded-full"></div> -
             Size: M
