@@ -1,4 +1,4 @@
-import ProductTItle from "../product_page_components/ProductTItle";
+import ProductTItle from "../product_page_components/TItle";
 import LinkBtn from "./LinkBtn";
 import ProductPrice from "./ProductPrice";
 

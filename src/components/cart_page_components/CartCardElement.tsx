@@ -2,7 +2,7 @@ import { Counter } from "../../store/app/Counter";
 import Button from "../elements/Button";
 import ImgElement from "../elements/ImgElement";
 import ProductPrice from "../elements/ProductPrice";
-import ProductTItle from "../product_page_components/ProductTItle";
+import ProductTItle from "../product_page_components/TItle";
 import ColorSizeDisplay from "./ColorSizeDisplay";
 
 interface CartCardElementProps {

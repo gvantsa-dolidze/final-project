@@ -3,7 +3,7 @@ import ColorPiker from "../elements/ColorPiker";
 import SizePiker from "../elements/SizePiker";
 import { Counter } from "../../store/app/Counter";
 import LinkBtn from "../elements/LinkBtn";
-import ProductTItle from "./ProductTItle";
+import ProductTItle from "./TItle";
 import ProductPrice from "../elements/ProductPrice";
 
 const DetailCustomizer = () => {
