@@ -1,12 +1,12 @@
-import SelectSizeRadioBtn from "./SelectSizeBtn"
+import SelectSizeBtn from "./SelectSizeBtn"
 const SizePiker = () => {
   return (
     <div className="space-x-2 flex">
-          <SelectSizeRadioBtn variant="s" type='checkbox'/>
-          <SelectSizeRadioBtn variant="m" type='checkbox'/>
-          <SelectSizeRadioBtn variant="l" type='checkbox'/>
-          <SelectSizeRadioBtn variant="xl" type='checkbox'/>
-          <SelectSizeRadioBtn variant="xxl" type='checkbox'/>
+          <SelectSizeBtn variant="s" />
+          <SelectSizeBtn variant="m" />
+          <SelectSizeBtn variant="l" />
+          <SelectSizeBtn variant="xl"/>
+          <SelectSizeBtn variant="xxl"/>
         </div>
   )
 }

@@ -1,8 +1,10 @@
 interface SelectColorRadioBtnProps {
   variant?: "blue" | "yellow" | "red" | "pink" | "green";
+  type?: string;
 }
 const SelectColorRadioBtn: React.FC<SelectColorRadioBtnProps> = ({
   variant = "blue",
+  type = 'checkbox'
 }) => {
   const styles: Record<string, string> = {
     blue: "appearance-none cursor-pointer w-5 h-5 bg-blue-500 rounded-full border-2 border-transparent checked:border-white checked:outline checked:outline-gray-500 hover:bg-blue-200",
@@ -18,7 +20,7 @@ const SelectColorRadioBtn: React.FC<SelectColorRadioBtnProps> = ({
     <div>
       <label htmlFor={`colorPiker-${[variant]}`}></label>
       <input
-        type="radio"
+        type={type}
         className={`${styles[variant]}`}
         name="color_piker"
         id={`colorPiker-${[variant]}`}

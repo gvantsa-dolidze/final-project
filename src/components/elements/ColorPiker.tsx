@@ -1,12 +1,12 @@
-import SelectColorRadioBtn from "./SelectColorRadioBtn"
+import SelectColorBtn from "./SelectColorBtn"
 const ColorPiker = () => {
   return (
     <div className="space-x-2 flex">
-          <SelectColorRadioBtn variant="blue" />
-          <SelectColorRadioBtn variant="green" />
-          <SelectColorRadioBtn variant="red" />
-          <SelectColorRadioBtn variant="yellow" />
-          <SelectColorRadioBtn variant="pink" />
+          <SelectColorBtn variant="blue" />
+          <SelectColorBtn variant="green" />
+          <SelectColorBtn variant="red" />
+          <SelectColorBtn variant="yellow" />
+          <SelectColorBtn variant="pink" />
         </div>
   )
 }
