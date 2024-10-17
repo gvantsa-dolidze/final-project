@@ -1,8 +1,8 @@
-interface SelectSizeRadioBtnProps {
+interface SelectSizeBtnProps {
   variant?: "s" | "m" | "l" | "xl" | "xxl";
   type?: string;
 }
-const SelectSizeRadioBtn: React.FC<SelectSizeRadioBtnProps> = ({
+const SelectSizeBtn: React.FC<SelectSizeBtnProps> = ({
   variant = "s",
   type = 'checkbox'
 }) => {
@@ -25,4 +25,4 @@ const SelectSizeRadioBtn: React.FC<SelectSizeRadioBtnProps> = ({
   );
 };
 
-export default SelectSizeRadioBtn;
+export default SelectSizeBtn;
