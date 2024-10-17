@@ -1,5 +1,6 @@
 import Button from "../../components/elements/Button";
 import ImgElement from "../../components/elements/ImgElement";
+import ProductPrice from "../../components/elements/ProductPrice";
 
 interface AdminTableCellProps {
   showName?: boolean;
@@ -73,18 +74,18 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
           <p className="text-start">{order}</p>
         </td>
       )}
-       
+
       {showPrice && (
         <td>
-          <p className="text-start">{price}</p>
+          <ProductPrice />{" "}
         </td>
       )}
-       {showSKU && (
+      {showSKU && (
         <td>
           <p className="text-start">{sku}</p>
         </td>
       )}
-       {showStock && (
+      {showStock && (
         <td>
           <p className="text-start">{stock}</p>
         </td>
@@ -111,7 +112,7 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
       )}
       {showTotal && (
         <td>
-          <p className="text-start">{total}</p>
+          <ProductPrice />{" "}
         </td>
       )}
       {showStatus && (
@@ -119,9 +120,7 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
           <p className="text-start">{status}</p>
         </td>
       )}
-      
-      
-      
+
       {showAddress && (
         <td>
           <p className="text-start">{address}</p>
