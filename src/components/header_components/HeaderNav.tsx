@@ -14,7 +14,7 @@ const HeaderNav: React.FC<HeaderNavProps> = ({
   // contact,
 }) => {
   return (
-    <div className="space-x-5 md:flex hidden">
+    <div className="gap-5 md:flex hidden">
       <LinkBtn  destination="/" label='Home' variant="link"/>
       <PopOver 
           categories="Categories"
