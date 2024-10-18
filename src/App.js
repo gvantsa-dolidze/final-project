@@ -33,6 +33,8 @@ import Products from "./admin/admin_pages/Products";
 import Reviews from "./admin/admin_pages/Reviews";
 import Settings from "./admin/admin_pages/Settings";
 
+import WriteReview from './components/product_page_components/WriteReview'
+
 function App() {
   return (
     <div className="App">
@@ -49,6 +51,7 @@ function App() {
           <Route index element={<DetailsContent />} />
           <Route path="details_content" element={<DetailsContent />} />
           <Route path="reviews_content" element={<ReviewsContent />} />
+          <Route path="/product_page/write_review" element={<WriteReview />} />
         </Route>
 
         <Route path="/listing_page" element={<ListingPage />} />
