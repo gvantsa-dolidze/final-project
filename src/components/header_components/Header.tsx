@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <div>
       <PromoHeader content="Get 25% OFF on your first order. Order Now" />
-      <div className="flex items-center space-x-28 max-w-1116 m-auto pt-3 pb-3 justify-between">
-        <div className="flex items-center gap-[116px]">
+      <div className="flex items-center justify-between gap-5 max-w-1116 m-auto pt-3 pb-3">
+        <div className="flex items-center w-[641px] justify-between">
           <HeaderLogo />
           <HeaderNav
             home="Home"
@@ -16,7 +16,7 @@ const Header = () => {
             contact="Contact"
           />
         </div>
-        <div className="flex gap-3">
+        <div className="flex w-[370px] justify-between gap-5">
           <SearchBar />
           <LoginAndCart />
         </div>
