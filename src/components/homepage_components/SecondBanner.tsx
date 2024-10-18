@@ -4,9 +4,9 @@ const SecondBanner = () => {
   return (
     <div className="bg-BackgroundGray py-5">
       <div className="text-start max-w-1116 m-auto space-y-5 flex justify-between">
-        <div className="space-y-5 my-auto flex flex-col w-96">
+        <div className="space-y-5 my-auto flex flex-col w-96 items-center md:items-start ">
           <h2>Browse Our Fashion Paradise!</h2>
-          <p className="pb-6">
+          <p className="pb-6 text-center md:text-start">
             Step into a world of style and explore our diverse collection of
             clothing categories.
           </p>
@@ -18,7 +18,7 @@ const SecondBanner = () => {
             className='w-52'
           />
         </div>
-        <div className="">
+        <div className="hidden md:block">
           <img
             src="/img/banner/category_Image.png"
             alt="star"

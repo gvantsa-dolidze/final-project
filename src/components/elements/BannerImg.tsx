@@ -1,7 +1,7 @@
 
 const BannerImg = () => {
   return (
-    <div className="relative">
+    <div className="relative hidden md:block">
     <img
       src="/img/banner/star.png"
       alt="star"
