@@ -13,9 +13,9 @@ const SignUpForm = () => {
 
   return (
     <form className="space-y-5" onSubmit={signUp}>
-      <InputElement text="name" type="text" placeholder="" />
-      <InputElement text="Email" type="email" placeholder="" />
-      <InputElement text="password" type="password" placeholder="" />
+      <InputElement text="name" type="text" placeholder="" id="sign_up_name"/>
+      <InputElement text="Email" type="email" placeholder="" id="sign_up_email"/>
+      <InputElement text="password" type="password" placeholder="" id="sign_up_pass"/>
       <p className="pb-6">
         By creating an account you agree with our Terms of Service, Privacy
         Policy,
