@@ -4,6 +4,7 @@ interface InputElementProps {
   type: React.HTMLInputTypeAttribute;
   placeholder?: string;
   img?: string;
+  onChange?: any;
 }
 
 const InputElement: React.FC<InputElementProps> = ({
@@ -12,6 +13,7 @@ const InputElement: React.FC<InputElementProps> = ({
   type,
   placeholder = "",
   img = "",
+  onChange ='',
 }) => {
   const styles: Record<string, string> = {
     form: "outline-none border py-2 px-3 rounded-md text-sm box-border",
@@ -40,6 +42,7 @@ const InputElement: React.FC<InputElementProps> = ({
         name="name"
         id={`form-${variant}`}
         placeholder={placeholder}
+        onChange={onChange}
       />
     </div>
   );
