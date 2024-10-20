@@ -5,8 +5,13 @@ import LinkBtn from "../elements/LinkBtn";
 const LoginForm = () => {
   return (
     <form action="" className="space-y-5">
-      <InputElement text="Email" type="email" placeholder="" />
-      <InputElement text="password" type="password" placeholder="" />
+      <InputElement text="Email" type="email" placeholder="" id="login_email" />
+      <InputElement
+        text="password"
+        type="password"
+        placeholder=""
+        id="login_pass"
+      />
 
       <div className="flex flex-col gap-5 w-96">
         <LinkBtn
