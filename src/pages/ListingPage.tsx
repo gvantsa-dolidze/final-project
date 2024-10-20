@@ -4,14 +4,20 @@ import AppliedFilters from "../components/listing_page_components/AppliedFilters
 import ShowingResults from "../components/listing_page_components/ShowingResults";
 import Breadcrumb from "../components/elements/Breadcrumb";
 import Layout from "../components/layout/Layout";
+import { useEffect } from "react";
 
 const ListingPage = () => {
+  
+  useEffect(() => {
+    console.log(window.location.search);
+  }, []);
+
   return (
     <Layout>
       <div className="bg-BackgroundGray">
         <div className="max-w-1116 m-auto">
           <Breadcrumb
-            title=''
+            title=""
             label="Ecommerce"
             secondaryLabel="Search"
             destination="/"
