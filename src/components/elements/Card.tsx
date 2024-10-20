@@ -28,19 +28,35 @@ const Card: React.FC<CardProps> = ({ variant = "primary", id = "" }) => {
   console.log(product);
 
   return (
-    <div className={`${styles[variant]} flex flex-col `}>
-      <div className="w-[264px] h-[312px] bg-BackgroundGray rounded-md flex justify-center">
-        <img src="/img/cover.png" alt="product" />
-      </div>
-      <ProductTitle />
-      <div className="flex items-center gap-3">
-        <LinkBtn
-          label="IN STOCK"
-          variant="secondary"
-          destination={`/product_page/${id}`}
-        />
-        <ProductPrice />{" "}
-      </div>
+    <div>
+      {product && product.length > 0 ? (
+        product.map((productData: any) => (
+          <div
+            key={productData.id}
+            className={`${styles[variant]} flex flex-col`}
+          >
+            <div className="flex flex-col space-y-5">
+              <div className="w-[264px] h-[312px] bg-BackgroundGray rounded-md flex justify-center">
+                <img
+                  src={productData.images}
+                  alt={productData.title}
+                />{" "}
+              </div>
+              <ProductTitle title={productData.title} />{" "}
+              <div className="flex items-center gap-3">
+                <LinkBtn
+                  label="IN STOCK"
+                  variant="secondary"
+                  destination={`/product_page/${productData.id}`}
+                />
+                <ProductPrice price={productData.price} />{" "}
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p>No products available</p>
+      )}
     </div>
   );
 };
