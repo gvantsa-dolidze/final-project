@@ -12,7 +12,7 @@ const onChangeSearch = (e: any) => {
 const onSubmit = (e: any) => {
   e.preventDefault()
   console.log(value)
-  navigate("listing_page")
+  navigate(`/listing_page?search=${value}`)
 }
   return (
     <div className="border rounded-md px-3 py-1 w-56 flex items-center gap-2 justify-start">
