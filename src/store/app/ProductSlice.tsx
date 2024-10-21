@@ -13,8 +13,9 @@ const initialState: ProductState = {
   error:''
 };
 
-export const getProducts = createAsyncThunk("product", async () => {
-  return fetch("https://api.escuelajs.co/api/v1/products").then((res) =>
+export const getProducts = createAsyncThunk("product", async (search: any) => {
+  
+  return fetch(`https://api.escuelajs.co/api/v1/products${search}&limit=1`).then((res) =>
     res.json()
   );
 });
@@ -25,7 +26,7 @@ export const productSlice = createSlice({
   reducers: {},
   extraReducers(builder) {
     builder
-        .addCase(getProducts.pending, (state) => {
+        .addCase(getProducts.pending, (state, action) => {
              state.loading = true;
         })
         .addCase(getProducts.fulfilled,(state, action)=>{

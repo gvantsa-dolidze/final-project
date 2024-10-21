@@ -4,6 +4,9 @@ import ProductPrice from "./ProductPrice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { getProducts } from "../../store/app/ProductSlice";
 import { useEffect } from "react";
+import {
+  useLocation
+} from "react-router-dom";
 
 interface CardProps {
   variant?: "primary" | "secondary" | "danger" | "outline";
@@ -16,16 +19,14 @@ const Card: React.FC<CardProps> = ({ variant = "primary", id = "" }) => {
     danger: "",
     outline: "",
   };
-
+  const { search } = useLocation();
   const dispatch = useAppDispatch();
 
   const product = useAppSelector((state) => state.product.data);
 
   useEffect(() => {
-    dispatch(getProducts());
-  }, []);
-
-  console.log(product);
+    dispatch(getProducts(search));
+  }, [search]);
 
   return (
     <div>
