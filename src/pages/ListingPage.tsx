@@ -14,7 +14,7 @@ const ListingPage = () => {
 
   return (
     <Layout>
-      <div className="bg-BackgroundGray">
+      <div className="bg-BackgroundGray hidden md:block">
         <div className="max-w-1116 m-auto">
           <Breadcrumb
             title=""
@@ -25,7 +25,7 @@ const ListingPage = () => {
           />
         </div>
       </div>
-      <div className="max-w-1116 m-auto gap-10 flex py-10">
+      <div className="max-w-1116 m-auto gap-10 flex py-10 justify-center">
         <SideBar />
         <div className="flex flex-col gap-10">
           <div className="text-start space-y-10">
