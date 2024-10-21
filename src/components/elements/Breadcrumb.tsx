@@ -11,7 +11,7 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ label='', title, secondaryLabel = '', destination='', secondaryDestination=''}) => {
   return (
-    <div className="max-w-1116 py-5 ">
+    <div className="max-w-1116 py-5 px-2">
       <Title title={title} className="text-start pb-4 text-xl" variant="title24"/>
       <nav className="flex" aria-label="Breadcrumb">
         <ol className="flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
