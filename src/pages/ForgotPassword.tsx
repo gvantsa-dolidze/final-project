@@ -17,7 +17,7 @@ const ForgotPassword = () => {
         </div>
       </div>
       <div className="max-w-1116 m-auto flex justify-center">
-        <div className="w-96 py-32 space-y-10">
+        <div className="w-80 py-32 space-y-10">
           <div>
             <p>
               Please enter the email address associated with your account. We'll
