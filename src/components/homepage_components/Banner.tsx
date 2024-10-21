@@ -9,7 +9,7 @@ const Banner = () => {
           <h2>Fresh Arrivals Online</h2>
           <p className="pb-6">Discover Our Newest Collection Today.</p>
           <LinkBtn
-            destination="/listing_page"
+            destination="/listing_page?offset=1"
             label="View Collection"
             img="/img/icons/Arrow Right.png"
             reverse={true}
