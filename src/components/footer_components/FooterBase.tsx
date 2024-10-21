@@ -4,7 +4,7 @@ import FooterNav from "./FooterNav";
 
 const FooterBase = () => {
   return (
-    <div className="max-w-1116 md:flex justify-between m-auto pt-14 pb-14">
+    <div className="max-w-1116 md:flex justify-between m-auto pt-14 pb-14 px-2">
       <FooterLogo />
       <FooterNav
         support="SUPPORT"
