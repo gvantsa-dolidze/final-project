@@ -30,7 +30,7 @@ const FooterNav: React.FC<PromoHeaderProps> = ({
   cart,
 }) => {
   return (
-    <div className="flex space-x-10 text-start justify-around px-5">
+    <div className="flex space-x-10 text-start justify-between px-5">
       <div>
         <h2>{support}</h2>
         <nav className="flex flex-col mt-10 gap-2">
