@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 const FooterLogo = () => {
   return (
-    <div className="space-y-4">
-      <div className="flex items-center space-x-2">
+    <div className="space-y-4 hidden md:block">
+      <div className="flex items-center space-x-2 ">
         <img src="/img/logo/logomark_footer.png" alt="logo" />
         <span>Ecommerce</span>
       </div>

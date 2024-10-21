@@ -1,6 +1,6 @@
 const AcceptedPayments = () => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 hidden md:block">
       <div>
         <p>ACCEPTED PAYMENT</p>
       </div>
