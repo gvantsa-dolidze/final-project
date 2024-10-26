@@ -1,4 +1,3 @@
-import Button from "../elements/Button";
 import LinkBtn from "../elements/LinkBtn";
 import ProductRatingInfo from "../elements/ProductRatingInfo";
 import SortByBtn from "../elements/SortByBtn";

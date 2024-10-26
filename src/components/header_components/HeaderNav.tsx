@@ -8,11 +8,7 @@ interface HeaderNavProps {
   contact: string;
 }
 
-const HeaderNav: React.FC<HeaderNavProps> = ({
-  // home,
-  // about,
-  // contact,
-}) => {
+const HeaderNav: React.FC<HeaderNavProps> = () => {
   return (
     <div className="gap-5 md:flex hidden">
       <LinkBtn  destination="/" label='Home' variant="link"/>

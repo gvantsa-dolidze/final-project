@@ -1,4 +1,3 @@
-import Button from "../elements/Button"
 import FullRoundedImg from "../elements/FullRoundedImg"
 import LinkBtn from "../elements/LinkBtn"
 
