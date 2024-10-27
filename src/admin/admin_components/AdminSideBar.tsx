@@ -9,7 +9,7 @@ const AdminSideBar = () => {
           destination="dashboard"
           label="Dashboard"
           variant="sidebar"
-          img="/img/icons/Dashboard.png"
+          img="/img/icons/dashboard.png"
         />
 
         <LinkBtn
@@ -23,28 +23,28 @@ const AdminSideBar = () => {
           destination="admins_orders"
           label="Orders"
           variant="sidebar"
-          img="/img/icons/Cart.png"
+          img="/img/icons/cart.png"
         />
 
         <LinkBtn
           destination="customers"
           label="Customers"
           variant="sidebar"
-          img="/img/icons/Users.png"
+          img="/img/icons/users.png"
         />
 
         <LinkBtn
           destination="reviews"
           label="Reviews"
           variant="sidebar"
-          img="/img/icons/Empty Star.png"
+          img="/img/icons/empty_star.png"
         />
 
         <LinkBtn
           destination="settings"
           label="Settings"
           variant="sidebar"
-          img="/img/icons/Settings.png"
+          img="/img/icons/settings.png"
         />
       </div>
       <div className="py-5">
@@ -52,7 +52,7 @@ const AdminSideBar = () => {
           destination=""
           label="Extras"
           variant="sidebar"
-          img="/img/icons/Add.png"
+          img="/img/icons/add.png"
         />
       </div>
     </div>

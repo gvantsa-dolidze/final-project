@@ -3,7 +3,7 @@ const AboutShipping = () => {
     <div className="md:flex max-w-1116 m-auto md:justify-between px-2 py-12">
       <div className="text-start space-y-3 p-12 flex flex-col md:items-start items-center">
         <img
-          src="/img/icons/Delivery.png"
+          src="/img/icons/delivery.png"
           alt="car"
           className="bg-slate-200 p-2 rounded-full"
         />
@@ -13,7 +13,7 @@ const AboutShipping = () => {
       </div>
       <div className="text-start space-y-3 p-12 flex flex-col md:items-start items-center">
         <img
-          src="/img/icons/Star Badge.png"
+          src="/img/icons/star_badge.png"
           alt="star"
           className="bg-slate-200 p-2 rounded-full"
         />
@@ -23,7 +23,7 @@ const AboutShipping = () => {
       </div>
       <div className="text-start space-y-3 p-12 flex flex-col md:items-start items-center">
         <img
-          src="/img/icons/Shield Check.png"
+          src="/img/icons/shield_check.png"
           alt="check"
           className="bg-slate-200 p-2 rounded-full"
         />

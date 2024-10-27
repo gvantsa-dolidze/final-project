@@ -11,7 +11,7 @@ const Banner = () => {
           <LinkBtn
             destination="/listing_page?offset=1"
             label="View Collection"
-            img="/img/icons/Arrow Right.png"
+            img="/img/icons/arrow_right.png"
             reverse={true}
             className='w-52'
           />

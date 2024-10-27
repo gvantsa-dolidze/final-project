@@ -13,15 +13,15 @@ const FooterLogo = () => {
       </div>
       <div className="flex gap-1">
         <NavLink to="https://github.com/" target="_blank">
-          <img src="/img/social icons/Github.png" alt="github" />
+          <img src="/img/social_icons/github.png" alt="github" />
         </NavLink>
         <NavLink to="https://www.instagram.com/" target="_blank">
           {" "}
-          <img src="/img/social icons/Instagram.png" alt="instagram" />
+          <img src="/img/social_icons/instagram.png" alt="instagram" />
         </NavLink>
         <NavLink to="https://www.youtube.com/" target="_blank">
           {" "}
-          <img src="/img/social icons/Youtube.png" alt="youtube" />
+          <img src="/img/social_icons/youtube.png" alt="youtube" />
         </NavLink>
       </div>
     </div>

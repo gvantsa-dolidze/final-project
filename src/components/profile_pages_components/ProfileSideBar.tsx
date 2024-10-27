@@ -7,7 +7,7 @@ const ProfileSideBar = () => {
         destination="orders"
         label="Orders"
         variant="sidebar"
-        img="/img/icons/Add to cart.png"
+        img="/img/icons/add_to_cart.png"
       />
       <LinkBtn
         destination="wishlists"

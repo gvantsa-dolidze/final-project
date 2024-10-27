@@ -26,7 +26,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ label='', title, secondaryLabel
                 destination={secondaryDestination}
                 label={secondaryLabel}
                 variant="link"
-                img="/img/icons/Chevron Right.png"
+                img="/img/icons/chevron_right.png"
               />
           </li>
         </ol>

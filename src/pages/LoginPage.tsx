@@ -23,7 +23,7 @@ const LoginPage = () => {
           <Button
             label="Continue with Google"
             variant="light"
-            img="/img/social icons/Google.png"
+            img="/img/social_icons/google.png"
             className="w-full"
           />
           <HorizontalLine />

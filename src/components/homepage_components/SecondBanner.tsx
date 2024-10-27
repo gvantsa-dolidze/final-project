@@ -13,7 +13,7 @@ const SecondBanner = () => {
           <LinkBtn
             destination="/listing_page"
             label="View Collection"
-            img="/img/icons/Arrow Right.png"
+            img="/img/icons/arrow_right.png"
             reverse={true}
             className='w-52'
           />

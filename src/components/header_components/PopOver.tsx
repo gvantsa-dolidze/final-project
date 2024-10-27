@@ -24,7 +24,7 @@ const PopOver: React.FC<PopOverProps> = ({
     <Popover className="relative">
         <PopoverButton className="flex outline-none">
           {categories}
-          <img src="/img/icons/Chevron Down.png" alt="arrow_down" />
+          <img src="/img/icons/chevron_down.png" alt="arrow_down" />
         </PopoverButton>
         <PopoverPanel anchor="bottom" className="flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3">
         <LinkBtn destination="/listing_page/" label="perfume" variant="sidebar" />
