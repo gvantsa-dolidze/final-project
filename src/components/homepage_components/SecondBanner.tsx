@@ -11,7 +11,7 @@ const SecondBanner = () => {
             clothing categories.
           </p>
           <LinkBtn
-            destination="/listing_page"
+            destination="/listing_page?offset=1"
             label="View Collection"
             img="/img/icons/arrow_right.png"
             reverse={true}
