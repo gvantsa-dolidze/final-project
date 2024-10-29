@@ -5,6 +5,7 @@ import ProductsReducer from "../store/app/ProductSlice"
 import BestSellingProductsReducer from "./app/BestSellingProductsReducer"
 import FeaturedProductsReducer from './app/FeaturedProductsReducer'
 import LatestProductsReducer from './app/LatestProductsReducer'
+import SimilarProductsReducer from './app/SimilarProductsReducer'
 
 const store = configureStore({
   reducer: {
@@ -12,7 +13,8 @@ const store = configureStore({
     products: ProductsReducer,
     bestSellingProducts: BestSellingProductsReducer,
     featuredProduct: FeaturedProductsReducer,
-    latestProduct: LatestProductsReducer
+    latestProduct: LatestProductsReducer,
+    similarProduct: SimilarProductsReducer
   },
 })
 export default store;

@@ -1,6 +1,6 @@
 import ImgSwiper from "../components/elements/ImgSwiper";
 import DetailCustomizer from "../components/product_page_components/DetailCustomizer";
-import SimiliarProducts from "../components/product_page_components/SimiliarProducts";
+import SimilarProducts from "../components/product_page_components/SimilarProducts";
 import AboutProduct from "../components/product_page_components/AboutProduct";
 import Breadcrumb from "../components/elements/Breadcrumb";
 import Layout from "../components/layout/Layout";
@@ -25,7 +25,7 @@ const ProductPage = () => {
           <DetailCustomizer />
         </div>
         <AboutProduct />
-        <SimiliarProducts />
+        <SimilarProducts />
       </div>
     </Layout>
   );
