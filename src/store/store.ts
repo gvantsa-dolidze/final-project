@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './app/counterSlice'
-import ProductsReducer from "../store/app/ProductSlice"
+import AllProductsReducer from "./app/AllProductsReducer"
 
 import BestSellingProductsReducer from "./app/BestSellingProductsReducer"
 import FeaturedProductsReducer from './app/FeaturedProductsReducer'
@@ -10,7 +10,7 @@ import SimilarProductsReducer from './app/SimilarProductsReducer'
 const store = configureStore({
   reducer: {
     counter: counterReducer,
-    products: ProductsReducer,
+    allProduct: AllProductsReducer,
     bestSellingProducts: BestSellingProductsReducer,
     featuredProduct: FeaturedProductsReducer,
     latestProduct: LatestProductsReducer,
