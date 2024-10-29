@@ -22,11 +22,11 @@ const Card: React.FC<CardProps> = ({ variant = "primary", id = "" }) => {
   const { search } = useLocation();
   const dispatch = useAppDispatch();
 
-  const product = useAppSelector((state) => state.product.data);
+  const product = useAppSelector((state) => state.products.data);
 
   useEffect(() => {
     dispatch(getProducts(search));
-  }, [search]);
+  }, [dispatch, search]);
 
   return (
     <div>

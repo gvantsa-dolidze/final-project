@@ -1,16 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './app/counterSlice'
-import ProductReducer from "../store/app/ProductSlice"
-import BestSellingProductsSlice from "./app/BestSellingProductsSlice"
+import ProductsReducer from "../store/app/ProductSlice"
 
-import HomePageProductReducer from '../store/app/HomePageProductSlice'
+import BestSellingProductsReducer from "./app/BestSellingProductsReducer"
+import FeaturedProductsReducer from './app/FeaturedProductsReducer'
 
 const store = configureStore({
   reducer: {
     counter: counterReducer,
-    product: ProductReducer,
-    bestSellingProducts: BestSellingProductsSlice.reducer,
-    homePageProduct: HomePageProductReducer
+    products: ProductsReducer,
+    bestSellingProducts: BestSellingProductsReducer,
+    featuredProduct: FeaturedProductsReducer
   },
 })
 export default store;

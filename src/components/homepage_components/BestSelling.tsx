@@ -3,7 +3,7 @@ import { CardNew } from "../elements/CardNew";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 
 import { useEffect } from "react";
-import { getBestSellingProducts } from "../../store/app/BestSellingProductsSlice";
+import { getBestSellingProducts } from "../../store/app/BestSellingProductsReducer";
 
 const BestSelling = () => {
   const dispatch = useAppDispatch();

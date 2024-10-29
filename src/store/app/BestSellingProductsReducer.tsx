@@ -15,7 +15,7 @@ const initialState: ProductState = {
 export const getBestSellingProducts = createAsyncThunk("product2", async () => {
   //${search}
   return fetch(
-    `https://fakestoreapi.com/products?limit=4&offset=0`
+    `https://fakestoreapi.com/products?limit=4`
   ).then((res) => res.json());
 });
 
@@ -41,4 +41,4 @@ const BestSellingProductsSlice = createSlice({
   },
 });
 
-export default BestSellingProductsSlice;
+export default BestSellingProductsSlice.reducer;
