@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './app/counterSlice'
 import ProductReducer from "../store/app/ProductSlice"
+import HomePageProductReducer from '../store/app/HomePageProductSlice'
 
 const store = configureStore({
   reducer: {
     counter: counterReducer,
-    product: ProductReducer
+    product: ProductReducer,
+    homePageProduct: HomePageProductReducer
   },
 })
 export default store;
