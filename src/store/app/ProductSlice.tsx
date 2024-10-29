@@ -14,10 +14,9 @@ const initialState: ProductState = {
 };
 
 export const getProducts = createAsyncThunk("product", async (search: any) => {
-  
-  return fetch(`https://api.escuelajs.co/api/v1/products${search}&limit=1`).then((res) =>
-    res.json()
-  );
+  //${search}
+  return fetch(`https://api.escuelajs.co/api/v1/products?limit=4&offset=0`)
+  .then(res => res.json());
 });
 
 export const productSlice = createSlice({

@@ -14,7 +14,7 @@ const initialState: HomePageProductState = {
 };
 
 export const getHomePageProducts = createAsyncThunk("product", async (search: any) => {
-  
+
   return fetch('https://fakestoreapi.com/products?limit=4').then((res) =>
     res.json()
   );

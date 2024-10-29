@@ -1,12 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './app/counterSlice'
 import ProductReducer from "../store/app/ProductSlice"
+import BestSellingProductsSlice from "./app/BestSellingProductsSlice"
+
 import HomePageProductReducer from '../store/app/HomePageProductSlice'
 
 const store = configureStore({
   reducer: {
     counter: counterReducer,
     product: ProductReducer,
+    bestSellingProducts: BestSellingProductsSlice.reducer,
     homePageProduct: HomePageProductReducer
   },
 })
