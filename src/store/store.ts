@@ -4,13 +4,15 @@ import ProductsReducer from "../store/app/ProductSlice"
 
 import BestSellingProductsReducer from "./app/BestSellingProductsReducer"
 import FeaturedProductsReducer from './app/FeaturedProductsReducer'
+import LatestProductsReducer from './app/LatestProductsReducer'
 
 const store = configureStore({
   reducer: {
     counter: counterReducer,
     products: ProductsReducer,
     bestSellingProducts: BestSellingProductsReducer,
-    featuredProduct: FeaturedProductsReducer
+    featuredProduct: FeaturedProductsReducer,
+    latestProduct: LatestProductsReducer
   },
 })
 export default store;
