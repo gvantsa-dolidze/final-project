@@ -6,7 +6,7 @@ import "swiper/css";
 
 const ImgSwiper = () => {
   return (
-    <div className="w-[534px]">
+    <div className="w-[500px] h-[500px]">
         <Swiper
       className="bg-[#F6F6F6] rounded-md"
       spaceBetween={50}
@@ -16,7 +16,7 @@ const ImgSwiper = () => {
     >
       <SwiperSlide>
         <div className="flex justify-center py-32">
-          <img src="/img/cover.png" alt="product1" />
+          <img src="/img/cover.png" alt="product1" className=""/>
         </div>
       </SwiperSlide>
       <SwiperSlide>

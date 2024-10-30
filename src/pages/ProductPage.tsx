@@ -40,7 +40,7 @@ const ProductPage = () => {
       </div>
 
       <div className="max-w-1116 m-auto py-10 space-y-10">
-        <div className="flex justify-between">
+        <div className="md:flex md:justify-between gap-5">
           <ImgSwiper />
           <DetailCustomizer />
         </div>

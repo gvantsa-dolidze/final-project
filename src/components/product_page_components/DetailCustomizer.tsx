@@ -8,7 +8,7 @@ import ProductPrice from "../elements/ProductPrice";
 
 const DetailCustomizer = () => {
   return (
-    <div className="space-y-10 w-[438px]">
+    <div className="w-[438px] flex flex-col gap-7">
       <div className="flex justify-between">
         <Title variant="title24" />
         <Button img="/img/icons/Share.png" variant="link" />
