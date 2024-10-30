@@ -22,8 +22,8 @@ export const CardNew: React.FC<CardProps> = ({ variant = "primary", image, title
     
         <div className={`${styles[variant]} flex flex-col`}>
           <div className="flex flex-col space-y-5">
-            <div className="w-[264px] h-[312px] bg-BackgroundGray rounded-md flex justify-center">
-              <img src={image} alt={title} />
+            <div className="w-[264px] h-[312px] bg-BackgroundGray rounded-md flex justify-center items-center">
+              <img src={image} alt={title} className="w-[60%]"/>
             </div>
             <ProductTitle title={title} />
             <div className="flex items-center gap-3">
