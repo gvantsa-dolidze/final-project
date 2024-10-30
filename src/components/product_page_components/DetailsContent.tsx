@@ -1,13 +1,11 @@
 import { useAppSelector } from "../../store/hooks";
 
-interface DetailsContentProps {
-  description: string;
-}
 
-const DetailsContent: React.FC<DetailsContentProps> = ({description}) => {
-  const product = useAppSelector((state) => state.singleProduct.data);
 
-  console.log(product);
+const DetailsContent = () => {
+  const product: any = useAppSelector((state) => state.singleProduct.data);
+
+  console.log(product.description);
   
 
   const styles: Record<string, string> = {};
@@ -16,7 +14,7 @@ const DetailsContent: React.FC<DetailsContentProps> = ({description}) => {
       <h2>Details</h2>
       <div className="space-y-20">
         <p>
-          {description}
+          {product.description}
         </p>
       </div>
     </div>
