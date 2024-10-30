@@ -4,9 +4,9 @@ interface ProductPriceProps {
   price?: number; // You can also use string if you prefer
 }
 
-const ProductPrice: React.FC<ProductPriceProps> = ({ price = 43 }) => {
+const ProductPrice: React.FC<ProductPriceProps> = ({ price }) => {
   return (
-    <div className="text-start">${price.toFixed(2)}</div>
+    <div className="text-start">${price}</div>
   );
 };
 
