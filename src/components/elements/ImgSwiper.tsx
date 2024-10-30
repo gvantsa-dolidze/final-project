@@ -4,7 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-const ImgSwiper = () => {
+const ImgSwiper = ({product}: any) => {
+
+  console.log(product);
+  
   return (
     <div className="w-[500px] h-[500px]">
         <Swiper
@@ -16,24 +19,10 @@ const ImgSwiper = () => {
     >
       <SwiperSlide>
         <div className="flex justify-center py-32">
-          <img src="/img/cover.png" alt="product1" className=""/>
+          <img src={product.image} alt="product1" className="h-[200px]"/>
         </div>
       </SwiperSlide>
-      <SwiperSlide>
-        <div className="flex justify-center py-32">
-          <img src="/img/cover1.png" alt="product1"/>
-        </div>{" "}
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="flex justify-center py-32">
-          <img src="/img/cover2.png" alt="product1" />
-        </div>{" "}
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="flex justify-center py-32">
-          <img src="/img/cover3.png" alt="product1" />
-        </div>{" "}
-      </SwiperSlide>
+ 
     </Swiper>
     </div>
   

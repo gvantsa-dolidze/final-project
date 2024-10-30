@@ -23,7 +23,7 @@ const ProductPage = () => {
   }, []);
 
   const product = useAppSelector((state) => state.singleProduct.data);
-
+  
   
 
   return (
@@ -41,8 +41,8 @@ const ProductPage = () => {
 
       <div className="max-w-1116 m-auto py-10 space-y-10">
         <div className="md:flex md:justify-between gap-5">
-          <ImgSwiper />
-          <DetailCustomizer />
+          <ImgSwiper product={product} />
+          <DetailCustomizer  />
         </div>
         <AboutProduct />
         <SimilarProducts />
