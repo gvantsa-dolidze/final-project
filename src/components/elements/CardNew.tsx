@@ -12,7 +12,7 @@ interface CardProps {
 
 export const CardNew: React.FC<CardProps> = ({ variant = "primary", image, title, id, price }) => {
   const styles: Record<string, string> = {
-    primary: "w-[264px] h-[434px] text-start space-y-5",
+    primary: " text-start space-y-5",
     secondary: "",
     danger: "",
     outline: "",
@@ -22,8 +22,8 @@ export const CardNew: React.FC<CardProps> = ({ variant = "primary", image, title
     
         <div className={`${styles[variant]} flex flex-col`}>
           <div className="flex flex-col space-y-5">
-            <div className="w-[264px] h-[312px] bg-BackgroundGray rounded-md flex justify-center items-center">
-              <img src={image} alt={title} className="w-[60%]"/>
+            <div className="h-[312px]  rounded-md flex justify-center items-center">
+              <img src={image} alt={title} className="lg:w-[60%] w-[30%] max-sm:w-[25%]"/>
             </div>
             <ProductTitle title={title} />
             <div className="flex items-center gap-3">
