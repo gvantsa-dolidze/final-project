@@ -47,11 +47,11 @@ function App() {
         </Route>
 
         {/* productpage routing */}
-        <Route path="/product_page" element={<ProductPage />}>
+        <Route path="/product_page/:id" element={<ProductPage />}>
           <Route index element={<DetailsContent />} />
           <Route path="details_content" element={<DetailsContent />} />
           <Route path="reviews_content" element={<ReviewsContent />} />
-          <Route path="/product_page/write_review" element={<WriteReview />} />
+          <Route path="/product_page/:id/write_review" element={<WriteReview />} />
         </Route>
 
         <Route path="/listing_page" element={<ListingPage />} />
