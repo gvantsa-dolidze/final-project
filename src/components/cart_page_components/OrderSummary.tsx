@@ -4,7 +4,7 @@ import ProductPrice from "../elements/ProductPrice";
 
 const OrderSummary = () => {
   return (
-    <div className="border rounded-md py-10 px-2  flex flex-col w-96 gap-5">
+    <div className="border rounded-md py-10 px-2  flex flex-col w-96 gap-5 h-[450px]">
       <h3 className="text-start">Order Summery</h3>
 
       <div className="border-b space-y-5 py-5">
