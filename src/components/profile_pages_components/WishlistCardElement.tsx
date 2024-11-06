@@ -1,19 +1,32 @@
 import Button from "../elements/Button";
 import ImgElement from "../elements/ImgElement";
-const WishlistCardElement = () => {
+import ProductPrice from "../elements/ProductPrice";
+import ProductTItle from "../product_page_components/Title";
+
+interface WishlistCardElementProps {
+  image: string;
+  title: string;
+  price: number;
+}
+
+const WishlistCardElement: React.FC<WishlistCardElementProps> = ({
+  title,
+  price,
+  image,
+}) => {
   return (
     <div className="flex items-center justify-between w-full">
       <div className="flex gap-5">
-        <ImgElement />
+        <ImgElement image={image} />
         <div className="text-start">
-          <h3>Raw Black T-Shirt Lineup</h3>
+          <ProductTItle title={title} />
           <p>Added on: 27 July 2023</p>
-          <p>$ 70.00</p>
+          <ProductPrice price={price} />
         </div>
       </div>
       <div className="flex gap-5 items-center">
-        <Button variant="link" label="Remove item"  />
-        <Button variant="light" label="Add to cart"  />
+        <Button variant="link" label="Remove item" />
+        <Button variant="light" label="Add to cart" />
       </div>
     </div>
   );
