@@ -7,9 +7,10 @@ interface BreadcrumbProps {
   secondaryLabel?: string;
   destination?: string;
   secondaryDestination?: string;
+  product?: any;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ label='', title, secondaryLabel = '', destination='', secondaryDestination=''}) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ label='', title, destination='', secondaryLabel='', secondaryDestination='', product=''}) => {
   return (
     <div className="max-w-1116 py-5 px-2">
       <Title title={title} className="text-start pb-4 text-xl" variant="title24"/>
@@ -24,7 +25,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ label='', title, secondaryLabel
           <li>
               <LinkBtn
                 destination={secondaryDestination}
-                label={secondaryLabel}
+                label={product.title || secondaryLabel}
                 variant="link"
                 img="/img/icons/chevron_right.png"
               />

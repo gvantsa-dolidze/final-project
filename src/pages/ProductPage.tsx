@@ -30,12 +30,12 @@ const ProductPage = () => {
     <Layout>
       <div className="max-w-1116 m-auto">
         <Breadcrumb
+          product={product}
           title=""
           label="Ecommerce"
-          secondaryLabel="Raw Black T-Shirt Lineup"
+          secondaryLabel=""
           destination="/"
           secondaryDestination="/product_page"
-          
         />
       </div>
 
