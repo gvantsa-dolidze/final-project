@@ -51,7 +51,7 @@ const Products = () => {
           showName={true}
           name={product.title}
           showSKU={true}
-          sku="47514501"
+          sku={product.id}
           showPrice={true}
           price={product.price}
           showStock={true}
