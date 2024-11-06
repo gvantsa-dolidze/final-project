@@ -6,11 +6,11 @@ import LinkBtn from "../elements/LinkBtn";
 import Title from "./Title";
 import ProductPrice from "../elements/ProductPrice";
 
-const DetailCustomizer = () => {
+const DetailCustomizer = ({product}: any) => {
   return (
     <div className="w-[438px] flex flex-col gap-7">
       <div className="flex justify-between">
-        <Title variant="title24" />
+        <Title variant="title24" title={product.title}/>
         <Button img="/img/icons/Share.png" variant="link" />
       </div>
 
