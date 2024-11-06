@@ -19,7 +19,7 @@ const DetailCustomizer = ({product}: any) => {
           destination="details_content"
           variant="secondary"
           img="/img/icons/Star.png"
-          label="4.2 — 54 Reviews"
+          label={`${product.rating.rate} - ${product.rating.count} Reviews`}
           className="flex items-center text-xs"
         />
         <Button label="IN STOCK" variant="secondary" />
