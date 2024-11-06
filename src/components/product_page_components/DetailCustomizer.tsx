@@ -24,7 +24,7 @@ const DetailCustomizer = ({product}: any) => {
         />
         <Button label="IN STOCK" variant="secondary" />
       </div>
-      <ProductPrice />
+      <ProductPrice price={product.price}/>
       <div className="flex flex-col items-start">
         <Title variant="title12" title="Available Colors" className="pb-2" />
         <ColorPiker />
