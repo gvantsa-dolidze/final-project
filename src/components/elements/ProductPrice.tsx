@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ProductPriceProps {
-  price?: number; // You can also use string if you prefer
+  price?: number;
 }
 
 const ProductPrice: React.FC<ProductPriceProps> = ({ price }) => {
