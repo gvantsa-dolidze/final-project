@@ -42,8 +42,6 @@ const AdminsOrders = () => {
             status="Processing"
             showImage={true}
             image={product.image}
-            showCategories={true}
-            categories={product.category}
           />
         ))}
       </table>
