@@ -6,11 +6,12 @@ import LinkBtn from "../elements/LinkBtn";
 import Title from "./Title";
 import ProductPrice from "../elements/ProductPrice";
 
-const DetailCustomizer = ({product}: any) => {
+const DetailCustomizer = ({ product }: any) => {
+
   return (
     <div className="w-[438px] flex flex-col gap-7">
       <div className="flex justify-between">
-        <Title variant="title24" title={product.title}/>
+        <Title variant="title24" title={product.title} />
         <Button img="/img/icons/Share.png" variant="link" />
       </div>
 
@@ -19,12 +20,14 @@ const DetailCustomizer = ({product}: any) => {
           destination="details_content"
           variant="secondary"
           img="/img/icons/Star.png"
-          label={`${product.rating.rate} - ${product.rating.count} Reviews`}
+          label={
+            product.rating ? `${product.rating.rate} - ${product.rating.count} Reviews` : "No reviews"
+          }
           className="flex items-center text-xs"
         />
         <Button label="IN STOCK" variant="secondary" />
       </div>
-      <ProductPrice price={product.price}/>
+      <ProductPrice price={product.price} />
       <div className="flex flex-col items-start">
         <Title variant="title12" title="Available Colors" className="pb-2" />
         <ColorPiker />
