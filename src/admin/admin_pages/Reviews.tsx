@@ -17,6 +17,8 @@ const Reviews = () => {
           name="Esther Howard"
           showReview={true}
           review="Completed the task and added the ..."
+          showImage={true}
+          image=''
         />
       </table>
       <div className="flex justify-end">

@@ -16,19 +16,21 @@ interface AdminTableCellProps {
   showEmail?: boolean;
   showAddress?: boolean;
   showReview?: boolean;
+  showImage?: boolean;
   name?: string;
   sku?: string;
-  price?: string;
+  price?: number;
   stock?: string;
   categories?: string;
   action?: string;
-  total?: string;
+  total?: number;
   status?: string;
   order?: string;
   date?: string;
   email?: string;
   address?: string;
   review?: string;
+  image: string;
 }
 
 const AdminTableCell: React.FC<AdminTableCellProps> = ({
@@ -45,25 +47,30 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
   showEmail = false,
   showAddress = false,
   showReview = false,
+  showImage = true,
   name = "Name",
   email = "Email",
   sku = "SKU",
   address = "Address",
-  price = "Price",
+  price,
   stock = "Stock",
   categories = "Categories",
   action = "Action",
-  total = "Total",
+  total,
   status = "Status",
   order = "Order",
   date = "Date",
   review = "Review",
+  image,
 }) => {
   return (
     <tr className="border-b">
-      <td className="flex justify-center items-center py-2">
-        <ImgElement />
-      </td>
+      {showImage && (
+        <td className="flex justify-center items-center py-2">
+          <ImgElement image={image} />
+        </td>
+      )}
+
       {showName && (
         <td>
           <p className="text-start">{name}</p>
@@ -75,14 +82,15 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
         </td>
       )}
 
-      {showPrice && (
-        <td>
-          <ProductPrice />{" "}
-        </td>
-      )}
+    
       {showSKU && (
         <td>
           <p className="text-start">{sku}</p>
+        </td>
+      )}
+        {showPrice && (
+        <td>
+          <ProductPrice price={price} />{" "}
         </td>
       )}
       {showStock && (
@@ -112,7 +120,7 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
       )}
       {showTotal && (
         <td>
-          <ProductPrice />{" "}
+          <ProductPrice total={total} />{" "}
         </td>
       )}
       {showStatus && (

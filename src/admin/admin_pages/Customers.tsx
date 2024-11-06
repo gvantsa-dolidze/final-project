@@ -25,6 +25,8 @@ const Customers = () => {
           email="esther.howard@gmail.com"
           showAddress={true}
           address="8642 Yule Street, Arvada CO 80007"
+          showImage={true}
+          image=''
         />
       </table>
       <div className="flex justify-end">
