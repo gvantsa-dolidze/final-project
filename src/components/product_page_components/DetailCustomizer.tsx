@@ -43,7 +43,7 @@ const DetailCustomizer = ({ product }: any) => {
       </div>
       <div className="space-y-2">
         <Title variant="title12" title="Quantity" className="text-start" />
-        <Counter itemId="yourItemId" />
+        <Counter id={product.id} />
       </div>
       <div className="flex gap-5 items-center">
         <Button label="Add to cart" />

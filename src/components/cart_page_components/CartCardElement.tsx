@@ -6,21 +6,25 @@ import ProductTItle from "../product_page_components/Title";
 import ColorSizeDisplay from "./ColorSizeDisplay";
 
 interface CartCardElementProps {
-  itemId: string; // Adjust type as necessary (string or number)
+  id: string; // Adjust type as necessary (string or number)
+  
+  // image: string;
+  title: string;
+  price: number;
 }
-const CartCardElement: React.FC<CartCardElementProps> = ({ itemId }) => {
+const CartCardElement: React.FC<CartCardElementProps> = ({ id, title, price }) => {
   return (
     <div className="flex items-center justify-between mt-5">
       <div className="flex gap-5">
         <ImgElement />
         <div className="text-start">
-          <ProductTItle />
+          <ProductTItle title={title}/>
           <ColorSizeDisplay />
         </div>
       </div>
       <div className="flex items-center gap-5">
-        <ProductPrice />
-        <Counter itemId={itemId} />
+        <ProductPrice price={price}/>
+        <Counter id={id} />
         <Button variant="gray" img="/img/icons/x.png" />
       </div>
     </div>
