@@ -1,18 +1,17 @@
 import CartCardElement from "./CartCardElement";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { useEffect } from "react";
-import { getSingleProduct } from "../../store/app/SingleProductReducer";
-import { useParams } from "react-router";
+import { getAllProducts } from "../../store/app/AllProductsReducer";
+
 
 const CartElement = () => {
-  const { id } = useParams();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(getSingleProduct(Number(id)));
+    dispatch(getAllProducts());
   });
 
-  const products = useAppSelector((state) => state.singleProduct.data || []);
+  const products = useAppSelector((state) => state.allProduct.data || []);
 
   return (
     <div className="flex flex-col w-full">
