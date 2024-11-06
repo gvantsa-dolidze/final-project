@@ -49,7 +49,7 @@ const Products = () => {
         {products.map((product: any) => (
         <AdminTableCell
           showName={true}
-          name="Raw Black T-Shirt Lineup"
+          name={product.title}
           showSKU={true}
           sku="47514501"
           showPrice={true}
@@ -57,7 +57,7 @@ const Products = () => {
           showStock={true}
           stock="In Stock"
           showCategories={true}
-          categories="T-shirt, Men"
+          categories={product.category}
           showImage={true}
           image={product.image}
         />
