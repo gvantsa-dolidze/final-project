@@ -15,7 +15,7 @@ const initialState: CategoryState = {
 
 export const getAllCategories = createAsyncThunk("allCategories", async () => {
   //${search}
-  return fetch(`https://fakestoreapi.com/categories/?limit=9`)
+  return fetch(`https://fakestoreapi.com/products/categories/?limit=9`)
   .then(res => res.json());
 });
 
