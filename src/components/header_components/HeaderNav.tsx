@@ -14,12 +14,12 @@ const HeaderNav: React.FC<HeaderNavProps> = () => {
       <LinkBtn  destination="/" label='Home' variant="link"/>
       <PopOver 
           categories="Categories"
-          perfume='Perfume'
-          trousers='Trousers'
-          shoe='Shoe'
-          handbag='Handbag'
-          hat='Hat'
-          thermos='Thermos'
+          // perfume='Perfume'
+          // trousers='Trousers'
+          // shoe='Shoe'
+          // handbag='Handbag'
+          // hat='Hat'
+          // thermos='Thermos'
       />
       <LinkBtn  destination="/about" label='About' variant="link"/>
       <LinkBtn  destination="/contact" label='Contact' variant="link"/>

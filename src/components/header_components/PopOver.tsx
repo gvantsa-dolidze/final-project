@@ -1,41 +1,44 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import LinkBtn from "../elements/LinkBtn";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { useEffect } from "react";
+import { getAllCategories } from "../../store/app/AllCategoriesReducer";
 
-interface PopOverProps { 
-    categories: string;
-    perfume: string;
-    trousers: string;
-    shoe: string;
-    handbag: string;
-    hat: string;
-    thermos: string;
-  }
-
-const PopOver: React.FC<PopOverProps> = ({
-    categories,
-    // perfume,
-    // trousers,
-    // shoe,
-    // handbag,
-    // hat,
-    // thermos,
-  }) => {
-  return (
-    <Popover className="relative">
-        <PopoverButton className="flex outline-none">
-          {categories}
-          <img src="/img/icons/chevron_down.png" alt="arrow_down" />
-        </PopoverButton>
-        <PopoverPanel anchor="bottom" className="flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3">
-        <LinkBtn destination="/listing_page/" label="perfume" variant="sidebar" />
-        <LinkBtn destination="" label="trousers" variant="sidebar" />
-        <LinkBtn destination="" label="shoe" variant="sidebar" />
-        <LinkBtn destination="" label="handbag" variant="sidebar" />
-        <LinkBtn destination="" label="hat" variant="sidebar" />
-        <LinkBtn destination="" label="thermos" variant="sidebar" />
-        </PopoverPanel>
-      </Popover>
-  )
+interface PopOverProps {
+  categories: string;
 }
 
-export default PopOver
+const PopOver: React.FC<PopOverProps> = ({ categories }) => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getAllCategories());
+  });
+
+  const allCategories = useAppSelector(
+    (state) => state.allCategories.data || []
+  );
+
+  return (
+    <Popover className="relative">
+      <PopoverButton className="flex outline-none">
+        {categories}
+        <img src="/img/icons/chevron_down.png" alt="arrow_down" />
+      </PopoverButton>
+      <PopoverPanel
+        anchor="bottom"
+        className="flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3"
+      >
+        {allCategories.map((category: any) => (
+          <LinkBtn
+            destination="/listing_page/"
+            label={category}
+            variant="sidebar"
+          />
+        ))}
+      </PopoverPanel>
+    </Popover>
+  );
+};
+
+export default PopOver;
