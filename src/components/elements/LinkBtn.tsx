@@ -16,6 +16,7 @@ interface LinkBtnProps {
   reverse?: boolean;
   className?: string;
   id?: any;
+  onClick?: () => void;
 }
 const LinkBtn: React.FC<LinkBtnProps> = ({
   label,
@@ -25,7 +26,8 @@ const LinkBtn: React.FC<LinkBtnProps> = ({
   img,
   reverse = false,
   className = "",
-  id = ''
+  id = '',
+  onClick
 }) => {
   const styles: Record<string, string> = {
     primary:
@@ -40,7 +42,7 @@ const LinkBtn: React.FC<LinkBtnProps> = ({
   };
 
   return (
-    <NavLink to={destination} id={id} className={`${styles[variant]} ${className}`}>
+    <NavLink to={destination} id={id} className={`${styles[variant]} ${className}`} onClick={onClick}>
       {!reverse && img && <img src={img} alt={alt} />}
       {label && <p>{label}</p>}
       {reverse && img && <img src={img} alt={alt} className="ml-2" />}
