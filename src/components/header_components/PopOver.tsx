@@ -34,6 +34,7 @@ const PopOver: React.FC<PopOverProps> = ({ categories }) => {
             destination="/listing_page/"
             label={category}
             variant="sidebar"
+            id={category}
           />
         ))}
       </PopoverPanel>
