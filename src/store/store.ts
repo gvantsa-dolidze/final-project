@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './app/counterSlice'
 import AllProductsReducer from "./app/AllProductsReducer"
 import AllUsersReducer from './app/AllUsersReducer'
+import AllCategoriesReducer from './app/AllCategoriesReducer'
 import BestSellingProductsReducer from "./app/BestSellingProductsReducer"
 import FeaturedProductsReducer from './app/FeaturedProductsReducer'
 import LatestProductsReducer from './app/LatestProductsReducer'
@@ -17,7 +18,8 @@ const store = configureStore({
     latestProduct: LatestProductsReducer,
     similarProduct: SimilarProductsReducer,
     singleProduct: SingleProductReducer,
-    allUsers: AllUsersReducer
+    allUsers: AllUsersReducer,
+    allCategories: AllCategoriesReducer
   },
 })
 export default store;
