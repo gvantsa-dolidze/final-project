@@ -3,7 +3,22 @@ import SearchBar from "../../components/header_components/SearchBar";
 import AdminTableCell from "../admin_components/AdminTableCell";
 import AdminTableHeader from "../admin_components/AdminTableHeader";
 
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { useEffect } from "react";
+import { getAllUsers } from '../../store/app/AllUsersReducer'
+
 const Customers = () => {
+
+
+  const dispatch = useAppDispatch();
+  
+    useEffect(() => {
+      dispatch(getAllUsers());
+    });
+  
+    const users = useAppSelector((state) => state.allUsers.data || []);
+  
+
   return (
     <div className="bg-white rounded-md border">
       <div className="flex justify-between items-center p-7">
@@ -18,16 +33,18 @@ const Customers = () => {
           address="Shipping Address"
           showAction={true}
         />
+        {users.map((user: any) => (
         <AdminTableCell
           showName={true}
-          name="Esther Howard"
+          name={user.name.firstname + " " + user.name.lastname}
           showEmail={true}
-          email="esther.howard@gmail.com"
+          email={user.email}
           showAddress={true}
-          address="8642 Yule Street, Arvada CO 80007"
+          address={user.address.city + ", " + user.address.street + " " + user.address.number}
           showImage={true}
           image=''
         />
+      ))}
       </table>
       <div className="flex justify-end">
         <Pagination />
