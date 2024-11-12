@@ -2,11 +2,14 @@ import { useState } from "react";
 import Button from "../elements/Button";
 import InputElement from "../elements/InputElement";
 import LinkBtn from "../elements/LinkBtn";
-import Cookies from 'js-cookie'
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router";
+
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const onSubmitForm = (e: any) => {
     e.preventDefault();
@@ -24,15 +27,16 @@ const LoginForm = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json.token)
-        Cookies.set('AccessToken', json.token)
-        setIsLoading(false)
-        alert('შესვლა წარმატებით მოხდა')
+        console.log(json.token);
+        Cookies.set("AccessToken", json.token);
+        setIsLoading(false);
+        alert("შესვლა წარმატებით მოხდა");
+        navigate("/profile_page");
       })
-      .catch(err => {
-        alert('მომხმარებელი ვერ მოიძებნა')
-        setIsLoading(false)
-      })
+      .catch((err) => {
+        alert("მომხმარებელი ვერ მოიძებნა");
+        setIsLoading(false);
+      });
   };
 
   const onUsernameChange = (e: any) => {
@@ -68,7 +72,7 @@ const LoginForm = () => {
           destination="/forgot_password_page"
           className=""
         />
-        <Button label={isLoading? 'loading...' : 'Sign In'} type="submit" />
+        <Button label={isLoading ? "loading..." : "Sign In"} type="submit" />
         <LinkBtn
           label="Don't have an account? Sign up"
           variant="link"
