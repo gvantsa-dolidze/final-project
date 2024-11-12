@@ -21,7 +21,10 @@ const LoginForm = () => {
       }),
     })
       .then((res) => res.json())
-      .then((json) => console.log(json));
+      .then((json) => console.log(json))
+      .catch(err => {
+        alert('მომხმარებელი ვერ მოიძებნა')
+      })
   };
 
   const onUsernameChange = (e: any) => {
