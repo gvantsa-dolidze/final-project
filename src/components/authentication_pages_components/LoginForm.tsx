@@ -3,14 +3,21 @@ import InputElement from "../elements/InputElement";
 import LinkBtn from "../elements/LinkBtn";
 
 const LoginForm = () => {
+  
+  const onSubmitForm = (e: any) => {
+    e.preventDefault();
+    console.log('submit')
+  }
+
   return (
-    <form action="" className="space-y-5 w-80">
+    <form onSubmit={onSubmitForm} className="space-y-5 w-80">
       <InputElement text="Email" type="email" placeholder="" id="login_email" />
       <InputElement
         text="password"
         type="password"
         placeholder=""
         id="login_pass"
+        autocomplete='current-password'
       />
 
       <div className="flex flex-col gap-5">
@@ -20,7 +27,7 @@ const LoginForm = () => {
           destination="/forgot_password_page"
           className=""
         />
-        <Button label="Login" />
+        <Button label="Login" type='submit'/>
         <LinkBtn
           label="Don't have an account? Sign up"
           variant="link"
