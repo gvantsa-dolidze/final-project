@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../elements/Button";
 import InputElement from "../elements/InputElement";
 import LinkBtn from "../elements/LinkBtn";
-
+import Cookies from 'js-cookie'
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +21,11 @@ const LoginForm = () => {
       }),
     })
       .then((res) => res.json())
-      .then((json) => console.log(json))
+      .then((json) => {
+        console.log(json.token)
+        Cookies.set('AccessToken', json.token)
+        alert('შესვლა წარმატებით მოხდა')
+      })
       .catch(err => {
         alert('მომხმარებელი ვერ მოიძებნა')
       })
