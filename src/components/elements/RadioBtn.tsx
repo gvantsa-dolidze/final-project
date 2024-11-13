@@ -1,9 +1,9 @@
-interface CheckBtnProps {
+interface RadioBtnProps {
   id: string;
   label: string;
   variant?: "blue";
 }
-const CheckBtn: React.FC<CheckBtnProps> = ({ variant = "blue", label, id}) => {
+const RadioBtn: React.FC<RadioBtnProps> = ({ variant = "blue", label, id}) => {
   const styles: Record<string, string> = {
     blue: "w-4 h-4",
   };
@@ -11,7 +11,7 @@ const CheckBtn: React.FC<CheckBtnProps> = ({ variant = "blue", label, id}) => {
   return (
     <label htmlFor={id} className="flex gap-2 items-center border-b cursor-pointer hover:bg-BackgroundGray px-4 py-3">
       <input
-        type="checkbox"
+        type='radio'
         className={`${styles[variant]} cursor-pointer`}
         name="product-category"
         id={id}
@@ -21,4 +21,4 @@ const CheckBtn: React.FC<CheckBtnProps> = ({ variant = "blue", label, id}) => {
   );
 };
 
-export default CheckBtn;
+export default RadioBtn;

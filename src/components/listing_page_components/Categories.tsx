@@ -1,4 +1,4 @@
-import CheckBtn from "../elements/CheckBtn";
+import RadioBtn from "../elements/RadioBtn";
 
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { useEffect } from "react";
@@ -19,7 +19,7 @@ const Categories = () => {
       <h3>Categories</h3>
       <div className="mt-5">   
         {categories.map((category: any) => (
-          <CheckBtn label={category} id={category} />
+          <RadioBtn label={category} id={category} />
         ))}
       </div>
     </div>
