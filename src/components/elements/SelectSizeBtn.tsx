@@ -17,7 +17,7 @@ const SelectSizeBtn: React.FC<SelectSizeBtnProps> = ({
       <input
         type={type}
         className={`${styles[variant]} appearance-none w-10 h-10 border rounded cursor-pointer checked:border-[black] hover:bg-BackgroundGray`}
-        name={`size-piker-${variant}`} 
+        name={`size-piker`} 
         id={`sizePiker-${variant}`} 
         value={variant}
       />

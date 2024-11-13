@@ -10,7 +10,7 @@ const Categories = () => {
 
   useEffect(() => {
     dispatch(getAllCategories());
-  });
+  },[]);
 
   const categories = useAppSelector((state) => state.allCategories.data || []);
   

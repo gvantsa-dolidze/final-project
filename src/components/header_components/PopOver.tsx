@@ -13,7 +13,7 @@ const PopOver: React.FC<PopOverProps> = ({ categories }) => {
 
   useEffect(() => {
     dispatch(getAllCategories());
-  });
+  },[]);
 
   const allCategories = useAppSelector(
     (state) => state.allCategories.data || []
@@ -31,7 +31,7 @@ const PopOver: React.FC<PopOverProps> = ({ categories }) => {
       >
         {allCategories.map((category: any) => (
           <LinkBtn
-            destination="/listing_page/"
+            destination={`/listing_page/${category}`}
             label={category}
             variant="sidebar"
             id={category}

@@ -9,7 +9,7 @@ const Orders = () => {
 
   useEffect(() => {
     dispatch(getAllProducts());
-  });
+  },[]);
 
   const products = useAppSelector((state) => state.allProduct.data || []);
 

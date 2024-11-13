@@ -55,6 +55,7 @@ function App() {
         </Route>
 
         <Route path="/listing_page" element={<ListingPage />} />
+        <Route path="/listing_page/:category_id" element={<ListingPage />} />
         <Route path="/cart_page" element={<CartPage />} />
         <Route path="/checkout_page" element={<CheckoutPage />} />
         <Route path="/after_payment_page" element={<AfterPaymentPage />} />

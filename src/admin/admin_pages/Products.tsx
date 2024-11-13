@@ -17,7 +17,7 @@ const Products = () => {
   
     useEffect(() => {
       dispatch(getAllProducts());
-    });
+    },[]);
   
     const products = useAppSelector((state) => state.allProduct.data || []);
   

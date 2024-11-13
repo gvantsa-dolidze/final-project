@@ -10,7 +10,7 @@ const EditCard = () => {
 
   useEffect(() => {
     dispatch(getAllProducts());
-  });
+  },[]);
 
   const products = useAppSelector((state) => state.allProduct.data || []);
   const limitedProducts = products.slice(0, 3);
