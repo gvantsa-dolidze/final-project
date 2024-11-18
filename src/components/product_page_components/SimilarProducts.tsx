@@ -10,7 +10,7 @@ const SimilarProducts = () => {
 
   useEffect(() => {
     dispatch(getSimilarProducts());
-  });
+  },[]);
 
   const products = useAppSelector(
     (state) => state.similarProduct.data || []

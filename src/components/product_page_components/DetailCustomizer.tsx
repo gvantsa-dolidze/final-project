@@ -5,8 +5,33 @@ import { Counter } from "../../store/app/Counter";
 import LinkBtn from "../elements/LinkBtn";
 import Title from "./Title";
 import ProductPrice from "../elements/ProductPrice";
+// import { useParams } from "react-router";
 
 const DetailCustomizer = ({ product }: any) => {
+
+  // const { productId } = useParams();
+
+  const AddToCart = () => {
+    fetch('https://fakestoreapi.com/carts', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          userId: 2,
+          date: '2020-02-03',
+          products: [
+              { productId: product.id, quantity: 1 },
+          ]
+      })
+  })
+  .then(res => res.json())
+  .then(
+    json => console.log(json)
+
+)
+  .catch(error => console.error('Error:', error));
+  }
 
   return (
     <div className="w-[438px] flex flex-col gap-7">
@@ -46,7 +71,7 @@ const DetailCustomizer = ({ product }: any) => {
         <Counter id={product.id} />
       </div>
       <div className="flex gap-5 items-center">
-        <Button label="Add to cart" />
+        <Button label="Add to cart" onClick={AddToCart}/>
         <Button
           img="/img/icons/Heart.png"
           variant="borderPngBtn"

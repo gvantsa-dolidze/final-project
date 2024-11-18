@@ -19,7 +19,7 @@ export const getCart = createAsyncThunk(
       const products_res = await fetch("https://fakestoreapi.com/products");
       const products_data = await products_res.json();
 
-      const cart_res = await fetch(`https://fakestoreapi.com/carts/3`);
+      const cart_res = await fetch(`https://fakestoreapi.com/carts/2`);
       const cart_data = await cart_res.json();
 
       // Combine cart items with corresponding product details
