@@ -10,7 +10,7 @@ const BestSelling = () => {
 
   useEffect(() => {
     dispatch(getBestSellingProducts());
-  });
+  },[]);
 
   const products = useAppSelector(
     (state) => state.bestSellingProducts.data || []

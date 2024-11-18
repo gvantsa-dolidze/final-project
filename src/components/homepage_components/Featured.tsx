@@ -10,7 +10,7 @@ const Featured = () => {
 
   useEffect(() => {
     dispatch(getFeaturedProducts());
-  });
+  },[]);
 
   const products = useAppSelector(
     (state) => state.featuredProduct.data || []

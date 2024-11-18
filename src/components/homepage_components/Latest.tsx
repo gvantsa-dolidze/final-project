@@ -10,7 +10,7 @@ const Latest = () => {
 
   useEffect(() => {
     dispatch(getLatestProducts());
-  });
+  },[]);
 
   const products = useAppSelector(
     (state) => state.latestProduct.data || []

@@ -14,7 +14,7 @@ const Customers = () => {
   
     useEffect(() => {
       dispatch(getAllUsers());
-    });
+    },[]);
   
     const users = useAppSelector((state) => state.allUsers.data || []);
   
