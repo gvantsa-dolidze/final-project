@@ -10,7 +10,7 @@ import ProductPrice from "../elements/ProductPrice";
 const DetailCustomizer = ({ product }: any) => {
 
   // const { productId } = useParams();
-
+  const currentDate = new Date().toISOString().split('T')[0];
   const AddToCart = () => {
     fetch('https://fakestoreapi.com/carts', {
       method: 'POST',
@@ -19,7 +19,7 @@ const DetailCustomizer = ({ product }: any) => {
       },
       body: JSON.stringify({
           userId: 2,
-          date: '2020-02-03',
+          date: currentDate,
           products: [
               { productId: product.id, quantity: 1 },
           ]
