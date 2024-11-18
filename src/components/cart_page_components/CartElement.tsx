@@ -1,27 +1,28 @@
 import CartCardElement from "./CartCardElement";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { useEffect } from "react";
-import { getAllProducts } from "../../store/app/AllProductsReducer";
+import { getCart } from "../../store/app/CartReducer";
 
 
 const CartElement = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(getAllProducts());
+    dispatch(getCart());
   },[]);
 
-  const products = useAppSelector((state) => state.allProduct.data || []);
+  const cart = useAppSelector((state) => state.cart.data || []);
 
   return (
     <div className="flex flex-col w-full">
       <h3 className="border-b pb-5 text-start">Your cart</h3>
-      {products.map((product: any) => (
+      {cart.map((cart: any) => (
         <CartCardElement
-          id={product.id}
-          title={product.title}
-          price={product.price}
-          image={product.image}
+          id={cart.id}
+          title={cart.title}
+          quantity={cart.quantity}
+          price={cart.price}
+          image={cart.image}
         />
       ))}
     </div>

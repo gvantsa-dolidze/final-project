@@ -8,6 +8,7 @@ import FeaturedProductsReducer from './app/FeaturedProductsReducer'
 import LatestProductsReducer from './app/LatestProductsReducer'
 import SimilarProductsReducer from './app/SimilarProductsReducer'
 import SingleProductReducer  from './app/SingleProductReducer'
+import cartReducer from './app/CartReducer'
 
 const store = configureStore({
   reducer: {
@@ -19,7 +20,8 @@ const store = configureStore({
     similarProduct: SimilarProductsReducer,
     singleProduct: SingleProductReducer,
     allUsers: AllUsersReducer,
-    allCategories: AllCategoriesReducer
+    allCategories: AllCategoriesReducer,
+    cart: cartReducer
   },
 })
 export default store;
