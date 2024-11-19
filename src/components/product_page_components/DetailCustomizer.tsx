@@ -37,14 +37,14 @@ const DetailCustomizer = ({ product }: any) => {
     <div className="w-[438px] flex flex-col gap-7">
       <div className="flex justify-between">
         <Title variant="title24" title={product.title} />
-        <Button img="/img/icons/Share.png" variant="link" />
+        <Button img="/img/icons/share.png" variant="link" />
       </div>
 
       <div className="flex gap-5">
         <LinkBtn
           destination="details_content"
           variant="secondary"
-          img="/img/icons/Star.png"
+          img="/img/icons/star.png"
           label={
             product.rating ? `${product.rating.rate} - ${product.rating.count} Reviews` : "No reviews"
           }
@@ -73,7 +73,7 @@ const DetailCustomizer = ({ product }: any) => {
       <div className="flex gap-5 items-center">
         <Button label="Add to cart" onClick={AddToCart}/>
         <Button
-          img="/img/icons/Heart.png"
+          img="/img/icons/heart.png"
           variant="borderPngBtn"
           className=""
         />

@@ -20,7 +20,7 @@ const SecondBanner = () => {
         </div>
         <div className="hidden md:block">
           <img
-            src="/img/banner/category_image.png"
+            src="/img/banner/white_poncho.png"
             alt="star"
             className="w-56"
           />
