@@ -14,7 +14,6 @@ const initialState: CartState = {
 
 export const getCart = createAsyncThunk(
   "cart/getCart",
-  // async (_, { getState }) => {
 
   async (_, { getState, dispatch }) => {
     // Gets the current Redux state
