@@ -35,7 +35,19 @@ import Settings from "./admin/admin_pages/Settings";
 
 import WriteReview from './components/product_page_components/WriteReview'
 
+import { useAppDispatch } from "./store/hooks";
+import { useEffect } from "react";
+import { getCart } from "./store/app/CartReducer";
+
+
 function App() {
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getCart());
+  },[]);
+
   return (
     <div className="App">
       <Routes>
