@@ -5,39 +5,29 @@ import { Counter } from "../../store/app/Counter";
 import LinkBtn from "../elements/LinkBtn";
 import Title from "./Title";
 import ProductPrice from "../elements/ProductPrice";
-import { useNavigate } from "react-router";
-
-
+import { useState } from "react";
 
 const DetailCustomizer = ({ product }: any) => {
-
-  const currentDate = new Date().toISOString().split('T')[0];
-  const navigate = useNavigate()
+  const currentDate = new Date().toISOString().split("T")[0];
+  const [cartMessage, setCartMessage] = useState("");
   const AddToCart = () => {
-    fetch('https://fakestoreapi.com/carts', {
-      method: 'POST',
+    fetch("https://fakestoreapi.com/carts", {
+      method: "POST",
       headers: {
-          'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-          userId: 2,
-          date: currentDate,
-          products: [
-              { productId: product.id, quantity: 1 },
-          ]
-      })
-  })
-  .then(res => res.json())
-  .then(
-    json => console.log(json)
+        userId: 2,
+        date: currentDate,
+        products: [{ productId: product.id, quantity: 1 }],
+      }),
+    })
+      .then((res) => res.json())
+      .then((json) => console.log(json))
+      .catch((error) => console.error("Error:", error));
 
-)
-  .catch(error => console.error('Error:', error));
-  
-  alert('product added')
-  navigate('/cart_page')
-
-  }
+    setCartMessage(`Product has been added to your cart.`);
+  };
 
   return (
     <div className="w-[438px] flex flex-col gap-7">
@@ -52,7 +42,9 @@ const DetailCustomizer = ({ product }: any) => {
           variant="secondary"
           img="/img/icons/star.png"
           label={
-            product.rating ? `${product.rating.rate} - ${product.rating.count} Reviews` : "No reviews"
+            product.rating
+              ? `${product.rating.rate} - ${product.rating.count} Reviews`
+              : "No reviews"
           }
           className="flex items-center text-xs"
         />
@@ -77,7 +69,7 @@ const DetailCustomizer = ({ product }: any) => {
         <Counter id={product.id} />
       </div>
       <div className="flex gap-5 items-center">
-        <Button label="Add to cart" onClick={AddToCart}/>
+        <Button label="Add to cart" onClick={AddToCart} />
         <Button
           img="/img/icons/heart.png"
           variant="borderPngBtn"
@@ -89,6 +81,12 @@ const DetailCustomizer = ({ product }: any) => {
         title="— Free shipping on orders $100+"
         className="text-start"
       />
+      {cartMessage && (
+        <div className="flex items-center justify-start gap-4">
+          <p>{cartMessage}</p>
+          <LinkBtn destination="/cart_page" label="Go to cart" />
+        </div>
+      )}
     </div>
   );
 };

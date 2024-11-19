@@ -38,7 +38,7 @@ const LinkBtn: React.FC<LinkBtnProps> = ({
     outline: "",
     light: "border px-8 py-3 text-sm hover:bg-BackgroundGray rounded-md",
     link: " flex justify-start text-gray hover:text-gray-800",
-    gray: "bg-BackgroundGray rounded-md",
+    gray: "bg-BackgroundGray rounded-md px-4 py-1",
   };
 
   return (
