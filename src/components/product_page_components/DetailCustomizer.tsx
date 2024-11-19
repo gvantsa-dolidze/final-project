@@ -6,25 +6,41 @@ import LinkBtn from "../elements/LinkBtn";
 import Title from "./Title";
 import ProductPrice from "../elements/ProductPrice";
 import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { addItemToCart } from "../../store/app/CartReducer";
 
 const DetailCustomizer = ({ product }: any) => {
   const currentDate = new Date().toISOString().split("T")[0];
   const [cartMessage, setCartMessage] = useState("");
+  const dispatch = useAppDispatch();
+
   const AddToCart = () => {
-    fetch("https://fakestoreapi.com/carts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        userId: 2,
-        date: currentDate,
-        products: [{ productId: product.id, quantity: 1 }],
-      }),
-    })
+    // fetch("https://fakestoreapi.com/carts", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     userId: 2,
+    //     date: currentDate,
+    //     products: [{ productId: product.id, quantity: 1 }],
+    //   }),
+    // })
+    //   .then((res) => res.json())
+    //   .then((json) => console.log(json))
+    //   .catch((error) => console.error("Error:", error));
+
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
-      .then((json) => console.log(json))
-      .catch((error) => console.error("Error:", error));
+      .then((data) => {
+        const pp = data.find((p: any) => p.id === product.id);
+        return pp;
+      })
+      .then((pp) =>
+        dispatch(addItemToCart({ ...pp, productId: product.id, quantity: 1 }))
+      );
+
+    // dispatch(addItemToCart({ productId: product.id, quantity: 1 }));
 
     setCartMessage(`Product has been added to your cart.`);
   };
