@@ -10,7 +10,7 @@ const AdminHeader = () => {
         destination="/admin_page"
         secondaryDestination="/admin_page/dashboard"
       />
-      <Button img="/img/icons/Logout.png" variant="gray" />
+      <Button img="/img/icons/logout.png" variant="gray" />
     </div>
   );
 };

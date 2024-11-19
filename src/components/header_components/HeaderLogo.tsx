@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const HeaderLogo = () => {
   return (
     <NavLink to="/" className="flex items-center gap-1 p-2">
-      <img src="/img/logo/Logomark.png" alt="logo" />
+      <img src="/img/logo/logomark.png" alt="logo" />
 
       <span className="hidden lg:block ">Ecommerce</span>
     </NavLink>

@@ -140,7 +140,7 @@ const AdminTableCell: React.FC<AdminTableCellProps> = ({
         </td>
       )}
       <td>
-        <Button img="/img/icons/More.png" variant="link" />
+        <Button img="/img/icons/more.png" variant="link" />
       </td>
     </tr>
   );

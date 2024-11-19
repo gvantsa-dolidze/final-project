@@ -61,7 +61,7 @@ const AdminTableHeader: React.FC<AdminTableHeaderProps> = ({
     <tr className="border-b border-t">
       <th>
         <div className="pt-2">
-          <Button variant="link" img="/img/icons/Sort.png" />
+          <Button variant="link" img="/img/icons/sort.png" />
         </div>
       </th>
       {showName && (

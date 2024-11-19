@@ -13,31 +13,31 @@ const ProfileSideBar = () => {
         destination="wishlists"
         label="Wishlists"
         variant="sidebar"
-        img="/img/icons/Heart.png"
+        img="/img/icons/heart.png"
       />
       <LinkBtn
         destination="address"
         label="Address"
         variant="sidebar"
-        img="/img/icons/Delivery.png"
+        img="/img/icons/delivery.png"
       />
       <LinkBtn
         destination="password"
         label="Password"
         variant="sidebar"
-        img="/img/icons/Key.png"
+        img="/img/icons/key.png"
       />
       <LinkBtn
         destination="account_detail"
         label="Account Detail"
         variant="sidebar"
-        img="/img/icons/User.png"
+        img="/img/icons/user.png"
       />
       <LinkBtn
         destination="logout"
         label="Logout"
         variant="sidebar"
-        img="/img/icons/Logout.png"
+        img="/img/icons/logout.png"
       />
     </div>
   );
