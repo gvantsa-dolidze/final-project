@@ -5,12 +5,14 @@ import { Counter } from "../../store/app/Counter";
 import LinkBtn from "../elements/LinkBtn";
 import Title from "./Title";
 import ProductPrice from "../elements/ProductPrice";
-// import { useParams } from "react-router";
+import { useNavigate } from "react-router";
+
+
 
 const DetailCustomizer = ({ product }: any) => {
 
-  // const { productId } = useParams();
   const currentDate = new Date().toISOString().split('T')[0];
+  const navigate = useNavigate()
   const AddToCart = () => {
     fetch('https://fakestoreapi.com/carts', {
       method: 'POST',
@@ -31,6 +33,10 @@ const DetailCustomizer = ({ product }: any) => {
 
 )
   .catch(error => console.error('Error:', error));
+  
+  alert('product added')
+  navigate('/cart_page')
+
   }
 
   return (
