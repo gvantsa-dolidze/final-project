@@ -1,16 +1,7 @@
 import CartCardElement from "./CartCardElement";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
-// import { useEffect } from "react";
-// import { getCart } from "../../store/app/CartReducer";
-
+import { useAppSelector } from "../../store/hooks";
 
 const CartElement = () => {
-  // const dispatch = useAppDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getCart());
-  // },[]);
-
   const cart = useAppSelector((state) => state.cart.data || []);
 
   return (
