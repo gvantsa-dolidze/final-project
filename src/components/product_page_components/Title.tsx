@@ -15,7 +15,9 @@ const Title: React.FC<TitleProps> = ({
     title24: 'text-2xl',
   };
 
-  return <h3 className={`${styles[variant]} ${className}`}>{title}</h3>;
+  const truncatedTitle = title.length > 20 ? `${title.slice(0, 20)}...` : title;
+
+  return <h3 className={`${styles[variant]} ${className}`}>{truncatedTitle}</h3>;
 };
 
 export default Title;
