@@ -4,7 +4,7 @@ import ProductPrice from "../elements/ProductPrice";
 import { useNavigate } from "react-router";
 
 interface OrderSummaryProps {
-  totalPrice: number; // Prop for total price
+  totalPrice: number;
 }
 
 const OrderSummary: React.FC<OrderSummaryProps> = ({ totalPrice }) => {
@@ -14,9 +14,8 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({ totalPrice }) => {
     navigate('/checkout_page');
   }
 
-  // Format total price to 2 decimal places
   const formatPrice = (price: number) => {
-    return price.toFixed(2); // Ensure 2 decimal places
+    return price.toFixed(2);
   };
 
   return (
@@ -25,21 +24,21 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({ totalPrice }) => {
 
       <div className="border-b space-y-5 py-5">
         <div className="flex justify-between">
-          <p>Subtotal</p> 
+          <p>Subtotal</p>
           <ProductPrice price={parseFloat(formatPrice(totalPrice))} />
         </div>
         <div className="flex justify-between">
-          <p>Shipping</p> 
+          <p>Shipping</p>
           <p>Free</p>
         </div>
         <div className="flex justify-between">
-          <p>Tax</p> 
-          <ProductPrice price={parseFloat(formatPrice(totalPrice * 0.001))} /> {/* Example Tax Calculation */}
+          <p>Tax</p>
+          <ProductPrice price={parseFloat(formatPrice(totalPrice * 0.001))} />
         </div>
       </div>
       <div className="flex justify-between">
-        <p>Total</p> 
-        <ProductPrice price={parseFloat(formatPrice(totalPrice * 1.001))} /> {/* Example Total with tax */}
+        <p>Total</p>
+        <ProductPrice price={parseFloat(formatPrice(totalPrice * 1.001))} />
       </div>
       <div className="flex flex-col gap-7">
         <Button label="Checkout" onClick={Checkout} />

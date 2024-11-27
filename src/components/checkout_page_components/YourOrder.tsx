@@ -1,14 +1,21 @@
 import EditCard from "./EditCard";
-import PlaceOrder from "./PlaceOrder";
+import React from "react";
+import PlaceOrder from "../checkout_page_components/PlaceOrder";
+import { useAppSelector } from "../../store/hooks";
 
-const YourOrder = () => {
+const YourOrder: React.FC = () => {
+  const cart = useAppSelector((state) => state.cart.data || []);
+
+  const totalPrice = cart.reduce((acc, cartItem) => acc + (cartItem.price * cartItem.quantity), 0);
+
   return (
-    <div className="border-l-2 pl-20">
+    <div>
       <h3 className="text-start">Your Order</h3>
       <EditCard />
-      <PlaceOrder />
+      <PlaceOrder totalPrice={totalPrice} />
     </div>
   );
 };
 
 export default YourOrder;
+

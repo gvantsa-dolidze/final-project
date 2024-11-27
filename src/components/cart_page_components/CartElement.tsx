@@ -3,7 +3,7 @@ import { useAppSelector } from "../../store/hooks";
 
 const CartElement = () => {
   const cart = useAppSelector((state) => state.cart.data || []);
-  
+
   return (
     <div className="flex flex-col w-full">
       <h3 className="border-b pb-5 text-start">Your cart</h3>

@@ -8,7 +8,6 @@ import Layout from "../components/layout/Layout";
 import { useAppSelector } from "../store/hooks";
 
 
-// Define the type of cart item
 interface CartItem {
   id: number;
   title: string;
@@ -19,15 +18,13 @@ interface CartItem {
 
 const CartPage: React.FC = () => {
   const [hasToken, setHasToken] = useState<boolean>(false);
-  const [totalPrice, setTotalPrice] = useState<number>(0); // State for total price
+  const [totalPrice, setTotalPrice] = useState<number>(0);
   const navigate = useNavigate();
 
-  // Use the selector to get the cart from the Redux store
-  const cart = useAppSelector((state) => state.cart.data || []); // Ensure the data is properly typed
+  const cart = useAppSelector((state) => state.cart.data || []);
 
-  // Calculate total price
   const calculatedTotalPrice = cart.reduce((acc: number, cartItem: CartItem) => {
-    return acc + (cartItem.price * cartItem.quantity); // Calculate total price
+    return acc + (cartItem.price * cartItem.quantity);
   }, 0);
 
   useEffect(() => {
@@ -41,7 +38,6 @@ const CartPage: React.FC = () => {
     }
   }, [navigate]);
 
-  // Set the total price in state
   useEffect(() => {
     setTotalPrice(calculatedTotalPrice);
   }, [calculatedTotalPrice]);
