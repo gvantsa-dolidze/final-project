@@ -5,6 +5,7 @@ const AdminHeader = () => {
   return (
     <div className="flex justify-between p-7">
       <Breadcrumb
+        title='Dashboard'
         label="Admin"
         secondaryLabel="Dashboard"
         destination="/admin_page"
