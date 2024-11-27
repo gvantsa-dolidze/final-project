@@ -10,25 +10,20 @@ const CartPage: React.FC = () => {
   const [hasToken, setHasToken] = useState<boolean>(false);
   const navigate = useNavigate();
 
-  // Check if the token exists on component mount
   useEffect(() => {
     const token = Cookies.get("AccessToken");
-    console.log("Token found:", token); // Debugging log to check the token
+    console.log("Token found:", token);
 
     if (token) {
-      setHasToken(true);  // If token exists, set hasToken to true
+      setHasToken(true);
     } else {
-      // If no token exists, redirect to login page
       navigate("/login");
     }
   }, [navigate]);
 
-  // If the token exists, render the Cart page, otherwise it will redirect
   if (!hasToken) {
-    return null;  // Prevent rendering CartPage content if there's no token (because we already redirected to login)
+    return null;
   }
-
-  // Render the Cart page if the token exists
   return (
     <Layout>
       <div className="bg-BackgroundGray">
