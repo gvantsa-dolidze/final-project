@@ -19,7 +19,7 @@ const CartCardElement: React.FC<CartCardElementProps> = ({ id, title, price, ima
       <div className="flex gap-5">
         <ImgElement image={image}/>
         <div className="text-start">
-          <ProductTItle title={title}/>
+          <ProductTItle title={title} truncate={true}/>
           {/* <ColorSizeDisplay /> */}
           <p><span>quantity - </span>{quantity}</p>
         </div>

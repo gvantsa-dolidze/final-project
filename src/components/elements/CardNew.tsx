@@ -25,7 +25,7 @@ export const CardNew: React.FC<CardProps> = ({ variant = "primary", image, title
             <div className="h-[312px]  rounded-md flex justify-center items-center">
               <img src={image} alt={title} className="lg:w-[60%] w-[30%] max-sm:w-[25%]"/>
             </div>
-            <ProductTitle title={title} />
+            <ProductTitle title={title} truncate={true}/>
             <div className="flex items-center gap-3">
               <LinkBtn
                 label="IN STOCK"

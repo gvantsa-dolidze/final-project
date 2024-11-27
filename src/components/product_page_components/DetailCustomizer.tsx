@@ -30,7 +30,7 @@ const DetailCustomizer = ({ product }: any) => {
   return (
     <div className="w-[438px] flex flex-col gap-7">
       <div className="flex justify-between">
-        <Title variant="title24" title={product.title} />
+        <Title variant="title16" title={product.title} truncate={false}/>
         <Button img="/img/icons/share.png" variant="link" />
       </div>
 
