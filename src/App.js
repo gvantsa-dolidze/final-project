@@ -72,6 +72,7 @@ function App() {
         <Route path="/checkout_page" element={<CheckoutPage />} />
         <Route path="/after_payment_page" element={<AfterPaymentPage />} />
         <Route path="/login_page" element={<LoginPage />} />
+        <Route path="login" element={<Login />} />
         <Route path="/sign_up_page" element={<SignUpPage />} />
         <Route path="/forgot_password_page" element={<ForgotPassword />} />
         <Route path="/reset_password_page" element={<ResetPassword />} />
@@ -97,9 +98,7 @@ function App() {
           <Route path="customers" element={<Customers />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="settings" element={<Settings />} />
-
           <Route path="add_product" element={<AddProduct />} />
-          <Route path="login" element={<Login />} />
         </Route>
 
       </Routes>
