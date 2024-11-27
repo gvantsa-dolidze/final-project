@@ -1,8 +1,14 @@
 import Button from "../elements/Button";
 import LinkBtn from "../elements/LinkBtn";
 import ProductPrice from "../elements/ProductPrice";
+import { useNavigate } from "react-router";
 
 const OrderSummary = () => {
+  const navigate = useNavigate();
+
+  const Checkout = () => {
+    navigate('/checkout_page')
+  }
   return (
     <div className="border rounded-md py-10 px-2  flex flex-col w-96 gap-5 h-[450px]">
       <h3 className="text-start">Order Summery</h3>
@@ -22,7 +28,7 @@ const OrderSummary = () => {
         <p>Total</p> <ProductPrice />
       </div>
       <div className="flex flex-col gap-7">
-        <Button label="Checkout" />
+        <Button label="Checkout" onClick={Checkout}/>
         <LinkBtn
           label="Continue Shopping"
           variant="link"
