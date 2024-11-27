@@ -5,10 +5,30 @@ import CartElement from "../components/cart_page_components/CartElement";
 import OrderSummary from "../components/cart_page_components/OrderSummary";
 import Breadcrumb from "../components/elements/Breadcrumb";
 import Layout from "../components/layout/Layout";
+import { useAppSelector } from "../store/hooks";
+
+
+// Define the type of cart item
+interface CartItem {
+  id: number;
+  title: string;
+  price: number;
+  quantity: number;
+  image: string;
+}
 
 const CartPage: React.FC = () => {
   const [hasToken, setHasToken] = useState<boolean>(false);
+  const [totalPrice, setTotalPrice] = useState<number>(0); // State for total price
   const navigate = useNavigate();
+
+  // Use the selector to get the cart from the Redux store
+  const cart = useAppSelector((state) => state.cart.data || []); // Ensure the data is properly typed
+
+  // Calculate total price
+  const calculatedTotalPrice = cart.reduce((acc: number, cartItem: CartItem) => {
+    return acc + (cartItem.price * cartItem.quantity); // Calculate total price
+  }, 0);
 
   useEffect(() => {
     const token = Cookies.get("AccessToken");
@@ -21,9 +41,15 @@ const CartPage: React.FC = () => {
     }
   }, [navigate]);
 
+  // Set the total price in state
+  useEffect(() => {
+    setTotalPrice(calculatedTotalPrice);
+  }, [calculatedTotalPrice]);
+
   if (!hasToken) {
     return null;
   }
+
   return (
     <Layout>
       <div className="bg-BackgroundGray">
@@ -39,7 +65,7 @@ const CartPage: React.FC = () => {
       </div>
       <div className="flex m-auto max-w-1116 py-10 gap-20">
         <CartElement />
-        <OrderSummary />
+        <OrderSummary totalPrice={totalPrice} />
       </div>
     </Layout>
   );
