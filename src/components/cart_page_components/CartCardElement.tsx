@@ -14,12 +14,12 @@ interface CartCardElementProps {
 }
 const CartCardElement: React.FC<CartCardElementProps> = ({ id, title, price, image, quantity }) => {
   return (
-    <div className="flex items-center justify-between mt-5">
+    <div className="flex items-center justify-between mt-5 gap-5">
       <div className="flex gap-5">
         <ImgElement image={image}/>
         <div className="text-start">
-          <ProductTItle title={title} truncateLength={25} hideOnSmall={true}/>
-          <p><span>quantity - </span>{quantity}</p>
+          <ProductTItle title={title} truncateLength={20} hideOnSmall={true}/>
+          <p className="md:block md:text-sm hidden"><span>quantity - </span>{quantity}</p>
         </div>
       </div>
       <div className="flex items-center gap-5">

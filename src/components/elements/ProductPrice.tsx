@@ -7,7 +7,7 @@ interface ProductPriceProps {
 
 const ProductPrice: React.FC<ProductPriceProps> = ({ price, total }) => {
   return (
-    <div className="text-start">${price || total}</div>
+    <div className="text-sm text-start">${price || total}</div>
   );
 };
 
