@@ -19,9 +19,9 @@ const WishlistCardElement: React.FC<WishlistCardElementProps> = ({
       <div className="flex gap-5">
         <ImgElement image={image} />
         <div className="text-start">
-          <ProductTItle title={title} />
-          <p>Added on: 27 July 2023</p>
-          <ProductPrice price={price} />
+          <ProductTItle title={title} hideOnSmall={true}/>
+          <p className="md:block md:text-sm hidden">Added on: 27 July 2023</p>
+          <ProductPrice price={price} hideOnSmall={true}/>
         </div>
       </div>
       <div className="flex gap-5 items-center">
