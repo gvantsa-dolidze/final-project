@@ -2,7 +2,7 @@ import LinkBtn from "../elements/LinkBtn";
 
 const ProfileSideBar = () => {
   return (
-    <div className="flex flex-col w-1/4 border-r-2 p-5">
+    <div className="flex-col w-70 border-r-2 pr-10 md:block hidden">
       <LinkBtn
         destination="orders"
         label="Orders"
