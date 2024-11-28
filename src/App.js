@@ -22,6 +22,7 @@ import AccountDetail from "./components/profile_pages_components/AccountDetail";
 import Password from "./components/profile_pages_components/Password";
 import Logout from "./components/profile_pages_components/Logout";
 
+import Contact from './pages/Contact';
 import About from "./pages/About";
 import AddProduct from "./admin/admin_pages/AddProduct";
 import AdminPage from "./admin/admin_pages/AdminPage";
@@ -77,6 +78,7 @@ function App() {
         <Route path="/forgot_password_page" element={<ForgotPassword />} />
         <Route path="/reset_password_page" element={<ResetPassword />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* profile Page routing */}
         <Route path="/profile_page" element={<ProfilePage />}>

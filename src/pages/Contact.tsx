@@ -1,26 +1,26 @@
 import Breadcrumb from "../components/elements/Breadcrumb";
 import Layout from "../components/layout/Layout";
 
-const About = () => {
+const Contact = () => {
   return (
     <Layout>
       <div className="bg-BackgroundGray">
         <div className="max-w-1116 m-auto py-5">
           <Breadcrumb
-            title="About"
+            title="Contact"
             label="Ecommerce"
             secondaryLabel="Contact"
             destination="/"
-            secondaryDestination="/about"
+            secondaryDestination="/contact"
           />
         </div>
       </div>
       <div className="max-w-1116 m-auto">
-        about
+        contact
       </div>
     </Layout>
   );
 };
 
-export default About;
+export default Contact;
 
