@@ -11,18 +11,11 @@ interface HeaderNavProps {
 const HeaderNav: React.FC<HeaderNavProps> = () => {
   return (
     <div className="gap-5 md:flex hidden">
-      <LinkBtn  destination="/" label='Home' variant="link"/>
-      <PopOver 
-          categories="Categories"
-          // perfume='Perfume'
-          // trousers='Trousers'
-          // shoe='Shoe'
-          // handbag='Handbag'
-          // hat='Hat'
-          // thermos='Thermos'
-      />
-      <LinkBtn  destination="/about" label='About' variant="link"/>
-      <LinkBtn  destination="/contact" label='Contact' variant="link"/>
+      <LinkBtn destination="/" label='Home' variant="link" />
+      <PopOver
+        categories="Categories" />
+      <LinkBtn destination="/about" label='About' variant="link" />
+      <LinkBtn destination="/contact" label='Contact' variant="link" />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import PromoHeader from "./PromoHeader";
 import SearchBar from "./SearchBar";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
+
 const Header = () => {
   return (
     <div>
