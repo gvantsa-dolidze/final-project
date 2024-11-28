@@ -28,7 +28,8 @@ const Title: React.FC<TitleProps> = ({
       : title;
 
   
-  const responsiveClasses = hideOnSmall ? 'md:block hidden' : '';
+  const responsiveClasses = hideOnSmall ? 'md:block md:text-sm hidden' : '';
+  
   return <h3 className={`${styles[variant]} ${className} ${responsiveClasses}`}>{truncatedTitle}</h3>;
 };
 
