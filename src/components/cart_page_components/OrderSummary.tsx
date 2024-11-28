@@ -19,7 +19,7 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({ totalPrice }) => {
   };
 
   return (
-    <div className="border rounded-md py-10 px-2 flex flex-col w-96 gap-5 h-[450px]">
+    <div className="border rounded-md py-10 px-2 flex flex-col gap-5 h-[450px] w-4/6">
       <h3 className="text-start">Order Summary</h3>
 
       <div className="border-b space-y-5 py-5">
