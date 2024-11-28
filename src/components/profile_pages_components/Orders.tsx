@@ -14,7 +14,7 @@ const Orders = () => {
   const products = useAppSelector((state) => state.allProduct.data || []);
 
   return (
-    <div className="flex  flex-col pl-10 space-y-10">
+    <div className="flex flex-col xl:px-10 px-2 space-y-10">
       <h3 className="text-start">Orders</h3>
       {products.map((product: any) => (
         <OrdersCardElement

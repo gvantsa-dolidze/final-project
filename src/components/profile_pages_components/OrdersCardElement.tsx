@@ -18,14 +18,14 @@ const OrdersCardElement: React.FC<OrdersCardElementProps> = ({
     <div className="flex items-center justify-between w-full">
       <div className="flex gap-5">
         <ImgElement image={image} />
-        <div className="text-start">
-          <ProductTItle title={title} />
-          <p>Added on: 27 July 2023</p>
+        <div className="flex flex-col items-start justify-center">
+          <ProductTItle title={title} hideOnSmall={true}/>
+          <p className="md:block md:text-sm hidden">Added on: 27 July 2023</p>
           <Button variant="link" label="Remove item" />
         </div>
       </div>
       <div className="flex gap-5 items-center">
-        <ProductPrice price={price} />
+        <ProductPrice price={price} hideOnSmall={true}/>
         <Button variant="light" label="Add to cart" />
       </div>
     </div>
