@@ -41,6 +41,9 @@ const Header = () => {
                 <MenuItem>
                   <LinkBtn destination="/contact" label="Contact" variant="sidebar" />
                 </MenuItem>
+                <MenuItem>
+                  <LinkBtn destination="/cart_page" label="My Cart" variant="sidebar" />
+                </MenuItem>
                 <div className="w-80 flex gap-5 justify-center ">
                   <MenuItem>
                     <LinkBtn destination="/login_page" label="Login" variant='primary' img="/img/icons/arrow_right.png"
