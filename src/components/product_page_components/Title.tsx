@@ -4,6 +4,7 @@ interface TitleProps {
   className?: string;
   truncate?: boolean;
   truncateLength?: number;
+  hideOnSmall?: boolean;
 }
 const Title: React.FC<TitleProps> = ({
   title = "Raw Black T-Shirt Lineup",
@@ -11,6 +12,8 @@ const Title: React.FC<TitleProps> = ({
   className = "",
   truncate = true,
   truncateLength = 20,
+  
+  hideOnSmall = false,
 }) => {
   const styles: Record<string, string> = {
     title12: 'text-xs',
@@ -24,7 +27,9 @@ const Title: React.FC<TitleProps> = ({
       ? `${title.slice(0, truncateLength)}...`
       : title;
 
-  return <h3 className={`${styles[variant]} ${className}`}>{truncatedTitle}</h3>;
+  
+  const responsiveClasses = hideOnSmall ? 'md:block hidden' : '';
+  return <h3 className={`${styles[variant]} ${className} ${responsiveClasses}`}>{truncatedTitle}</h3>;
 };
 
 

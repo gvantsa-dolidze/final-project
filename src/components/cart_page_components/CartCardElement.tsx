@@ -3,10 +3,9 @@ import Button from "../elements/Button";
 import ImgElement from "../elements/ImgElement";
 import ProductPrice from "../elements/ProductPrice";
 import ProductTItle from "../product_page_components/Title";
-import ColorSizeDisplay from "./ColorSizeDisplay";
 
 interface CartCardElementProps {
-  id?: any; // Adjust type as necessary (string or number)
+  id?: any; 
   image?: string;
   title?: string;
   price?: number;
@@ -19,8 +18,7 @@ const CartCardElement: React.FC<CartCardElementProps> = ({ id, title, price, ima
       <div className="flex gap-5">
         <ImgElement image={image}/>
         <div className="text-start">
-          <ProductTItle title={title} truncateLength={40} />
-          {/* <ColorSizeDisplay /> */}
+          <ProductTItle title={title} truncateLength={40} hideOnSmall={true}/>
           <p><span>quantity - </span>{quantity}</p>
         </div>
       </div>
