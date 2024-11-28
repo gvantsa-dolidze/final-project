@@ -17,7 +17,7 @@ const BestSelling = () => {
   );
 
   return (
-    <div className="max-w-1116 m-auto py-16 space-y-5">
+    <div className="max-w-1116 m-auto py-16 space-y-5 xl:block hidden">
       <div className="text-center">
         <p>SHOP NOW</p>
         <h2>Best Selling</h2>
