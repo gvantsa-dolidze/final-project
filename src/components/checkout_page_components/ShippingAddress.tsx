@@ -1,14 +1,12 @@
 import InputElement from "../elements/InputElement"
-import PopOver2 from "../elements/PopOver2";
-
 
 const ShippingAddress = () => {
   return (
     <div>
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between">
         <h3 className="text-start">Shipping Address</h3>
-        <PopOver2 categories="My Account" className="md:hidden block"/>
-      </div>
+      </div> */}
+      
       <form className="space-y-5 mt-5">
         <InputElement text="Street Address" type="text" placeholder="" />
         <div className="grid gap-x-6 gap-y-10 md:grid-cols-1 lg:grid-cols-2 xl:gap-x-8">

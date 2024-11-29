@@ -17,8 +17,11 @@ const CheckoutPage = () => {
           />
         </div>
       </div>
-      <div className="flex justify-between py-10 max-w-1116 m-auto">
-        <ShippingAddress />
+      <div className="flex justify-between py-10 px-2 max-w-1116 m-auto flex-col md:flex-row gap-20">
+        <div>
+          <h3 className="text-start">Shipping Address</h3>
+          <ShippingAddress />
+        </div>
         <YourOrder />
       </div>
     </Layout>
