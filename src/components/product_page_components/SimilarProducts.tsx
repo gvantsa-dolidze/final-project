@@ -17,7 +17,7 @@ const SimilarProducts = () => {
   );
 
   return (
-    <div className="max-w-1116 m-auto py-16 space-y-5">
+    <div className="max-w-1116 m-auto py-16 space-y-5 xl:block hidden">
      <div className="text-start">
       <h3>You might also like</h3>
       <h2>SIMILAR PRODUCTS</h2>
