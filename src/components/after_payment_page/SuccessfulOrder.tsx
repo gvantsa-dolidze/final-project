@@ -2,7 +2,7 @@ import LinkBtn from '../elements/LinkBtn'
 
 const SuccessfulOrder = () => {
   return (
-    <div className='p-32'>
+    <div className='p-20'>
         <div className='flex flex-col gap-10 items-center'>
             <img src="/img/Frame.png" alt="box" />
             <h3>Thank you for shopping</h3>
