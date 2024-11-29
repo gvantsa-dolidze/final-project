@@ -11,7 +11,7 @@ const Logout = () => {
   };
 
   const staySignIn = () => {
-    navigate("/cart_page");
+    navigate("/profile_page");
   }
   
   return (
