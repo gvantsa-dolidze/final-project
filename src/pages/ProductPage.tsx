@@ -23,21 +23,24 @@ const ProductPage = () => {
   }, []);
 
   const product = useAppSelector((state) => state.singleProduct.data);
-  
-  
+
+
 
   return (
     <Layout>
-      <div className="max-w-1116 m-auto">
-        <Breadcrumb
-          product={product}
-          title=""
-          label="Ecommerce"
-          secondaryLabel=""
-          destination="/"
-          secondaryDestination="/product_page"
-        />
+      <div className=" bg-BackgroundGray py-5">
+        <div className="max-w-1116 m-auto bg-BackgroundGray">
+          <Breadcrumb
+            product={product}
+            title=""
+            label="Ecommerce"
+            secondaryLabel=""
+            destination="/"
+            secondaryDestination="/product_page"
+          />
+        </div>
       </div>
+
 
       <div className="max-w-1116 m-auto py-10 space-y-10 px-5">
         <div className="xl:flex md:justify-between gap-5">
