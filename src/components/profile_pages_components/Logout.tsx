@@ -15,7 +15,7 @@ const Logout = () => {
   }
   
   return (
-    <div className="pl-10 pt-20">
+    <div className="px-5 py-20">
       <div>
         <h3>Are you sure you want to log out?</h3>
         <div className="mt-10 space-x-5">

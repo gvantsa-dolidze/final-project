@@ -5,7 +5,7 @@ import PopOver2 from "../elements/PopOver2"
 
 const Address = () => {
   return (
-    <div className="flex justify-start pl-10">
+    <div className="flex justify-start px-5">
       <div className="w-96">
          <div className="flex justify-between">
         <h3 className="text-start">Shipping Address</h3>

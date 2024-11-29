@@ -59,7 +59,7 @@ const CartPage: React.FC = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row m-auto max-w-1116 py-10 gap-20">
+      <div className="flex flex-col md:flex-row m-auto max-w-1116 py-10 gap-20 px-2">
         <CartElement />
         <OrderSummary totalPrice={totalPrice} />
       </div>
