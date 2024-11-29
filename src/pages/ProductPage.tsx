@@ -43,7 +43,7 @@ const ProductPage = () => {
 
 
       <div className="max-w-1116 m-auto py-10 space-y-10 px-5">
-        <div className="xl:flex md:justify-between gap-5">
+        <div className="xl:flex xl:space-y-0 space-y-10  md:justify-between">
           <ImgSwiper product={product} />
           <DetailCustomizer product={product} />
         </div>
