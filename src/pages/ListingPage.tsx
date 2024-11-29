@@ -6,6 +6,8 @@ import Breadcrumb from "../components/elements/Breadcrumb";
 import Layout from "../components/layout/Layout";
 import { useEffect } from "react";
 import PopOver from "../components/header_components/PopOver";
+import SortByBtn from "../components/elements/SortByBtn";
+
 
 
 const ListingPage = () => {
@@ -33,8 +35,12 @@ const ListingPage = () => {
           <div className="text-start space-y-10 px-2">
             
             <AppliedFilters />
-            <ShowingResults />
-            <PopOver categories="Categories" className="md:hidden block"/>
+            <div className="flex justify-between items-center">
+              <ShowingResults className="md:block hidden" />
+            <SortByBtn />
+            <PopOver categories="CATEGORIES" className="md:hidden block"/>
+            </div>
+            
           </div>
           <GridContainer />
         </div>

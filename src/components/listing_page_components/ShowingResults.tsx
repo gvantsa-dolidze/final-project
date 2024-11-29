@@ -1,13 +1,13 @@
-import SortByBtn from "../elements/SortByBtn"
+interface ShowingResultsProps {
+  className?: string;
+}
 
-
-const ShowingResults = () => {
+const ShowingResults: React.FC<ShowingResultsProps> = ({ className = '' }) => {
   return (
-    <div className="flex justify-between items-center">
-        <div>
-        Showing 1-9 of 36 results.
-        </div>
-        <SortByBtn />
+    <div className={` ${className}`}>
+
+      Showing 1-9 of 36 results.
+
     </div>
   )
 }
