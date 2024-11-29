@@ -8,8 +8,8 @@ const AccountDetail = () => {
     <div className="flex justify-start pl-10">
       <div className="w-96 space-y-5 text-start">
         <div className="flex justify-between">
-          <h3 className="text-start md:hidden block">Account Details</h3>
-          <PopOver2 categories="My Account" />
+          <h3 className="text-start">Account Details</h3>
+          <PopOver2 categories="My Account" className="md:hidden block"/>
         </div>
         <InitialsAvatar />
         <form action="" className="space-y-5">

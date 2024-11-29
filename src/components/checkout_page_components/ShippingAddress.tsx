@@ -6,8 +6,8 @@ const ShippingAddress = () => {
   return (
     <div>
       <div className="flex justify-between">
-        <h3 className="text-start md:hidden block">Shipping Address</h3>
-        <PopOver2 categories="My Account" />
+        <h3 className="text-start">Shipping Address</h3>
+        <PopOver2 categories="My Account" className="md:hidden block"/>
       </div>
       <form className="space-y-5 mt-5">
         <InputElement text="Street Address" type="text" placeholder="" />

@@ -3,11 +3,12 @@ import LinkBtn from "./LinkBtn";
 
 interface PopOverProps {
   categories: string;
+  className?: string;
 }
 
-const PopOver: React.FC<PopOverProps> = ({ categories }) => {
+const PopOver: React.FC<PopOverProps> = ({ categories, className = "" }) => {
   return (
-    <Popover className="relative">
+    <Popover className={`relative ${className}`}>
       <PopoverButton className="flex outline-none">
         {categories}
         <img src="/img/icons/chevron_down.png" alt="arrow_down" />

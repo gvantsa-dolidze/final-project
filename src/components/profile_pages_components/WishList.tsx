@@ -16,8 +16,8 @@ const WishList = () => {
   return (
     <div className="flex  flex-col xl:px-10 px-2 space-y-10">
       <div className="flex justify-between">
-        <h3 className="text-start md:hidden block">Wishlist</h3>
-        <PopOver2 categories="My Account" />
+        <h3 className="text-start">Wishlist</h3>
+        <PopOver2 categories="My Account" className="md:hidden block"/>
       </div>
       
       {products.map((product: any) => (
