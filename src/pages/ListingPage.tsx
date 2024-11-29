@@ -5,6 +5,8 @@ import ShowingResults from "../components/listing_page_components/ShowingResults
 import Breadcrumb from "../components/elements/Breadcrumb";
 import Layout from "../components/layout/Layout";
 import { useEffect } from "react";
+import PopOver from "../components/header_components/PopOver";
+
 
 const ListingPage = () => {
   
@@ -29,8 +31,10 @@ const ListingPage = () => {
         <SideBar />
         <div className="flex flex-col gap-10">
           <div className="text-start space-y-10 px-2">
+            
             <AppliedFilters />
             <ShowingResults />
+            <PopOver categories="Categories" className="md:hidden block"/>
           </div>
           <GridContainer />
         </div>

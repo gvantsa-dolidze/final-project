@@ -6,9 +6,10 @@ import { getAllCategories } from "../../store/app/AllCategoriesReducer";
 
 interface PopOverProps {
   categories: string;
+  className?: string;
 }
 
-const PopOver: React.FC<PopOverProps> = ({ categories }) => {
+const PopOver: React.FC<PopOverProps> = ({ categories, className='' }) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -20,14 +21,14 @@ const PopOver: React.FC<PopOverProps> = ({ categories }) => {
   );
 
   return (
-    <Popover className="relative">
+    <Popover className={`relative ${className}`}>
       <PopoverButton className="flex outline-none">
         {categories}
         <img src="/img/icons/chevron_down.png" alt="arrow_down" />
       </PopoverButton>
       <PopoverPanel
         anchor="bottom"
-        className="flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3"
+        className={`flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3`}
       >
         {allCategories.map((category: any) => (
           <LinkBtn
