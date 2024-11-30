@@ -26,6 +26,7 @@ const SignUpForm = () => {
           label="Already have an account? Log in"
           variant="link"
           destination="/login_page"
+          truncateLength={35}
         />
       </div>
     </form>
