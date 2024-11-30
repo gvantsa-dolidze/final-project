@@ -28,9 +28,9 @@ const DetailCustomizer = ({ product }: any) => {
   };
 
   return (
-    <div className="w-[438px] flex flex-col gap-7">
+    <div className="flex flex-col gap-7">
       <div className="flex justify-between">
-        <Title variant="title16" title={product.title} truncate={false}/>
+        <Title variant="title16" title={product.title} truncateLength={30}/>
         <Button img="/img/icons/share.png" variant="link" />
       </div>
 
@@ -78,6 +78,7 @@ const DetailCustomizer = ({ product }: any) => {
         variant="title12"
         title="— Free shipping on orders $100+"
         className="text-start"
+        truncate={false}
       />
       {cartMessage && (
         <div className="flex items-center justify-start gap-4">
