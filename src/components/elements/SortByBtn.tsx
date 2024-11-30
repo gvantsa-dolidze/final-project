@@ -10,7 +10,7 @@ const SortByBtn = () => {
           SORT BY
           <ChevronDownIcon
             aria-hidden="true"
-            className="-mr-1 h-5 w-5 text-gray-400"
+            className="mr-1 h-5 w-5 text-gray-400"
           />
         </MenuButton>
       </div>
