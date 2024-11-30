@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+
 interface LinkBtnProps {
   destination: string;
   label?: string;
@@ -18,6 +19,7 @@ interface LinkBtnProps {
   id?: any;
   onClick?: () => void;
 }
+
 const LinkBtn: React.FC<LinkBtnProps> = ({
   label,
   variant = "primary",
@@ -29,6 +31,14 @@ const LinkBtn: React.FC<LinkBtnProps> = ({
   id = '',
   onClick
 }) => {
+  // Function to truncate the label to 20 characters
+  const truncateLabel = (label: string | undefined) => {
+    if (label && label.length > 30) {
+      return label.slice(0, 30) + "...";
+    }
+    return label;
+  };
+
   const styles: Record<string, string> = {
     primary:
       "flex items-center justify-center bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm ",
@@ -44,7 +54,7 @@ const LinkBtn: React.FC<LinkBtnProps> = ({
   return (
     <NavLink to={destination} id={id} className={`${styles[variant]} ${className}`} onClick={onClick}>
       {!reverse && img && <img src={img} alt={alt} />}
-      {label && <p>{label}</p>}
+      {label && <p>{truncateLabel(label)}</p>} {/* Apply truncateLabel */}
       {reverse && img && <img src={img} alt={alt} className="ml-2" />}
     </NavLink>
   );
