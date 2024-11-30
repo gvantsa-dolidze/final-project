@@ -81,8 +81,8 @@ const DetailCustomizer = ({ product }: any) => {
         truncate={false}
       />
       {cartMessage && (
-        <div className="flex items-center justify-start gap-4">
-          <p>{cartMessage}</p>
+        <div className="flex-col  items-center justify-start gap-4">
+          <p className="pb-5">{cartMessage}</p>
           <LinkBtn destination="/cart_page" label="Go to cart" />
         </div>
       )}
