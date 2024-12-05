@@ -3,8 +3,32 @@ import HorizontalLine from "../components/authentication_pages_components/Horizo
 import SignUpForm from "../components/authentication_pages_components/SignUpForm";
 import Layout from "../components/layout/Layout";
 import Button from "../components/elements/Button";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
-const SignUpPage = () => {
+const SignUpPage: React.FC = () => {
+
+  const [hasToken, setHasToken] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = Cookies.get("AccessToken");
+    if (token) {
+      setHasToken(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (hasToken) {
+      navigate("/profile_page");
+    }
+  }, [hasToken, navigate]);
+
+  if (hasToken) {
+    return null;
+  }
+
   return (
     <Layout>
       <div className="bg-BackgroundGray">
