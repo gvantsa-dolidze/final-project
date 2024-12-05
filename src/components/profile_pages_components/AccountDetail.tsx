@@ -6,7 +6,7 @@ import PopOver2 from "../elements/PopOver2";
 const AccountDetail = () => {
   return (
     <div className="flex justify-start px-5">
-      <div className="w-96 space-y-5 text-start">
+      <div className="md:w-96 w-full space-y-5 text-start">
         <div className="flex justify-between">
           <h3 className="text-start">Account Details</h3>
           <PopOver2 categories="My Account" className="md:hidden block"/>
