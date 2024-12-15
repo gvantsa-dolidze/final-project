@@ -7,6 +7,7 @@ interface InputElementProps {
   img?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   autocomplete?: any;
+  value?: any;
 }
 
 const InputElement: React.FC<InputElementProps> = ({
@@ -18,6 +19,7 @@ const InputElement: React.FC<InputElementProps> = ({
   img = "",
   onChange,
   autocomplete,
+  value,
 }) => {
   const styles: Record<string, string> = {
     form: "outline-none border py-2 px-3 rounded-md text-sm box-border",
@@ -49,6 +51,7 @@ const InputElement: React.FC<InputElementProps> = ({
         placeholder={placeholder}
         onChange={onChange}
         autoComplete={autocomplete}
+        value={value}
       />
     </div>
   );

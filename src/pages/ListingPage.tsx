@@ -30,7 +30,7 @@ const ListingPage = () => {
         <SideBar />
         <div className="flex flex-col gap-10">
           <div className="text-start space-y-10 px-2">
-            <AppliedFilters />
+            {/* <AppliedFilters /> */}
             <div className="flex justify-between items-center">
               <ShowingResults className="md:block hidden" />
               <div className="flex flex-row-reverse items-center">
