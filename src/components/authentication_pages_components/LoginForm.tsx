@@ -9,11 +9,16 @@ const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(""); // Error message state
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
   const navigate = useNavigate();
 
   const onSubmitForm = (e: any) => {
     e.preventDefault();
     setIsLoading(true);
+    setErrorMessage(""); // Reset error message before submission
+    setSuccessMessage(""); // Reset success message before submission
+
     fetch("https://fakestoreapi.com/auth/login", {
       method: "POST",
       headers: {
@@ -27,14 +32,19 @@ const LoginForm = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json.token);
-        Cookies.set("AccessToken", json.token);
-        setIsLoading(false);
-        alert("შესვლა წარმატებით მოხდა");
-        navigate("/profile_page");
+        if (json.token) {
+          Cookies.set("AccessToken", json.token);
+          setSuccessMessage("Login successful! Redirecting...");
+          setIsLoading(false);
+          navigate("/profile_page");
+        } else {
+          setErrorMessage("Invalid username or password. Please try again.");
+          setIsLoading(false);
+        }
       })
       .catch((err) => {
-        alert("მომხმარებელი ვერ მოიძებნა");
+        console.error("Error:", err);
+        setErrorMessage("An error occurred while logging in. Please try again.");
         setIsLoading(false);
       });
   };
@@ -49,19 +59,35 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={onSubmitForm} className="space-y-5 w-80">
+      {/* Show error message */}
+      {errorMessage && (
+        <div className="text-red-500 text-sm">
+          <p>{errorMessage}</p>
+        </div>
+      )}
+
+      {/* Show success message */}
+      {successMessage && (
+        <div className="text-green-500 text-sm">
+          <p>{successMessage}</p>
+        </div>
+      )}
+
       <InputElement
         text="Username"
         type="text"
-        placeholder=""
+        placeholder="Enter your username"
         id="login_username"
+        value={username}
         onChange={onUsernameChange}
       />
       <InputElement
         text="Password"
         type="password"
-        placeholder=""
+        placeholder="Enter your password"
         id="login_pass"
         autocomplete="current-password"
+        value={password}
         onChange={onPasswordChange}
       />
 
@@ -70,9 +96,8 @@ const LoginForm = () => {
           label="Forgot Password?"
           variant="link"
           destination="/forgot_password_page"
-          className=""
         />
-        <Button label={isLoading ? "loading..." : "Sign In"} type="submit" />
+        <Button label={isLoading ? "Loading..." : "Sign In"} type="submit" />
         <LinkBtn
           label="Don't have an account? Sign up"
           variant="link"
