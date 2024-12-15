@@ -66,6 +66,13 @@ const CartSlice = createSlice({
         state.data.push(item);
       }
     },
+
+    // Action to remove an item from the cart
+    removeItemFromCart(state: any, action: PayloadAction<any>) {
+      const itemId = action.payload;
+      // Remove the item from the cart by filtering out the item with the provided ID
+      state.data = state.data.filter((item: any) => item.id !== itemId);
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -80,11 +87,10 @@ const CartSlice = createSlice({
       .addCase(getCart.rejected, (state, action: PayloadAction<any>) => {
         state.loading = false;
         state.error = action.payload;
-        // state.data = [];
       });
   },
 });
 
-export const { addItemToCart } = CartSlice.actions;
+export const { addItemToCart, removeItemFromCart } = CartSlice.actions;
 
 export default CartSlice.reducer;
