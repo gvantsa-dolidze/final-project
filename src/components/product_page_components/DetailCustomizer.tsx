@@ -13,6 +13,8 @@ const DetailCustomizer = ({ product }: any) => {
   const [cartMessage, setCartMessage] = useState("");
   const dispatch = useAppDispatch();
 
+  const [count, setCount] = useState(0);
+
   const AddToCart = () => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
@@ -21,7 +23,7 @@ const DetailCustomizer = ({ product }: any) => {
         return pp;
       })
       .then((pp) =>
-        dispatch(addItemToCart({ ...pp, productId: product.id, quantity: 1 }))
+        dispatch(addItemToCart({ ...pp, productId: product.id, quantity: count }))
       );
 
     setCartMessage(`Product has been added to your cart.`);
@@ -64,7 +66,7 @@ const DetailCustomizer = ({ product }: any) => {
       </div>
       <div className="space-y-2">
         <Title variant="title12" title="Quantity" className="text-start" />
-        <Counter id={product.id} />
+        <Counter value={count} add={() => setCount(Math.max(count + 1, 0))} remove={() => setCount(Math.max(count - 1, 0))} />
       </div>
       <div className="flex gap-5 items-center">
         <Button label="Add to cart" onClick={AddToCart} />

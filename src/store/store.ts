@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './app/counterSlice'
 import AllProductsReducer from "./app/AllProductsReducer"
 import AllUsersReducer from './app/AllUsersReducer'
 import AllCategoriesReducer from './app/AllCategoriesReducer'
@@ -12,7 +11,6 @@ import cartReducer from './app/CartReducer'
 
 const store = configureStore({
   reducer: {
-    counter: counterReducer,
     allProduct: AllProductsReducer,
     bestSellingProducts: BestSellingProductsReducer,
     featuredProduct: FeaturedProductsReducer,

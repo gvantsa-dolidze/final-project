@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
-import CartElement from "../components/cart_page_components/CartElement";
+import CartElementsList from "../components/cart_page_components/CartElementsList";
 import OrderSummary from "../components/cart_page_components/OrderSummary";
 import Breadcrumb from "../components/elements/Breadcrumb";
 import Layout from "../components/layout/Layout";
@@ -21,11 +21,7 @@ const CartPage: React.FC = () => {
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const navigate = useNavigate();
 
-  const cart = useAppSelector((state) => state.cart.data || []);
-
-  const calculatedTotalPrice = cart.reduce((acc: number, cartItem: CartItem) => {
-    return acc + (cartItem.price * cartItem.quantity);
-  }, 0);
+  const cart = useAppSelector((state) => state.cart.data);
 
   useEffect(() => {
     const token = Cookies.get("AccessToken");
@@ -39,8 +35,10 @@ const CartPage: React.FC = () => {
   }, [navigate]);
 
   useEffect(() => {
-    setTotalPrice(calculatedTotalPrice);
-  }, [calculatedTotalPrice]);
+    setTotalPrice(cart.reduce((acc: number, cartItem: CartItem) => {
+      return acc + (cartItem.price * cartItem.quantity);
+    }, 0));
+  }, [cart]);
 
   if (!hasToken) {
     return null;
@@ -60,7 +58,7 @@ const CartPage: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row m-auto max-w-1116 py-10 gap-20 px-2">
-        <CartElement />
+        <CartElementsList />
         <OrderSummary totalPrice={totalPrice} />
       </div>
     </Layout>

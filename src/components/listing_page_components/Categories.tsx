@@ -21,6 +21,7 @@ const Categories = () => {
       <div className="mt-5">
         {categories.map((category: any) => (
           <RadioBtn
+            key={category}
             label={category}
             id={category}
             onClick={() => navigate(`/listing_page/${category}`)}

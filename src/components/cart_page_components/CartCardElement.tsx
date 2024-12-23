@@ -3,7 +3,7 @@ import Button from "../elements/Button";
 import ImgElement from "../elements/ImgElement";
 import ProductPrice from "../elements/ProductPrice";
 import ProductTItle from "../product_page_components/Title";
-import { removeItemFromCart } from '../../store/app/CartReducer';
+import { addItemToCart, CartItem, removeItemFromCart } from '../../store/app/CartReducer';
 import { useDispatch } from "react-redux";
 
 interface CartCardElementProps {
@@ -11,7 +11,7 @@ interface CartCardElementProps {
   image?: string;
   title?: string;
   price?: number;
-  quantity?: number;
+  quantity: number;
   
 }
 const CartCardElement: React.FC<CartCardElementProps> = ({ id, title, price, image, quantity }) => {
@@ -20,8 +20,9 @@ const CartCardElement: React.FC<CartCardElementProps> = ({ id, title, price, ima
 
   // Handler to remove item from the cart
   const handleRemoveItem = (itemId: any) => {
+    const item: CartItem = {id: itemId, quantity: 999};
     // Dispatch the action to remove item from cart
-    dispatch(removeItemFromCart(itemId));
+    dispatch(removeItemFromCart(item));
   }
   return (
     <div className="flex items-center justify-between mt-5 gap-5">
@@ -34,7 +35,11 @@ const CartCardElement: React.FC<CartCardElementProps> = ({ id, title, price, ima
       </div>
       <div className="flex items-center gap-5">
         <ProductPrice price={price}/>
-        <Counter id={id} />
+        <Counter
+          value={quantity}
+          add={() => dispatch(addItemToCart({id: id, quantity: 1} as CartItem))}
+          remove={() => dispatch(removeItemFromCart({id: id, quantity: 1} as CartItem))}
+          />
         <Button variant="gray" img="/img/icons/x.png"  onClick={() => handleRemoveItem(id)}/>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface CartState {
-  data: any[] | null;
+  data: any[];
   loading: boolean;
   error: string | null;
 }
@@ -11,6 +11,11 @@ const initialState: CartState = {
   loading: false,
   error: null,
 };
+
+export interface CartItem {
+  id: number,
+  quantity: number
+}
 
 export const getCart = createAsyncThunk(
   "cart/getCart",
@@ -50,7 +55,7 @@ const CartSlice = createSlice({
   initialState,
   reducers: {
     // Action to add an item to the cart
-    addItemToCart(state: any, action: PayloadAction<any>) {
+    addItemToCart(state: any, action: PayloadAction<CartItem>) {
       const item = action.payload;
 
       // Check if the item already exists in the cart
@@ -68,10 +73,22 @@ const CartSlice = createSlice({
     },
 
     // Action to remove an item from the cart
-    removeItemFromCart(state: any, action: PayloadAction<any>) {
-      const itemId = action.payload;
+    removeItemFromCart(state: any, action: PayloadAction<CartItem>) {
+      const itemToDelete = action.payload;
+
       // Remove the item from the cart by filtering out the item with the provided ID
-      state.data = state.data.filter((item: any) => item.id !== itemId);
+      // state.data = state.data.filter((item: any) => item.id !== itemToDelete.id);
+
+      state.data = state.data
+      .map(
+        (item: any) => {
+          if (item.id === itemToDelete.id) {
+            item.quantity -= itemToDelete.quantity;
+          }
+          return item;
+        }
+      )
+      .filter((item: any) => item.quantity > 0);
     },
   },
   extraReducers: (builder) => {

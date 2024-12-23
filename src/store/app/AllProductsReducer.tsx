@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 // import type { RootState } from '../store';
 
 export interface ProductState {
-      data: [] | null,
+      data: [],
       loading: boolean,
       error: string | null
 }

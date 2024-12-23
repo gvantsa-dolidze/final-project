@@ -1,11 +1,17 @@
 import Grid from "../elements/Grid";
 import Pagination from "../elements/Pagination";
 
-const GridContainer = () => {
+
+interface Props {
+  pageOfProducts: any[],
+  totalPages: number
+}
+
+const GridContainer = ({pageOfProducts, totalPages}: Props) => {
   return (
     <div>
-      <Grid />
-      <Pagination />
+      <Grid data={pageOfProducts}/>
+      <Pagination total={totalPages} current={1} />
     </div>
   );
 };

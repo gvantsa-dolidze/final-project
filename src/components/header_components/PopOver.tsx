@@ -32,6 +32,7 @@ const PopOver: React.FC<PopOverProps> = ({ categories, className='' }) => {
       >
         {allCategories.map((category: any) => (
           <LinkBtn
+            key={category}
             destination={`/listing_page/${category}`}
             label={category}
             variant="sidebar"

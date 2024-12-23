@@ -1,17 +1,24 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import { current } from "@reduxjs/toolkit";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
 
-const Pagination = () => {
+
+interface Props {
+  total?: number,
+  current?: number
+}
+
+const Pagination = ({total = 10, current = 1}: Props) => {
   const location = useLocation();
   const navigate = useNavigate();
 
   // Get the current page from the URL, default to 1 if not found
   const queryParams = new URLSearchParams(location.search);
-  const currentPage = parseInt(queryParams.get("offset") || "1"); // Provide a default value ("1") when null is returned
+
+  const currentPage: number = parseInt(queryParams.get("offset") || `${current}`); // Provide a default value ("1") when null is returned
 
   // Pagination limit (you can adjust this depending on your needs)
-  const totalPages = 10; // Set a realistic total page count
+  const totalPages: number = total; // Set a realistic total page count
 
   // Handle page changes
   const handlePageChange = (pageNumber: number): void => { // Type pageNumber as number
