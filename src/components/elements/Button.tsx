@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
   type = "button",
 }) => {
   const styles: Record<string, string> = {
-    primary: "bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm",
+    primary: "bg-MidnightBlue text-white px-8 py-3 rounded-md text-sm hover:bg-slate-800",
     secondary: "flex items-center justify-center border rounded-full px-3 py-1 text-sm hover:bg-BackgroundGray",
     danger: "",
     outline: "",
