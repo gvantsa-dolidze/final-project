@@ -10,12 +10,12 @@ interface HeaderNavProps {
 
 const HeaderNav: React.FC<HeaderNavProps> = () => {
   return (
-    <div className="gap-5 md:flex hidden">
-      <LinkBtn destination="/" label='Home' variant="link" />
+    <div className="md:flex hidden">
+      <LinkBtn destination="/" label='Home' variant="sidebar"  className="py-6 px-5"/>
       <PopOver
-        categories="Categories" />
-      <LinkBtn destination="/about" label='About' variant="link" />
-      <LinkBtn destination="/contact" label='Contact' variant="link" />
+        categories="Categories" className="hover:bg-BackgroundGray py-6 px-5"/>
+      <LinkBtn destination="/about" label='About' variant="sidebar" className="py-6 px-5"/>
+      <LinkBtn destination="/contact" label='Contact' variant="sidebar" className="py-6 px-5"/>
     </div>
   );
 };
