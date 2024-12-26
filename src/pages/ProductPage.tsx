@@ -20,7 +20,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     dispatch(getSingleProduct(Number(id))); // Dispatch the action with the product ID
-  }, []);
+  }, [id]);
 
   const product = useAppSelector((state) => state.singleProduct.data);
 

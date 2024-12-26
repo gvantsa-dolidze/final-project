@@ -13,7 +13,7 @@ const DetailCustomizer = ({ product }: any) => {
   const [cartMessage, setCartMessage] = useState("");
   const dispatch = useAppDispatch();
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const AddToCart = () => {
     fetch("https://fakestoreapi.com/products")
@@ -66,7 +66,7 @@ const DetailCustomizer = ({ product }: any) => {
       </div>
       <div className="space-y-2">
         <Title variant="title12" title="Quantity" className="text-start" />
-        <Counter value={count} add={() => setCount(Math.max(count + 1, 0))} remove={() => setCount(Math.max(count - 1, 0))} />
+        <Counter value={count} add={() => setCount(Math.max(count + 1, 1))} remove={() => setCount(Math.max(count - 1, 1))} />
       </div>
       <div className="flex gap-5 items-center">
         <Button label="Add to cart" onClick={AddToCart} />
