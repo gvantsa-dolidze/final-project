@@ -19,6 +19,12 @@ const LoginForm = () => {
     setErrorMessage(""); // Reset error message before submission
     setSuccessMessage(""); // Reset success message before submission
 
+    if (!username || !password) {
+      setIsLoading(false);
+      setErrorMessage("Please fill in all the fields.");
+      return;
+    }
+
     fetch("https://fakestoreapi.com/auth/login", {
       method: "POST",
       headers: {
