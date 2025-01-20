@@ -28,7 +28,7 @@ const PopOver: React.FC<PopOverProps> = ({ categories, className='' }) => {
       </PopoverButton>
       <PopoverPanel
         anchor="bottom"
-        className={`flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-3`}
+        className={`flex flex-col gap-3 bg-white rounded-md border border-gray-200 mt-5`}
       >
         {allCategories.map((category: any) => (
           <LinkBtn
