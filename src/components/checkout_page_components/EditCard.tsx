@@ -16,13 +16,13 @@ const EditCard = () => {
 
 
   return (
-    <div className="flex  items-center gap-5 mt-5">
+    <div className="flex  items-center justify-between gap-5 mt-5">
       <div className="flex gap-5">
         {limitedProducts.map((cart: any) => (
           <FullRoundedImg image={cart.image} />
         ))}
       </div>
-      <LinkBtn label="Edit Card" variant="light" destination="/cart_page" />
+      <LinkBtn label="Edit" variant="light" destination="/cart_page" />
     </div>
   );
 };

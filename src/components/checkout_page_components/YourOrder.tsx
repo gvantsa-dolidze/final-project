@@ -9,7 +9,7 @@ const YourOrder: React.FC = () => {
   const totalPrice = cart.reduce((acc, cartItem) => acc + (cartItem.price * cartItem.quantity), 0);
 
   return (
-    <div>
+    <div className="md:w-96 m-auto">
       <h3 className="text-start">Your Order</h3>
       <EditCard />
       <PlaceOrder totalPrice={totalPrice} />
