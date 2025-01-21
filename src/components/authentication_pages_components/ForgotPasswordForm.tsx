@@ -27,6 +27,7 @@ const ForgotPasswordForm = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
+        required
       />
       <div className="flex flex-col gap-5">
         <Button label="Send reset link" type="submit" />

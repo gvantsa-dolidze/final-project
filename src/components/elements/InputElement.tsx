@@ -8,6 +8,7 @@ interface InputElementProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   autocomplete?: any;
   value?: any;
+  required?: any;
 }
 
 const InputElement: React.FC<InputElementProps> = ({
@@ -20,6 +21,7 @@ const InputElement: React.FC<InputElementProps> = ({
   onChange,
   autocomplete,
   value,
+  required
 }) => {
   const styles: Record<string, string> = {
     form: "outline-none border py-2 px-3 rounded-md text-sm box-border",
@@ -52,6 +54,7 @@ const InputElement: React.FC<InputElementProps> = ({
         onChange={onChange}
         autoComplete={autocomplete}
         value={value}
+        required={required}
       />
     </div>
   );
