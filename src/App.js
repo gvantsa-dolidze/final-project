@@ -39,6 +39,8 @@ import WriteReview from './components/product_page_components/WriteReview'
 import { useAppDispatch } from "./store/hooks";
 import { useEffect } from "react";
 import { getCart } from "./store/app/CartReducer";
+import ScrollToTop from "./utils/ScrollToTop"
+
 
 
 function App() {
@@ -51,7 +53,9 @@ function App() {
 
   return (
     <div className="App">
+            <ScrollToTop />
       <Routes>
+
         {/* homepage routing */}
         <Route path="/" element={<Home />}>
           <Route index element={<Featured />} />
